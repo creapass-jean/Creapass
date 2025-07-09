@@ -1,0 +1,18 @@
+# Dossiers générés ou temporaires
+active_html/
+user_data/
+
+# Fichiers de test ou sensibles
+id.json
+*.json~
+
+# Fichiers compilés
+creapass.exe
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Fichiers système ou inutiles
+Thumbs.db
+.DS_Store
