@@ -1,0 +1,156 @@
+{
+"file":
+    "Fișier",
+
+"help":
+    "Ajutor",
+
+"theme":
+    "Temă",
+
+"interface":
+    "Interfață",
+
+"ini_langue":
+    "Alegeți aici limba interfeței",
+
+"ini_theme":
+    "Alegeți tema interfeței",
+
+"entry_id" :
+    "Introduceți aici numele dvs. de utilizator. Acesta poate fi orice cuvânt doriți; singura condiție este să vi-l puteți aminti dacă aveți nevoie de el, deoarece acest identificator este utilizat de software, dar nu este stocat în computer. De exemplu, numele și prenumele dvs. sau numele și prenumele prietenei dvs. sau unul sau mai multe cuvinte la alegere. Cu toate acestea, există o regulă care trebuie respectată: nu folosiți spații; înlocuiți spațiile cu semnul de subliniere „_” (tasta 8 pe un PC sau tasta dedicată pe un Mac). De exemplu, Albert_Durant. Nu este nevoie să alegeți un cuvânt complicat. Acest identificator vă va fi cerut doar dacă schimbați calculatorul sau după formatare; totuși, este esențial, altfel nu va mai reproduce parolele pe care le utilizați.",
+
+"entry_ini_mdp" :
+    "Introduceți parola dvs. aici. Ca și în cazul autentificării de mai sus, alegeți o parolă fără spații și simplă, dar nu prea simplă; evitați data nașterii sau „Azerty”, folosiți ceva de genul „Napoleon a pierdut la Waterloo în 1815! Dacă păstrați primele litere, veți obține „NapàWe1815!”, care este ușor de reținut și solid. Și în acest caz, rețineți că software-ul nu vă înregistrează parola.",
+
+"mdp" :
+    "Aici trebuie să introduceți din nou parola pentru a verifica dacă se potrivește cu cea introdusă la prima utilizare a software-ului. Aveți dreptul la 3 încercări. Dacă faceți 3 greșeli, software-ul se va închide și nu îl veți mai putea utiliza. Scopul acestei proceduri este de a împiedica orice „pirat” să aibă acces la computerul dumneavoastră.",
+
+"site":
+    "Faceți clic pe săgeata mică din dreapta pentru a vedea lista de site-uri. De asemenea, puteți apăsa tasta săgeată și apoi tasta enter. Dacă site-ul în cauză nu apare în listă, introduceți-l, va fi luat în considerare și va apărea data viitoare.\n Ca de obicei, nu puneți spații, dacă este necesar, înlocuiți-le cu caractere de subliniere ( _ ).\n Se poate întâmpla ca același site să vă ceară mai multe parole; să ne imaginăm că vizitați site-ul „collection_voitures”. Acest site vă cere o parolă pentru înregistrare și are un forum care vă cere o altă parolă. Nu încercați să complicați lucrurile prin copierea adresei; cel mai important lucru este să vă amintiți ce faceți. Pentru a vă asigura că numele apare în lista de site-uri, simplificați-l folosind „Collec_auto_i” și „Collec_auto_f” (de exemplu).",
+
+
+"Messagebox.show_warning":
+    [
+    "Nu s-a găsit niciun fișier de ajutor pentru acest widget.",
+    "Ajutor"
+    ],
+
+"Messagebox.show_error_1":
+    [
+    "Această parolă nu este valabilă, încercați din nou. Aveți la dispoziție trei încercări.",
+    "Parolă invalidă"
+    ],
+
+"Messagebox.show_error_2":
+    [
+    "Fie nu ați ales un site, fie numele tastat conține unul sau mai multe spații, ceea ce este (în principiu) interzis în numele site-urilor.",
+    "Validare discutabilă"
+    ],
+
+"button_valid.configure_text":
+    "Faceți clic pentru a obține parola dvs. „puternică”",
+
+"label_mdp_text":
+    "Vă rugăm să introduceți parola dvs.",
+
+"ToolTip_entry_mdp_text":
+    "Introduceți parola fără spații aici în scopul verificării\nPentru a confirma, apăsați „Enter”. ",
+
+"label_site_text":
+    "Alegeți site-ul sau aplicația în cauză",
+
+"ToolTip_combobox_site_text":
+    "Faceți clic pe săgeata din dreapta pentru a alege site-ul solicitant sau apăsați tasta „↓”. Dacă nu este acolo, introduceți-o și va fi acolo data viitoare când veți utiliza site-ul.\nPentru mai multe detalii, apăsați „F1”.",
+
+"ToolTip_button_valid_text":
+    "Faceți clic aici sau apăsați *„Enter” pentru validare",
+
+"label_info_sortie_text":
+    "Mai jos este parola dvs. „solidă”\nAcesta este copiat în clipboard. Pentru a-l utiliza, trebuie doar să mergeți la\nși tastați „<Ctrl+v>” sau „<clic dreapta-paste>”.",
+
+"button_valid_ini.configure_text":
+    "Confirmați",
+
+"Messagebox.show_error_3":
+    [
+    "Nu ați ales un identificator sau acesta conține spații.",
+    "Identificator invalid"
+    ],
+
+"Messagebox.show_error_4":
+    [
+    "Nu ați ales o parolă sau parola dvs. conține spații.",
+    "Parolă invalidă"
+    ],
+
+"ini_fen_ttk.Window_title":
+    "Prima utilizare: inițializarea numelui de utilizator și a parolei",
+
+"label_id_ttk.Label_ini_fen_text":
+    "Vă rugăm să introduceți numele dvs. de utilizator",
+
+"ToolTip_entry_id_text":
+    "Introduceți aici datele dvs. de autentificare. Confirmați apăsând „Enter”. Pentru mai multe detalii, apăsați „F1”.",
+
+"label_ini_mdp_ttk.Label_ini_fen_text":
+    "Vă rugăm să introduceți parola dvs.",
+
+"ToolTip_entry_ini_mdp_text":
+    "Introduceți aici parola dvs. fără spații. Confirmați apăsând „Enter”. Pentru mai multe detalii, tastați „F1”.",
+
+"ToolTip_button_valid_ini_text":
+    "Faceți clic aici sau apăsați Enter",
+
+"label_link_notice":
+    "Instrucțiuni de utilizare",
+
+"ToolTip_label_link_notice":
+    "Dacă doriți să consultați instrucțiunile complete de utilizare, faceți clic aici",
+
+"label_ini_langue":
+    "Langue",
+
+"combobox_ini_langue":
+    [
+    "franceză",
+    "Engleză",
+    "spaniolă",
+    "română"
+    ],
+"label_ini_theme":
+    "Tema",
+
+"combobox_ini_theme":
+    ["Clair",
+    "Întuneric",
+    "Dulce",
+    "albastru-noapte"
+    ],
+
+"ToolTip_combobox_ini_langue":
+    "Alegeți limba de interfață făcând clic pe săgeata mică sau apăsând tasta săgeată în jos „↓”. Confirmați prin apăsarea tastei „enter”.",
+
+"ToolTip_combobox_ini_theme":
+    "Alegeți tema. Confirmați apăsând „Enter”.",
+
+"label_info_ini_text":
+    "ATENȚIE, \nAceastă fereastră de inițializare apare numai atunci\ncând prima dată când utilizați software-ul.",
+
+"Messagebox.show_question":
+    [
+    "Păreți că stăpâniți Creapass.\nDoriți ca în viitor Creapass să se deschidă la lansare, sub forma sa minimizată?\nDacă DA, veți găsi un meniu făcând clic (clic dreapta) pe iconița de lângă ceas",
+    "MiniInterface ?"
+    ],
+
+"Minimenu":
+    [
+    "Deschide și/sau aduce în prim plan",
+    "Minimizează",
+    "Ieși"
+    ],
+
+"Mdp_inimini":
+    "Introduceți parola Creapass și apăsați \"Enter\""
+
+}

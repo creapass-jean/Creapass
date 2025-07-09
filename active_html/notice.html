@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User manual - Creapass</title>
+    <style>
+        /* === Styles de base === */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne et lisible */
+            line-height: 1.6; /* Espacement confortable entre les lignes */
+            color: #333; /* Couleur de texte foncée pour meilleure lisibilité */
+            max-width: 900px; /* Largeur max pour une lecture confortable */
+            margin: 0 auto; /* Centrage de la page */
+            padding: 20px; /* Marge intérieure */
+            background-color: #f9f9f9; /* Fond légèrement gris */
+        }
+
+        .section-card {
+            background-color: #fefefe; /* Blanc légèrement plus chaud */
+            border-radius: 8px; /* Coins légèrement arrondis */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Ombre très subtile */
+            padding: 25px;
+            margin: 30px auto;
+            max-width: 850px; /* Largeur optimale pour la lecture */
+            border-left: 4px solid #3498db;
+
+        }
+
+        /* === Titres === */
+        h1 {
+            color: #2c3e50; /* Couleur bleu foncé */
+            text-align: center;
+            border-bottom: 2px solid #3498db; /* Ligne de séparation */
+            padding-bottom: 10px;
+        }
+
+        h2, h3 {
+            color: #2980b9; /* Bleu un peu plus clair */
+            margin-top: 30px; /* Espace avant les titres */
+        }
+
+        /* === Images === */
+        img {
+            display: block;
+            max-width: 100%; /* Images responsives */
+            height: auto;
+            margin: 20px auto; /* Centrage avec marges */
+            border: 1px solid #ddd;  /*Bordure légère */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Ombre légère */
+        }
+
+        .fig-caption {
+            text-align: center;
+            font-style: italic;
+            margin-top: 5px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    
+        /* === Paragraphes et texte === */
+        p {
+            margin-bottom: 15px; /* Espace entre paragraphes */
+        }
+
+        /* === Listes === */
+        ul {
+            padding-left: 20px; /* Alignement des puces */
+        }
+
+        li {
+            margin-bottom: 8px; /* Espace entre éléments de liste */
+        }
+
+        /* === Mise en valeur === */
+        .warning {
+            color: #e74c3c; /* Rouge pour les avertissements */
+            background-color: #fdeaea; /* Fond rouge très clair */
+            padding: 15px;
+            border-left: 4px solid #e74c3c; /* Bordure gauche */
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .note {
+            background-color: #e8f4fc; /* Fond bleu très clair */
+            padding: 15px;
+            border-left: 4px solid #3498db; /* Bordure gauche */
+            margin: 20px 0;
+        }
+
+        /* === Liens === */
+        a {
+            color: #3498db; /* Couleur bleue */
+            text-decoration: none; /* Pas de soulignement */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Soulignement au survol */
+        }
+
+        /* === Pied de page === */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.9em;
+            color: #7f8c8d; /* Gris moyen */
+        }
+
+        /* === Responsive === */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: transparent;">
+        <p style="text-align: center"><img src="images_creapass/logo.webp" alt="Logo Creapass" style="border:none; box-shadow:none;">
+        <h1>User manual - Creapass</h1>
+        <p class="note">Random password generator that is reproducible and standalone</p>
+    </header>
+
+    <section class = "section-card">
+        <h2>1 - Initialization</h2>
+        <p>When you launch Creapass for the first time, you will see this window:</p>
+        <p style="text-align: center"><img src="images_creapass/fig_1.webp" alt="Fenêtre d'initialisation"/></p>
+        <p class="fig-caption">Figure 1: Initialization window</p>
+
+        <p>The software has been designed to be used without a mouse (it's easier and faster, but the mouse is still there). The active area is surrounded by a blue frame; pressing the “Enter” key validates and automatically moves to the next area.</p>
+
+        <p class="warning">WARNING: Your username and password are stored in encrypted form (digital fingerprint). It is therefore <strong>IMPERATIVE THAT YOU REMEMBER THEM</strong>, as they cannot be recovered.</p>
+
+        <p style="text-align: center"><a href="conseils_ini.html">→ See our tips for choosing a good username and password ←</a></p>
+
+        <p id="Lorsque vous avez entré ces données">After entering this information, the window will change to:</p>
+        <p style="text-align: center"><img src="images_creapass/fig_2.webp" alt="Fenêtre de validation"/></p>
+        <p class="fig-caption">Figure 2: Initialization validation</p>
+    </section>
+
+    <section class = "section-card">
+        <h2>2 - Initial use</h2>
+        <p>After initialization, this window will appear at startup:</p>
+        <p style="text-align: center"><img src="images_creapass/fig_3.webp" alt="Fenêtre principale"/></p>
+        <p class="fig-caption">Figure 3: Main window</p>
+
+        <p>You must enter your password to access the features. Then:</p>
+        <ol>
+            <li>Select or enter a site/application</li>
+            <li>Confirm with Enter</li>
+            <li>The generated password is automatically copied to the clipboard</li>
+        </ol>
+
+        <p style="text-align: center"><img src="images_creapass/fig_4.webp" alt="Génération de mot de passe"/></p>
+        <p class="fig-caption">Figure 4: Password generated</p>
+    </section>
+
+    <section class = "section-card">
+        <h2>3 - Mini interface</h2>
+        <p>For more discreet use, activate the mini interface via the menu.<br>Please note that this menu option is only accessible after validating the password.</p>
+        <p style="text-align: center"><img src="images_creapass/fig_5.webp" alt="Activation mini-interface"/></p>
+        <p class="fig-caption">Figure 5: Activating the mini interface</p>
+
+        <p>The mini interface will then appear, along with an icon in the area next to the clock:<br>Right-clicking on the icon will bring up a menu.</p>
+        <p style="text-align: center"><img src="images_creapass/fig_6.webp" alt="Mini-interface"/></p>
+        <p class="fig-caption">Figure 6: Mini interface</p>
+        <p>If you need to move this window, press “Alt-m” to display the traditional system bar</p>
+        <p style="text-align: center"><img src="images_creapass/fig_7.webp" alt="Mini-interface déplaçable"/></p>
+        <p class="fig-caption">Figure 6: Movable mini-interface</p>
+        <p class="note">Tip: After selecting the site, press Enter to generate a password, then Enter again to clear and prepare for a new generation.</p>
+        <p>If you have chosen to open directly in reduced mode, you will be asked for your password.<br><strong>Please note</strong> that this assumes you are familiar with the software and that this is your usual working mode; you will no longer have access to the “language” and “theme” options.</p>
+    </section>
+
+    <section class = "section-card">
+        <h2>Help and shortcuts</h2>
+        <ul>
+            <li><strong>F1</strong>: Contextual help</li>
+            <li><strong>Ctrl+Q</strong>: Exit the application</li>
+            <li><strong>Ctrl+V</strong>: Paste the generated password</li>
+            <li><strong>Alt+m</strong>: Show/hide the system bar</li>
+        </ul>
+    </section>
+
+    <div class="footer">
+        <p>Creapass - Secure and reproducible password generator</p>
+    </div>
+</body>
+</html>

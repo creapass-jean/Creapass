@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips for initialization - Creapass</title>
+    <style>
+        /* Réutilisation du même CSS pour une cohérence visuelle */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .section-card {
+            background-color: #fefefe; /* Blanc légèrement plus chaud */
+            border-radius: 8px; /* Coins légèrement arrondis */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Ombre très subtile */
+            padding: 25px;
+            margin: 30px auto;
+            max-width: 850px; /* Largeur optimale pour la lecture */
+            border-left: 4px solid #3498db;
+        }
+
+        
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .warning {
+            color: #e74c3c;
+            background-color: #fdeaea;
+            padding: 15px;
+            border-left: 4px solid #e74c3c;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .example {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #95a5a6;
+            margin: 20px 0;
+            /*font-family: monospace;
+            font-size: 15px*/
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tips for initialization</h1>
+
+    <section class = "section-card">
+        <h2>Username</h2>
+        <p>The “username” field must be filled in <strong>without spaces</strong>. You can choose to use:</p>
+        <ul>
+            <li>Your name (without spaces)</li>
+            <li>A pseudonym</li>
+            <li>Any combination of characters</li>
+        </ul>
+        <p class="warning">This username will never be requested again unless you change computers or format your disk. You must remember it.</p>
+    </section>
+
+    <section class = "section-card">
+        <h2>Password</h2>
+        <p>Create a strong password using this method:</p>
+        
+        <div class="example">
+            <p><strong>1. Choose a phrase containing:</strong></p>
+            <ul>
+                <li>At least one capital letter</li>
+                <li>A number</li>
+                <li>A punctuation mark</li>
+            </ul>
+            
+            <p><strong>2. Example:</strong></p>
+            <p>“On June 18, 1940, Charles de Gaulle called on the French people to resist!”</p>
+            
+            <p><strong>3. Take the first letter of each word:</strong></p>
+            <p>→ <strong><font-size: 30px>→ OJ181940CdGcotFptr!</font></strong></p>
+        </div>
+
+        <p>Another example: “My grandmother was born on December 15, 1950!” becomes <strong>MgwboD15,1950!</strong></p>
+        
+        <p class="warning">This data is not stored anywhere (neither on your computer nor in the cloud). Only you know it!</p>
+    </section>
+
+    <div class="footer">
+        <p><a href="notice.html#Lorsque vous avez entré ces données">Back to the main instructions</a></p>
+    </div>
+</body>
+</html>

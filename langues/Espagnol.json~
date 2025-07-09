@@ -1,0 +1,160 @@
+{
+"file":
+    "Archivo",
+
+"help":
+    "Ayuda",
+
+"theme":
+    "Tema",
+
+"interface":
+    "Interfaz",
+
+"theme":
+    "Tema",
+
+"interface":
+    "Interfaz",
+
+"entry_id" :
+    "Introduzca aquí su nombre de usuario. Puede ser cualquier palabra que desee; la única condición es que pueda recordarla si la necesita, ya que este identificador es utilizado por el software pero no se almacena en el ordenador. Por ejemplo, su nombre y apellidos, o el nombre y apellidos de su novia, o una o varias palabras de cualquier tipo. Sin embargo, hay una regla que debe respetarse: no utilice espacios; sustituya los espacios por guiones bajos (tecla 8 en un PC o tecla dedicada en un Mac). Por ejemplo, Albert_Durant. No es necesario elegir una palabra complicada. Sólo se le pedirá este identificador si cambia de ordenador o después de formatear; sin embargo, lo necesitará, pues de lo contrario ya no reproducirá las contraseñas que utilice.",
+
+"entry_ini_mdp" :
+    "Introduzca aquí su contraseña. Al igual que con el inicio de sesión anterior, elige una contraseña sin espacios y sencilla pero no demasiado simple; evita tu fecha de nacimiento o «12345A», utiliza algo como «Napoleón perdió en Waterloo en 1815!» Si te quedas con las primeras letras, obtendrás\n«NpeWe1815!», que es fácil de recordar y sólida.\n Sustituya los espacios por guiones bajos « _ ». También en este caso, ten en cuenta que el programa no registra tu contraseña.",
+
+"mdp" :
+    "Aquí debe volver a escribir su contraseña para comprobar que coincide con la que introdujo la primera vez que utilizó el programa. Se le permiten 3 intentos. Si comete 3 errores, el programa se cerrará y no podrá utilizarlo. Este procedimiento está pensado para evitar que cualquier «pirata» acceda a su ordenador",
+
+"site":
+     "Pulsa en la flechita de la derecha para ver la lista de sitios. También puedes pulsar la tecla «↓» y luego intro. Si el sitio en cuestión no aparece en la lista, escríbalo, se tendrá en cuenta y aparecerá la próxima vez.\n Como siempre, no ponga espacios, si es necesario, sustitúyalos por guiones bajos ( _ ).\n Puede ocurrir que el mismo sitio le pida varias contraseñas; imaginemos que visita el sitio «colección_voitures». Este sitio te pide una contraseña para registrarte y tiene un foro que te pide otra contraseña. No intentes complicarte copiando la dirección; lo más importante es que recuerdes lo que estás haciendo. Para que el nombre aparezca en la lista de sitios, simplifícalo utilizando «Collec_auto_i» y «Collec_auto_f» (por ejemplo)",
+
+
+"Messagebox.show_warning":
+    [
+    "No se han encontrado archivos de ayuda para este widget",
+    "Ayuda"
+    ],
+
+"Messagebox.show_error_1":
+    [
+    "Esta contraseña no es válida, inténtalo de nuevoTienes tres intentos",
+    "Contraseña no válida"
+    ],
+
+"Messagebox.show_error_2":
+    [
+    "O bien no ha elegido un sitio, o bien el nombre que ha escrito contiene uno o varios espacios, lo que (en principio) está prohibido en los nombres de sitios",
+    "Validación cuestionable"
+    ],
+
+"button_valid.configure_text":
+    "Haga clic para obtener su contraseña « fuerte »",
+
+"label_mdp_text":
+    "Por favor, escriba su contraseña",
+
+"ToolTip_entry_mdp_text":
+    "Escriba aquí su contraseña sin espacios como verificación.\nPara validar, pulse «Intro» o haga clic abajo",
+
+"label_site_text":
+    "Por favor, seleccione el sitio correspondiente",
+
+"ToolTip_combobox_site_text":
+    "Haz clic en la flechita de la derecha para elegir el sitio solicitante o pulsa la tecla « ↓ ». Si no aparece, escríbala, estará presente la próxima vez que la utilice.\nPara más detalles, teclee « F1 »",
+
+"ToolTip_button_valid_text":
+    "Haga clic aquí o pulse «Intro» para validar",
+
+"label_info_sortie_text":
+    "A continuación se muestra su contraseña « fuerte »\nSe copia en el portapapeles. Para utilizarla, basta con ir al software solicitante\ny teclear «<Ctrl+v>» o «<clic-derecho-pegar>»",
+
+"button_valid_ini.configure_text":
+    "valide",
+
+"Messagebox.show_error_3":
+    [
+    "No ha elegido un identificador o contiene espacios.",
+    "Identificador no válido"
+    ],
+
+"Messagebox.show_error_4":
+    [
+    "No ha elegido una contraseña o contiene espacios.",
+    "Contraseña inválida"
+    ],
+
+"ini_fen_ttk.Window_title":
+    "Usuario por primera vez: Inicializar nombre de usuario y contraseña.",
+
+"label_id_ttk.Label_ini_fen_text":
+    "Introduzca su nombre de usuario",
+
+"ToolTip_entry_id_text":
+    "Introduzca aquí su nombre de usuario. Confirme pulsando «Intro». Para más detalles, pulse «F1».",
+
+"label_ini_mdp_ttk.Label_ini_fen_text":
+    "Introduzca su contraseña",
+
+"ToolTip_entry_ini_mdp_text":
+    "Escriba aquí su contraseña sin espacios. Confirme pulsando «Intro»\nPara más detalles, escriba «F1».",
+
+"ToolTip_button_valid_ini_text":
+    "Haga clic aquí o pulse Intro",
+
+"label_link_notice":
+    "Instrucciones de uso",
+
+"ToolTip_label_link_notice":
+    "Si desea consultar las instrucciones de uso completas, haga clic aquí",
+
+"label_ini_langue":
+    "Idioma",
+
+"combobox_ini_langue":
+    [
+    "Francés",
+    "Inglés",
+    "Español",
+    "Rumano"
+    ],
+
+"label_ini_theme":
+    "Tema",
+
+"combobox_ini_theme":
+    [
+    "Claro",
+    "Oscuro",
+    "Suave",
+    "azul-noche"
+    ],
+
+"ToolTip_combobox_ini_langue":
+    "Elija el idioma de la interfaz haciendo clic en la flecha pequeña o pulsando la tecla de flecha abajo «↓». Confírmalo pulsando la tecla «intro»",
+
+"ToolTip_combobox_ini_theme":
+    "Elija el tema. Confirme pulsando la tecla «Intro»",
+
+"label_info_ini_text":
+    "ATENCIÓN,\nesta ventana de inicialización sólo aparece\nla primera vez que se utiliza el programa.",
+
+"Messagebox.show_question":
+    [
+    "Parece que dominas Creapass.\nEn el futuro, le gustaría que Creapass se abriera en su forma minimizada al iniciarse ?\nEn caso afirmativo, encontrará un menú haciendo clic (clic derecho) en el icono cerca del reloj",
+    "MiniInterfaz ?"
+    ],
+
+"Minimenu":
+    [
+    "Abrir y/o traer al frente",
+    "Minimizar",
+    "Salir"
+    ],
+
+"Mdp_inimini":
+    "Escriba su contraseña de Creapass y presione \"Entrar\""
+
+"Systray_infobule":
+    "Creapass\nSu creador de contraseñas"
+}

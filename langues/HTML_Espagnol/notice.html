@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual del usuario - Creapass</title>
+    <style>
+        /* === Styles de base === */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne et lisible */
+            line-height: 1.6; /* Espacement confortable entre les lignes */
+            color: #333; /* Couleur de texte foncée pour meilleure lisibilité */
+            max-width: 900px; /* Largeur max pour une lecture confortable */
+            margin: 0 auto; /* Centrage de la page */
+            padding: 20px; /* Marge intérieure */
+            background-color: #f9f9f9; /* Fond légèrement gris */
+        }
+
+        .section-card {
+            background-color: #fefefe; /* Blanc légèrement plus chaud */
+            border-radius: 8px; /* Coins légèrement arrondis */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Ombre très subtile */
+            padding: 25px;
+            margin: 30px auto;
+            max-width: 850px; /* Largeur optimale pour la lecture */
+            border-left: 4px solid #3498db;
+
+        }
+
+        /* === Titres === */
+        h1 {
+            color: #2c3e50; /* Couleur bleu foncé */
+            text-align: center;
+            border-bottom: 2px solid #3498db; /* Ligne de séparation */
+            padding-bottom: 10px;
+        }
+
+        h2, h3 {
+            color: #2980b9; /* Bleu un peu plus clair */
+            margin-top: 30px; /* Espace avant les titres */
+        }
+
+        /* === Images === */
+        img {
+            display: block;
+            max-width: 100%; /* Images responsives */
+            height: auto;
+            margin: 20px auto; /* Centrage avec marges */
+            border: 1px solid #ddd;  /*Bordure légère */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Ombre légère */
+        }
+
+        .fig-caption {
+            text-align: center;
+            font-style: italic;
+            margin-top: 5px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    
+        /* === Paragraphes et texte === */
+        p {
+            margin-bottom: 15px; /* Espace entre paragraphes */
+        }
+
+        /* === Listes === */
+        ul {
+            padding-left: 20px; /* Alignement des puces */
+        }
+
+        li {
+            margin-bottom: 8px; /* Espace entre éléments de liste */
+        }
+
+        /* === Mise en valeur === */
+        .warning {
+            color: #e74c3c; /* Rouge pour les avertissements */
+            background-color: #fdeaea; /* Fond rouge très clair */
+            padding: 15px;
+            border-left: 4px solid #e74c3c; /* Bordure gauche */
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .note {
+            background-color: #e8f4fc; /* Fond bleu très clair */
+            padding: 15px;
+            border-left: 4px solid #3498db; /* Bordure gauche */
+            margin: 20px 0;
+        }
+
+        /* === Liens === */
+        a {
+            color: #3498db; /* Couleur bleue */
+            text-decoration: none; /* Pas de soulignement */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Soulignement au survol */
+        }
+
+        /* === Pied de page === */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.9em;
+            color: #7f8c8d; /* Gris moyen */
+        }
+
+        /* === Responsive === */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: transparent;">
+        <p style="text-align: center"><img src="images_creapass/logo.webp" alt="Logo Creapass" style="border:none; box-shadow:none;">
+        <h1>Manual del usuario - Creapass</h1>
+        <p class="note">Generador de contraseñas aleatorias autónomo y reproducible</p>
+    </header>
+
+    <section class = "section-card">
+        <h2>1 - Inicialización</h2>
+        <p>Cuando inicie Creapass por primera vez, verá esta ventana:</p>
+        <p style="text-align: center"><img src="images_creapass/fig_1.webp" alt="Fenêtre d'initialisation"/></p>
+        <p class="fig-caption">Figura 1: Ventana de inicialización</p>
+
+        <p>El software ha sido diseñado para ser utilizado sin ratón (es más fácil y rápido, pero el ratón permanece). La zona en uso está rodeada por un marco azul. Al pulsar la tecla «Intro» se valida y se pasa automáticamente a la zona siguiente.</p>
+
+        <p class="warning">ATENCIÓN: Su nombre de usuario y contraseña se almacenan de forma encriptada (huella digital). Por lo tanto, es <strong>IMPERATIVO QUE LOS RECUERDE</strong>, ya que no se pueden recuperar.</p>
+
+        <p style="text-align: center"><a href="conseils_ini.html">→ Consulte nuestros consejos para elegir un buen nombre de usuario y contraseña ←.</a></p>
+
+        <p id="Lorsque vous avez entré ces données">Tras introducir estos datos, la ventana se convierte en :</p>
+        <p style="text-align: center"><img src="images_creapass/fig_2.webp" alt="Fenêtre de validation"/></p>
+        <p class="fig-caption">Figura 2: Validación de la inicialización</p>
+    </section>
+
+    <section class = "section-card">
+        <h2>2 - Uso inicial</h2>
+        <p>Tras la inicialización, esta ventana aparecerá al arrancar:</p>
+        <p style="text-align: center"><img src="images_creapass/fig_3.webp" alt="Fenêtre principale"/></p>
+        <p class="fig-caption">Figura 3: Ventana principal</p>
+
+        <p>Deberá introducir su contraseña para acceder a las funciones. Siguiente :</p>
+        <ol>
+            <li>Seleccione o introduzca un sitio/aplicación</li>
+            <li>Confirme con Intro</li>
+            <li>La contraseña generada se copia automáticamente en el portapapeles</li>
+        </ol>
+
+        <p style="text-align: center"><img src="images_creapass/fig_4.webp" alt="Génération de mot de passe"/></p>
+        <p class="fig-caption">Figura 4: Contraseña generada</p>
+    </section>
+
+    <section class = "section-card">
+        <h2>3 - Mini-interfaz</h2>
+        <p>Para un uso más discreto, active la mini-interfaz a través del menú.<br>Tenga en cuenta que sólo se puede acceder a esta opción de menú una vez validada la contraseña.</p>
+        <p style="text-align: center"><img src="images_creapass/fig_5.webp" alt="Activation mini-interface"/></p>
+        <p class="fig-caption">Figura 5: Activación de la mini-interfaz</p>
+
+        <p>Aparece entonces la mini-interfaz, junto con un icono en la zona situada junto al reloj:<br>Pulse con el botón derecho del ratón sobre el icono para abrir un menú.</p>
+        <p style="text-align: center"><img src="images_creapass/fig_6.webp" alt="Mini-interface"/></p>
+        <p class="fig-caption">Figura 6: Miniinterfaz</p>
+        <p>Si necesita mover esta ventana, pulse 'Alt-m' para obtener la barra de sistema tradicional</p>
+        <p style="text-align: center"><img src="images_creapass/fig_7.webp" alt="Mini-interface déplaçable"/></p>
+        <p class="fig-caption">Figura 6: Miniinterfaz desplazable</p>
+        <p class="note">Sugerencia: Tras elegir el sitio, pulse Intro para generar una contraseña y, a continuación, vuelva a Intro para borrarla y preparar una nueva generación.</p>
+        <p>Si ha elegido abrir directamente en formato reducido, se le pedirá su contraseña.<br><strong>Atención:</strong> esto supone que domina el programa y que éste es su modo de trabajo actual; ya no tendrá acceso a las opciones «idioma» y «tema».</p>
+    </section>
+
+    <section class = "section-card">
+        <h2>Ayuda y accesos directos</h2>
+        <ul>
+            <li><strong>F1</strong> : Ayuda contextual</li>
+            <li><strong>Ctrl+Q</strong>: Salir de la aplicación</li>
+            <li><strong>Ctrl+V</strong>: Pegar la contraseña generada</li>
+            <li><strong>Alt+m</strong>: Mostrar/quitar la barra del sistema</li>
+        </ul>
+    </section>
+
+    <div class="footer">
+        <p>Creapass - Generador de contraseñas seguro y reproducible</p>
+    </div>
+</body>
+</html>

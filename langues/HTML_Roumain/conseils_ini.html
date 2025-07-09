@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conseils d'initialisation - Creapass</title>
+    <style>
+        /* Réutilisation du même CSS pour une cohérence visuelle */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .section-card {
+            background-color: #fefefe; /* Blanc légèrement plus chaud */
+            border-radius: 8px; /* Coins légèrement arrondis */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Ombre très subtile */
+            padding: 25px;
+            margin: 30px auto;
+            max-width: 850px; /* Largeur optimale pour la lecture */
+            border-left: 4px solid #3498db;
+        }
+
+        
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .warning {
+            color: #e74c3c;
+            background-color: #fdeaea;
+            padding: 15px;
+            border-left: 4px solid #e74c3c;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .example {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #95a5a6;
+            margin: 20px 0;
+            /*font-family: monospace;
+            font-size: 15px*/
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conseils pour l'initialisation</h1>
+
+    <section class = "section-card">
+        <h2>Identifiant</h2>
+        <p>La zone « identifiant » doit être remplie <strong>sans espace</strong>. Vous pouvez, au choix, utiliser :</p>
+        <ul>
+            <li>Votre nom (sans espaces)</li>
+            <li>Un pseudonyme</li>
+            <li>Toute combinaison de caractères</li>
+        </ul>
+        <p class="warning">Cet identifiant ne sera plus jamais demandé sauf si vous changez d'ordinateur ou formatez votre disque. Vous devez absolument vous en souvenir.</p>
+    </section>
+
+    <section class = "section-card">
+        <h2>Mot de passe</h2>
+        <p>Créez un mot de passe solide en suivant cette méthode :</p>
+        
+        <div class="example">
+            <p><strong>1. Choisissez une phrase contenant :</strong></p>
+            <ul>
+                <li>Au moins une majuscule</li>
+                <li>Un chiffre</li>
+                <li>Un signe de ponctuation</li>
+            </ul>
+            
+            <p><strong>2. Exemple :</strong></p>
+            <p>« Le 18 juin 40 Charles de Gaulle appelle les français à la résistance ! »</p>
+            
+            <p><strong>3. Prenez la première lettre de chaque mot :</strong></p>
+            <p>→ <strong><font-size: 30px>L18j40CdGalfàlr!</font></strong></p>
+        </div>
+
+        <p>Autre exemple : « Ma grand-mère est née le 15 décembre 50! » devient <strong>Mg-menl15d50!</strong></p>
+        
+        <p class="warning">Ces données ne sont stockées nulle part (ni sur votre ordinateur, ni dans le cloud). Vous seul les connaissez !</p>
+    </section>
+
+    <div class="footer">
+        <p><a href="notice.html#Lorsque vous avez entré ces données">Retour à la notice principale</a></p>
+    </div>
+</body>
+</html>
