@@ -1,6 +1,6 @@
 # Creapass 🔐🌐
 
-**Creapass** est une application locale et multilingue conçue pour faciliter la gestion sécurisée des identifiants, tout en préservant strictement la confidentialité de l'utilisateur.
+**Creapass** est une application locale et multilingue conçue pour faciliter la gestion sécurisée des identifiants et mots de passe, tout en préservant strictement la confidentialité de l'utilisateur.
 
 ## 🧰 Fonctionnalités principales
 - Génération automatique et temporaire des mots de passe (non conservés)
