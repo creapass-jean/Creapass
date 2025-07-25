@@ -94,7 +94,6 @@ class FoncCom :
         """Écrit le statut appliqué dans user_data.json."""
         prefs = FoncCom.gestion_fichiers("user_data.json", {}, "r")
         prefs["MiniInterface"] = statut
-        print("Écriture JSON avec : ", prefs)        
         return FoncCom.gestion_fichiers("user_data.json", prefs, "w")
     @staticmethod
     def get_miniinterface(defaut="non"):
@@ -230,13 +229,9 @@ class LanguageManager:
         :param language_file: Nom du fichier langue dans le dossier lang_dir (ex : "français.json").
         """
         source_path = self.lang_dir / language_file
-        print (language_file)
         if source_path.exists():
             shutil.copy(source_path, self.active_lang_file)
             self.translations = self.load_translations()
-            print(f"Langue changée pour {language_file}.")
-        else:
-            print(f"Le fichier langue {language_file} est introuvable.")
 
     # écriture de la langue sur le disque en vue des prochains démarrages
     def save_language(self, language_file):
@@ -272,8 +267,6 @@ class LanguageManager:
         '''change la langue des fichiers HTML en copiant le dossier HTML_"langue" dans le dossier principal de l'application'''
         html_dir = Path('langues/HTML_'+lang_file)
         active_html_file = html_dir.with_suffix('')
-        print (active_html_file)
-        #self.lang.change_html_lang(active_html_file)
         if os.path.exists("active_html") :
             shutil.rmtree("active_html", onerror = self.on_rm_error)
         shutil.copytree(active_html_file, "active_html")
@@ -281,8 +274,6 @@ class LanguageManager:
     def on_rm_error(self, func, path, exc_info) :
         os.chmod(path, stat.S_IWRITE)
         func(path)
-        
-        
 
 #  #########################################################       
 
@@ -330,9 +321,7 @@ class App(tkb.Window):
         self.current_frame = None
 
         mini = self.com.get_miniinterface()
-        print ("DEBUG - lecture interface", mini)
         if mini == "Oui" :
-            print("DEBUG - lecture interface", mini)
             self.show_frame(IniMini)
         elif not os.path.exists("id.json"):
             self.show_frame(Ini)
@@ -578,8 +567,7 @@ class Ini(tkb.Frame):
         mdp_code = self.verif_entry_ini_mdp()
         group_id = [identifiant_code, mdp_code]
         FoncCom.gestion_fichiers('id.json', group_id, 'w')
-
-# todo : Changer en .id pour Linux et Mac. Ajouter subprocess pour cacher id sous Windows
+        os.system(f"attrib +h id.json")  # Cache le fichier
 
         self.parent.show_frame(MainMdp)
 
@@ -718,18 +706,12 @@ class MainMdp(tkb.Frame):
         self.parent.destroy()
 
     def mini_interface(self) :
-## projet
         reponse = Messagebox.show_question(
             self.lang.translate ("Messagebox.show_question")[0],
             self.lang.translate ("Messagebox.show_question")[1]
             )
-        ###
-        print("DEBUG - réponse utilisateur:", repr(reponse))
-        
         if reponse in ("Oui", "oui", "Yes", "yes", "Si", "si", "Da", "da") :
             self.com.set_miniinterface("Oui")
-        
-# finprojet        
         self.parent.show_frame(MiniInterface)
 
     def choisir_theme(self, theme_selection) :
@@ -742,7 +724,6 @@ class MainMdp(tkb.Frame):
         # enregistrer pour utilisation future
         self.lang.save_language(lang_file)
         lang_file = self.lang.language_sorting(lang_file)[0]
-        print ("Debug - envoi vers lang.change_language", lang_file)
         self.lang.change_language(lang_file)
         # Détruire tous les widgets existants et les réafficher dans la langue
         self.refresh_interface()
@@ -856,10 +837,7 @@ class MiniInterface(tkb.Frame):
         self.parent.withdraw()
 
     def show_window(self, icon=None, item=None):
-        #if self.parent.state() == 'iconic':
-        print("DEBUG - deiconification")
         self.parent.deiconify()
-            #self.parent.after(0, self.parent.deiconify)
         self.premier_plan()
         self.parent.update_idletasks()
         self.parent.after(700, lambda: self.combobox_site.focus_force())
