@@ -1,160 +1,159 @@
 {
 "file":
-    "File",
+    "Fichier",
 
 "help":
-    "Help",
+    "Aide",
 
 "theme":
-    "Theme",
+    "Thème",
 
 "interface":
     "Interface",
 
 "ini_langue":
-    "Select the interface language here",
+    "Choisissez votre langue",
 
 "ini_theme":
-    "Choose the interface theme",
+    "Coisissez le thème de l'interface",
 
-"entry_id":
-    "Enter your ID here. This can be any word you like; the only condition is that you must be able to remember it in case of need, as this identifier is used by the software but is not stored in the computer. Example: your first and last names, or those of your girlfriend, or one or more words of your choice. However, there's one rule you must observe: don't use spaces; replace spaces with underscores “_” (key 8 on a PC or dedicated key on a Mac). Example: Albert_Durant. There's no need to choose a complicated word. You will only be asked for this identifier if you change computer or after a formatting operation; however, you will need it, otherwise it will no longer reproduce the passwords you use",
+"entry_id" :
+    "Entrez ici votre identifiant. Celui-ci peut être n’importe quel mot de votre choix ; la seule condition est que vous puissiez vous en souvenir en cas de besoin, en effet,cet identifiant est utilisé par le logiciel mais n'est pas stocké dans l'ordinateur . Exemple, vos nom et prénoms, ou ceux de votre petite amie, ou un ou plusieurs mots quelconques.\nIl faut cependant respecter une règle, ne pas mettre d’espace ; remplacer les espaces par des underscores « _ »(touche 8 d’un PC ou touche dédiée sur un Mac). Exemple, Albert_Durant. Il est inutile de choisir un mot compliqué. Cet identifiant ne vous sera demandé que si vous changez d'ordinateur ou suite à un formatage ; cependant, il vous sera indispensable, sans quoi il ne reproduira plus les mots de passe que vous utilisez",
 
-"entry_ini_mdp":
-    "Enter your password here. As with the login above, choose a password without spaces and simple but not too simple; avoid your date of birth or “Qwerty”, use something like “Napoleon lost at Waterloo in 1815!” If you keep the first letters, you'll get\n“NlaWi1815!”, easy to remember and solid.\n Replace spaces with underscores ( _ ). Again, please note that the software does not save your password",
+"entry_ini_mdp" :
+    "Entrez ici votre mot de passe. Comme pour l’identifiant ci- dessus, choisissez un mot de passe sans espace et simple mais pas trop ; évitez votre date de naissance ou \"Azerty\", utilisez plutôt un truc du genre :\n« Le 18 juin 40 Charles de Gaulle appelle les français à la résistance! »\n. Prenez les premières lettres de chaque mot, vous obtenez\n \" L18j40CdGalfàlr! \", facile à retenir et solide.\n Autre exemple : « Ma grand-mère est née le 15 décembre 50! »\ndevient  \"Mg-menl15d50!\"\nRemplacez les espaces par des underscores ( _ ). Là encore, sachez que le logiciel n’enregistre pas votre mot de passe.",
 
-"mdp":
-    "Here you need to retype your password to check that it matches the one you entered during initialization when you first used the software. You are allowed 3 attempts. If you have made 3 errors, the software will close and you will not be able to use it. This procedure is designed to prevent any “pirate” from accessing your computer.",
+"mdp" :
+    "Vous devez ici retaper votre mot de passe afin de vérifier qu'il correspond à celui que vous avez entré lors de l'initialisation au cours de la première utilisation du logiciel. Vous avez droit à 3 essais. Si vous avez commis 3 erreurs, le logiciel se ferme et vous ne pouvez pas l'utiliser. Cette procédure vise à interdire l'usage à un éventuel \"pirate\" qui aurait accès à votre ordinateur.",
 
 "site":
-    "Click on the little arrow on the right to see the list of sites. You can also press the arrow key and enter. If the site concerned doesn't appear in the list, type it in, it will be taken into account and will appear the next time.\n As usual, don't put spaces, if necessary, replace them with underscores ( _ ).\n It can happen that the same site asks you for several passwords; let's imagine you visit the site “collection_voitures”. This site asks you for a password to register and has a forum that asks you for another password. Don't try to complicate things by copying the address; the most important thing is that you remember what you're doing. To keep the name in the list of sites, simplify it with “Collec_auto_i” and “Collec_auto_f” (for example)",
+    "Clic sur la petite flèche à droite pour avoir la liste des sites. Vous pouvez aussi appuyer sur la touche \"flèche-bas\" puis entrée. Si le site concerné ne figure pas dans la liste, tapez-le, il sera pris en compte et il apparaîtra la prochaine fois.\n Comme d'habitude, ne mettez pas d'espaces, si besoin, remplacez les par des underscores ( _ ).\n Il peut arriver qu'un même site vous demande plusieurs mots de passe ; imaginons que vous visitiez le site «collection_voitures». Ce site vous demande un mot de passe pour votre inscription et dispose d'un forum qui vous demande un autre mot de passe. Ne cherchez pas la complication en recopiant l'adresse ; l'essentiel est que vous vous souveniez de ce que vous faites. Afin que le nom loge dans la liste des sites, simplifiez par «Collec_auto_i» et «Collec_auto_f» (par exemple).",
 
 
 "Messagebox.show_warning":
     [
-    "No help files found for this widget.",
-    "Help"
+    "Aucun fichier d'aide trouvé pour ce widget.",
+    "Aide"
     ],
 
 "Messagebox.show_error_1":
     [
-    "This password is invalid, try again\nYou have three tries.",
-    "Invalid password"
+    "Ce mot de passe n'est pas valide, recommencez\nVous avez trois essais.",
+    "Mot de passe invalide"
     ],
 
 "Messagebox.show_error_2":
     [
-    "Either you haven't chosen a site, or the name you typed contains one or more spaces, which is (in principle) forbidden in site names",
-    "Questionable validation."
+    "Soit vous n'avez pas choisi de site, soit le nom tapé contient un ou plusieurs espaces, ce qui est (en principe) interdit dans les noms de site",
+    "Validation douteuse"
     ],
 
 "button_valid.configure_text":
-    "Click to obtain your \"strong\" password",
+    "Cliquez pour obtenir votre mot de passe « solide »",
 
 "label_mdp_text":
-    "Please type your password",
+    "Veuillez taper votre mot de passe",
 
 "ToolTip_entry_mdp_text":
-    "Type your password here without spaces as verification. To validate, press \"Enter\" ",
+    "Tapez ici votre mot de passe sans espace à titre de vérification\nPour valider, appuyez sur «Entrée» ",
 
 "label_site_text":
-    "Please select the relevant site",
+    "Veuillez choisir le site ou l'app concerné",
 
 "ToolTip_combobox_site_text":
-    "Click on the small arrow on the right to choose the requesting site or press the \"↓\" key. If it doesn't appear, type it in, it will be present the next time you use it.\nFor more details, type \"F1\"",
+    "Cliquez sur la petite flèche à droite pour choisir le site demandeur ou appuyez sur la touche « ↓ ». S'il ne figure pas, tapez le, il sera présent lors de la prochaine utilisation.\nPour plus de détails, appuyez sur « F1 »",
 
 "ToolTip_button_valid_text":
-    "Click here or press \"Enter\" to validate",
+    "Cliquez ici ou appuyez sur *«Entrée» pour valider",
 
 "label_info_sortie_text":
-    "Below is your password \"strong\"\nIt's copied to the clipboard. To use it, simply go to the requesting software\nand type \"<Ctrl+v>\" or \"<right-click-paste>\"",
+    "Ci-dessous votre mot de passe « solide »\nIl est copié dans le presse papier. Pour l'utiliser, il vous suffit de vous rendre dans le\nlogiciel demandeur et taper \"<Ctrl+v>\" ou \"<clic droit-coller>\"",
 
 "button_valid_ini.configure_text":
-    "Validate",
+    "Valider",
 
 "Messagebox.show_error_3":
     [
-    "You have not chosen a username or it contains spaces",
-    "Invalid username"
+    "Vous n'avez pas choisi d'identifiant ou celui-ci contient des espaces.",
+    "Identifiant invalide"
     ],
 
 "Messagebox.show_error_4":
     [
-    "You have not chosen a password or it contains spaces",
-    "Invalid password"
+    "Vous n'avez pas choisi de mot de passe ou celui-ci contient des espaces.",
+    "Mot de passe invalide"
     ],
 
 "ini_fen_ttk.Window_title":
-    "First use: Initialize login and password",
+    "Première utilisation : Initialisation identifiant et mot de passe",
 
 "label_id_ttk.Label_ini_fen_text":
-    "Please enter your login",
+    "Veuillez saisir votre identifiant",
 
 "ToolTip_entry_id_text":
-    "Enter your ID here.\nValidate by pressing “Enter”\nFor more details, press “F1”.",
+    "Saisissez ici votre identifiant.\nValidez en appuyant sur «Entrée»\nPour plus de détails, appuyez sur « F1 ».",
 
 "label_ini_mdp_ttk.Label_ini_fen_text":
-    "Please enter your password",
+    "Veuillez entrer votre mot de passe",
 
 "ToolTip_entry_ini_mdp_text":
-    "Type your password here without spaces. Validate by pressing “Enter”\nFor more details, type “F1”.",
+    "Tapez ici votre mot de passe sans espace. Validez en appuyant sur «Entrée»\nPour plus de détails, tapez « F1 ».",
 
 "ToolTip_button_valid_ini_text":
-    "Click here or press enter.",
+    "Cliquez ici ou appuyez sur entrée",
 
 "label_link_notice":
-    "Instructions for use",
+    "Notice d'emploi",
 
 "ToolTip_label_link_notice":
-    "If you would like to consult the complete instructions for use, click here",
+    "Si vous désirez consulter la notice d'emploi globale, cliquez ici",
 
 "label_ini_langue":
-    "Language",
+    "Langue",
 
 "combobox_ini_langue":
     [
-    "French",
-    "English",
-    "Spanish",
-    "Romanian"
+    "Français",
+    "Anglais",
+    "Espagnol",
+    "Roumain"
     ],
-
 "label_ini_theme":
-    "Theme",
+    "Thème",
 
 "combobox_ini_theme":
     [
-    "Clear",
-    "Dark",
-    "Soft",
-    "blue-night"
+    "Clair",
+    "Foncé",
+    "Doux",
+    "Bleu-nuit"
     ],
 
 "ToolTip_combobox_ini_langue":
-    "Choose the interface language by clicking on the small arrow or by pressing the down-arrow key “↓”. Confirm by pressing the “enter” key",
+    "Choisissez la langue de l'interface en cliquant sur la petite flèche ou en appuyant sur la touche flèche-bas « ↓ ». Validez en appuyant sur la touche « entrée »",
 
 "ToolTip_combobox_ini_theme":
-    "Choose theme. Confirm by pressing the “enter” key",
+    "Choisissez le thème. Validez en appuyant sur la touche « entrée »",
 
 "label_info_ini_text":
-    "WARNING,\nthis initialization window only appears the first time\n you use your software.",
+    "ATTENTION, \nCette fenêtre d'initialisation n'apparait que lors de\n la première utilisation de votre logiciel.",
 
 "Messagebox.show_question":
     [
-    "You seem to have mastered Creapass.\nWould you like Creapass to open in minimized form when launched in the future?\n  If YES, you will find a menu by right-clicking on the icon next to the clock",
+    "Vous semblez maîtriser Creapass.\n Désirez vous qu'à l'avenir Creapass s'ouvre dès le lancement, sous sa forme minimisée ?\n  Si OUI, vous trouverez un menu en cliquant (clic droit) sur l'icône prés de l'horloge",
     "MiniInterface ?"
     ],
 
 "Minimenu":
     [
-    "Open and/or bring to the foreground",
-    "Minimize",
-    "Quit"
+    "Ouvrir et/ou mettre au premier plan",
+    "Réduire",
+    "Quitter"
     ],
 
 "Mdp_inimini":
-    "Type your Creapass password and press \"Enter\"",
+    "Tapez votre mot de passe Creapass et appuyez sur \"Entrée\"",
 
 "Systray_infobule":
-    "Creapass\nYour password creator"
+    "Creapass\nVotre créateur de mots de passe"
 }
