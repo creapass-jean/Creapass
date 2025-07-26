@@ -93,8 +93,7 @@ class FoncCom :
     def set_miniinterface(statut):
         """Écrit le statut appliqué dans user_data.json."""
         prefs = FoncCom.gestion_fichiers("user_data.json", {}, "r")
-        prefs["MiniInterface"] = statut
-        print("Écriture JSON avec : ", prefs)        
+        prefs["MiniInterface"] = statut        
         return FoncCom.gestion_fichiers("user_data.json", prefs, "w")
     @staticmethod
     def get_miniinterface(defaut="non"):
@@ -725,7 +724,6 @@ class MainMdp(tkb.Frame):
         # enregistrer pour utilisation future
         self.lang.save_language(lang_file)
         lang_file = self.lang.language_sorting(lang_file)[0]
-        print ("Debug - envoi vers lang.change_language", lang_file)
         self.lang.change_language(lang_file)
         # Détruire tous les widgets existants et les réafficher dans la langue
         self.refresh_interface()
