@@ -6,8 +6,8 @@
 #  Copyright 2025 Jean Dalbrut
 #  sauf logo et icône : Copyright 2025 Quentin Dalbrut 
 #
-# Merci aux IA :chatgpt et chat.deepseek pour leurs conseils souvent
-# judicieux et quelques corrections bienvenues
+# Merci aux différentes IA : chatgpt, chat.deepseek,  chat.mistral.ai, gemini.google, perplexity.ai et copilot.microsoft
+# pour leurs conseils la plupart du temps judicieux et quelques corrections bienvenues
 
 #   Licence
 # Ce logiciel est libre, vous êtes autorisé à l’utiliser sans restriction,
@@ -973,4 +973,3 @@ class IniMini(tkb.Frame):
 if __name__ == "__main__":
     app = App()
     app.mainloop()
-
