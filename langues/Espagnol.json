@@ -156,5 +156,12 @@
     "Escriba su contraseña de Creapass y presione \"Entrar\"",
 
 "Systray_infobule":
-    "Creapass\nSu creador de contraseñas"
+    "Creapass\nSu creador de contraseñas",
+
+"liste_aide":
+    [
+    "Manual de usuario",
+    "Video",
+    "Acerca de"
+    ]
 }

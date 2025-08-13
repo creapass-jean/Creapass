@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 #  creapass.py
-#  
+#
 #  Copyright 2025 Jean Dalbrut
-#  sauf logo et icône : Copyright 2025 Quentin Dalbrut 
+#  sauf logo et icône : Copyright 2025 Quentin Dalbrut
 #
 # Merci aux différentes IA : chatgpt, chat.deepseek,  chat.mistral.ai, gemini.google, perplexity.ai et copilot.microsoft
 # pour leurs conseils la plupart du temps judicieux et quelques corrections bienvenues
@@ -22,7 +22,7 @@
 # en anglais)
 # La page donne également accès à plus de 30 traductions
 
-
+from tkinter import Button, Frame
 import ttkbootstrap as tkb
 from ttkbootstrap.constants import *
 from ttkbootstrap.dialogs import Messagebox
@@ -62,7 +62,7 @@ class FoncCom :
             with open(fichier, "w", encoding="utf-8") as fic:
                 json.dump(data, fic, indent=4, ensure_ascii=False)
             return data
-        
+
     @staticmethod
     def get_theme_choisi(defaut="Clair"):
         """Lit le thème choisi dans user_data.json, ou retourne une valeur par défaut."""
@@ -86,9 +86,9 @@ class FoncCom :
     def set_theme_applique(theme_ap):
         """Écrit le thème appliqué dans user_data.json."""
         prefs = FoncCom.gestion_fichiers("user_data.json", {}, "r")
-        prefs["theme_applique"] = theme_ap        
+        prefs["theme_applique"] = theme_ap
         return FoncCom.gestion_fichiers("user_data.json", prefs, "w")
-    
+
     @staticmethod
     def set_miniinterface(statut):
         """Écrit le statut appliqué dans user_data.json."""
@@ -113,7 +113,7 @@ class FoncCom :
 ### fin cryptage
 
 ### section thème
-    def change_theme(self, theme_selection) :        
+    def change_theme(self, theme_selection) :
         '''calcule l'ensemble thème-indice'''
         theme_selection = theme_selection.strip()
         # enregistrer pour utilisation future
@@ -142,14 +142,12 @@ class FoncCom :
         FoncCom.set_theme_applique(theme)
         return nom_theme
 
-    def affiche_notice(self, cible): 
-        self.cible = cible
-        if cible == "Notice d'emploi":
-            html_path = Path("active_html/notice.html")
-            webbrowser.open(html_path.resolve().as_uri())  
+    def affiche_notice(self):
+        html_path = Path("active_html/notice.html")
+        webbrowser.open(html_path.resolve().as_uri())
 
 #todo : construire les autres fonctions liées au menu Aide
-            
+
     def recup_site(self, site, name, event = None) :
         """récupère le nom du site demandeur et en vérifie la validité. Si le nom ne figure pas dans la liste, l'ajoute et l'enregistre sur le disque"""
         site = site.capitalize()    #1ère lettre en capitale
@@ -165,7 +163,7 @@ class FoncCom :
         else :
             # charge la liste des sites depuis le fichier"sites.json"
             data = FoncCom.gestion_fichiers("sites.json",[],wr="r")
-            # vérifie la présence ou non dans la liste ; si absent, l'ajouter    
+            # vérifie la présence ou non dans la liste ; si absent, l'ajouter
             if not site in data:
                 data.append(site)
                 data.sort()    #classe la liste par ordre alphabétique
@@ -173,7 +171,7 @@ class FoncCom :
             FoncCom.gestion_fichiers("sites.json", data, "w")
             if name == "site":
                 self.main_mdp.quitsite()
-            self.main_mdp.combobox_site.configure(values = FoncCom.gestion_fichiers("sites.json", [], "r"),)    
+            self.main_mdp.combobox_site.configure(values = FoncCom.gestion_fichiers("sites.json", [], "r"),)
             return
 
 ### validation des données et calcul final du mot de passe "solide"
@@ -190,11 +188,11 @@ class FoncCom :
         base = identvar + motvar + site_code
         passfinal = self.empreinte(base)
         passdesire = passfinal [0 : 25]
-        
+
         """Bien que la probabilité qu'il manque soit une minuscule ou une majuscule ou un signe ou un chiffre, souvent demandés par les sites, soit extrèmement faible, cette ligne ajoute de façon sûre ces 4 types de caractères (y!Y8)"""
         passdesire = passdesire[0:4] + "y" + passdesire[5:10] + "!" + passdesire[11:16] + "Y" + passdesire[17:20] + "8" + passdesire[21:]
         return passdesire
-        # fin mot_de_passe désiré            
+        # fin mot_de_passe désiré
 
 ### fin du calculfinal
 
@@ -275,13 +273,13 @@ class LanguageManager:
         os.chmod(path, stat.S_IWRITE)
         func(path)
 
-#  #########################################################       
+#  #########################################################
 
 class Help :
     '''Gestion de l'aide'''
     def __init__(self) :
-        self.lang = LanguageManager()  # Gestionnaire de langues 
-              
+        self.lang = LanguageManager()  # Gestionnaire de langues
+
     def load_help_sections(self) :
         help_sections = self.lang.load_translations()
         return help_sections
@@ -303,7 +301,7 @@ class Help :
 
 # ##########################################################
 
-    
+
 class App(tkb.Window):
     '''Gestion de l'application'''
 
@@ -323,6 +321,7 @@ class App(tkb.Window):
         mini = self.com.get_miniinterface()
         if mini == "Oui" :
             self.show_frame(IniMini)
+
         elif not os.path.exists("id.json"):
             self.show_frame(Ini)
         else:
@@ -336,10 +335,135 @@ class App(tkb.Window):
         self.current_frame = frame_class(self)
         self.current_frame.pack(fill="both", expand=True)  # Assure l'affichage correct
 
+    def show_apropos(self) :
+        A_propos(self)
+
     def fermeture(self, event = None) :
-        self.destroy()    
+        self.destroy()
 
 # ##########################################################
+
+class A_propos(tkb.Toplevel) :
+    def __init__(self, parent) :
+        super().__init__(parent)        
+        self.lang = LanguageManager()  # Gestionnaire de langues
+        self.title ("À propos de creapass")
+        self.geometry ("380x440+270+270")
+        
+        self.logo = tkb.PhotoImage(file = "images_creapass/logo2.png")
+        self.lbl_im = tkb.Label(self, image=self.logo)
+        self.lbl_im.pack()
+        
+        self.trait = tkb.Label(self,
+                               text = "-----------"
+                              )
+        self.trait.pack()
+        
+        self.lbl_app = tkb.Label(self,
+                                 font = ("", 15, "bold"),
+                                 text = "Creapass",
+                                )
+        self.lbl_app.pack()
+
+        self.lbl_des = tkb.Label(self,
+                                 font=("", 10, "bold"),
+                                 justify = "center",
+                                 text = "Créateur de mots de passe\nsolides, reproductibles et sécurisés"
+                                )
+        self.lbl_des.pack()
+
+        self.lbl_ver = tkb.Label(self,
+                                 text = "1.0.0"
+                                )
+        self.lbl_ver.pack()
+
+        self.lbl_cop = tkb.Label(self,
+                            text = "Copyright 2025 Jean Dalbrut\nsauf icône et logo, copyright 2025 Quentin Dalbrut",
+                            justify = "center"
+                           )
+        self.lbl_cop.pack()
+
+        self.lbl_trad = tkb.Label(self,
+                                  text = "Traductions :",
+                                  )
+        self.lbl_trad.pack()
+
+        self.lbl_listrad = tkb.Label(self,
+                                     text = "https://www.deepl.com/fr/translator\nhttps://mistral.ai/fr\nAlexis Dupuy (espagnol)\nGeneviève Costello (anglais)"
+                                     )
+        self.lbl_listrad.pack()
+
+        self.frame_cdes = tkb.Frame(self)
+        self.frame_cdes.columnconfigure(0, weight=1, uniform="cols")
+        self.frame_cdes.columnconfigure(1, weight=1, uniform="cols")
+        self.frame_cdes.columnconfigure(2, weight=1, uniform="cols")
+        self.frame_cdes.pack(padx=10, pady=10, fill="x")
+
+        self.lbl_web = tkb.Label(self.frame_cdes,
+                                 text = "information",
+                                 anchor="center",
+                                 font = ("", 12, "underline"),
+                                 cursor = "hand2",
+                                 bootstyle = "primary"
+                                 )
+        self.lbl_web.grid(column = 0,row = 0, sticky="nsew",padx =5)
+        self.lbl_web.bind("<Button-1>", self.information)
+
+        self.lbl_mail = tkb.Label(self.frame_cdes,
+                                 text = "contact",
+                                 anchor="center",
+                                 font = ("", 12, "underline"),
+                                 cursor = "hand2",
+                                 bootstyle = "primary"
+                                 )
+        self.lbl_mail.grid(column = 2, row = 0, sticky="nsew", padx =5)
+        self.lbl_mail.bind("<Button-1>", self.ouvrir_mail)
+
+        for lbl in (self.lbl_web, self.lbl_mail) :
+            lbl.bind("<Enter>", self.on_enter)
+            lbl.bind("<Leave>", self.on_leave)
+
+        self.btn_quit = tkb.Button(self.frame_cdes,
+                                  text = "Fermer",
+                                  command= self.fermer,
+                                  bootstyle ="primary"
+                                  )
+        self.btn_quit.bind("<Enter>", self.btn_survol)
+        self.btn_quit.bind("<Leave>", self.btn_sortie)
+        self.btn_quit.grid(column = 1, row = 0, sticky="nsew", padx = 5)
+
+    def fermer(self) :
+        self.destroy()
+
+    def information(self, event=None) :
+        html_path = Path("active_html/presentation.html")
+        webbrowser.open(html_path.resolve().as_uri())
+        
+    def on_enter(self, event=None) :
+        event.widget.configure(bootstyle = "inverse-success")
+            
+    def on_leave(self, event=None) :
+        event.widget.configure(bootstyle = "primary")
+        
+    def btn_survol(self, event=None) :
+        event.widget.configure(bootstyle = "success")
+        
+    def btn_sortie(self, event=None) :
+        event.widget.configure(bootstyle = "primary")
+   
+
+    def ouvrir_mail(self, event=None) :
+        destinataire = "jeandalbrut@gmail.com"
+        sujet = "Demande de contact"
+        corps = "Bonjour Jean, je souhaite vous contacter concernant..."
+        # Encodage des espaces et caractères spéciaux
+        sujet = sujet.replace(" ", "%20")
+        corps = corps.replace(" ", "%20").replace("\n", "%0A")
+        lien_mailto = f"mailto:{destinataire}?subject={sujet}&body={corps}"
+        webbrowser.open(lien_mailto)
+
+# ##########################################################
+
 
 class Ini(tkb.Frame):
     '''Initialisation de l'application'''
@@ -385,7 +509,7 @@ class Ini(tkb.Frame):
         label_ini_langue.place(x = 20, y = 150, width = 120, height = 30)
 
     # combo langue
-        #récupérer sur le disque la langue utilisée précédemment 
+        #récupérer sur le disque la langue utilisée précédemment
         data = FoncCom.gestion_fichiers("user_data.json", {}, wr="r")
         langue_choisie = data.get("langue", "Français")  # valeur par défaut
         # Récupérer toute la liste associée à la clé "combobox_ini_langue"
@@ -594,9 +718,7 @@ class MainMdp(tkb.Frame):
                                        )
         bouton_fichier.place(x= 2, y= 0, width = 148, height = 30)
         options_dispo = tkb.Menu(bouton_fichier)
-        var_fichier = tkb.StringVar()
-        for y in ["Quitter"] :
-           options_dispo.add_radiobutton(label = y, variable = var_fichier, command= lambda y = y: self.fermeture())
+        options_dispo.add_radiobutton(label = self.lang.translate("Minimenu")[2], command= lambda : self.fermeture())
         bouton_fichier['menu'] = options_dispo
 
     # menu thèmes
@@ -605,10 +727,10 @@ class MainMdp(tkb.Frame):
                                        bootstyle = "primary-outline"
                                        )
         bouton_theme.place(x= 151, y= 0, width = 148, height = 30)
-        themes_dispo = tkb.Menu(bouton_theme)        
-        var_theme = tkb.StringVar()
-        for y in ["Clair", "Foncé", "Doux", "Bleu-nuit"] :
-           themes_dispo.add_radiobutton(label = y, variable = var_theme, command= lambda y = y : self.choisir_theme(y))
+        themes_dispo = tkb.Menu(bouton_theme)
+        liste_theme = self.lang.translate("combobox_ini_theme")
+        for y in liste_theme :
+           themes_dispo.add_radiobutton(label = y, command= lambda y = y : self.choisir_theme(y))
         bouton_theme['menu'] = themes_dispo
 
     # menu interface
@@ -619,22 +741,23 @@ class MainMdp(tkb.Frame):
         bouton_interface.place(x= 300, y= 0, width = 148, height = 30)
         self.interface = tkb.Menu(bouton_interface)
         self.langues = tkb.Menu(self.interface)
-        for y in ["Français", "Anglais", "Espagnol", "Roumain"] :
+        liste_langues = self.lang.translate("combobox_ini_langue")
+        for y in liste_langues :
             self.langues.add_command(label = y,  command= lambda y = y : self.choisir_langue(y))
-        self.interface.add_cascade(label = "Langue", menu = self.langues) 
+        self.interface.add_cascade(label = "Langue", menu = self.langues)
         self.interface.add_command(label = "mini-interface", state= "disabled", command= self.mini_interface)
         bouton_interface['menu'] = self.interface
 
-    # menu aide                                            
+    # menu aide
         bouton_aide = tkb.Menubutton(self,
                                        text = self.lang.translate("help"),
                                        bootstyle = "primary-outline"
                                        )
         bouton_aide.place(x= 449, y= 0, width = 148, height = 30)
-        aide_dispo = tkb.Menu(bouton_aide)        
-        var_aide = tkb.StringVar()
-        for y in ["Notice d'emploi", "Vidéo", "À propos"] :
-           aide_dispo.add_radiobutton(label = y, variable = var_aide, command= lambda y = y: self.choisir_aide(y))
+        aide_dispo = tkb.Menu(bouton_aide)
+        liste_aide = self.lang.translate("liste_aide")
+        for y in liste_aide :
+           aide_dispo.add_radiobutton(label = y, command= lambda y = y: self.choisir_aide(y))
         bouton_aide['menu'] = aide_dispo
 
     # label mdp
@@ -730,7 +853,11 @@ class MainMdp(tkb.Frame):
         self.lang.change_html_lang(lang_file)
 
     def choisir_aide(self, cible):
-        self.com.affiche_notice(cible)
+        if cible in ["Notice d'emploi", "User Manual", "Manual de usuario", "Manual de utilizare"]:
+            self.com.affiche_notice()
+        elif cible in ["À propos", "About", "Acerca de", "Despre"] :
+            self.parent.show_apropos()
+
 
     def refresh_interface(self):
         """Rafraîchit l'interface après un changement de langue."""
@@ -791,7 +918,7 @@ class MainMdp(tkb.Frame):
         self.combobox_site.delete(0, END)
         self.combobox_site.focus_set()
         return pressPap
-        # fin mot_de_passe désiré            
+        # fin mot_de_passe désiré
 ### fin du calculfinal
 
 # ##########################################################
@@ -812,7 +939,7 @@ class MiniInterface(tkb.Frame):
         self.sans_barre_sys = True #windows
         self.parent.bind("<Alt-m>", self.sans_barre_syst) #windows
         self.create_widgets()
-        
+
 #### projet systray ####
 
         # Interception de la fermeture par la croix
@@ -832,7 +959,7 @@ class MiniInterface(tkb.Frame):
         # Lancement du systray dans un thread séparé
         self.systray_thread = threading.Thread(target=self.icon.run, daemon=True)
         self.systray_thread.start()
-        
+
     def hide_window(self):
         self.parent.withdraw()
 
@@ -845,7 +972,7 @@ class MiniInterface(tkb.Frame):
     def premier_plan(self) :
         self.parent.lift()
         self.parent.attributes('-topmost', True)
-        self.parent.after(300, lambda: self.parent.attributes('-topmost', False))  # pour redonner la main ensuite    
+        self.parent.after(300, lambda: self.parent.attributes('-topmost', False))  # pour redonner la main ensuite
 
     def quit_app(self, icon=None, item=None):
         self.icon.stop()
@@ -854,7 +981,7 @@ class MiniInterface(tkb.Frame):
 #### fin projet systray ####
 
     def create_widgets(self) :
-    
+
     # combobox sites
         self.combobox_site = tkb.Combobox(self,
                                      name = "site",
@@ -891,12 +1018,12 @@ class MiniInterface(tkb.Frame):
         if self.compte_retour == False:
             site = self.combobox_site.get()
             self.com.recup_site(site, "site_mini")
-            
+
             if site == "" :
                 return
             else :
                 passdesire = self.com.mot_de_passe(site)
-            
+
             self.label_sortie.configure(text = passdesire)
             pressPap = pyperclip.copy(passdesire)
             self.compte_retour = True
@@ -917,9 +1044,9 @@ class IniMini(tkb.Frame):
         self.aide = Help()
         self.com = FoncCom(self)
         self.parent = parent
-        self.parent.overrideredirect(True) #windows 
-        x = 20 
-        y = 20 
+        self.parent.overrideredirect(True) #windows
+        x = 20
+        y = 20
         self.parent.geometry(f"570x30+{x}+{y}")
         self.parent.title("Creapass")
         self.parent.style.theme_use("cosmo")
@@ -969,7 +1096,13 @@ class IniMini(tkb.Frame):
 
 
 # ##########################################################
-    
+
 if __name__ == "__main__":
     app = App()
     app.mainloop()
+
+
+
+
+
+

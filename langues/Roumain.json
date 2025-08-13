@@ -154,5 +154,13 @@
     "Introduceți parola Creapass și apăsați \"Enter\"",
 
 "Systray_infobule":
-    "Creapass\nCreatorul tău de parole"
+    "Creapass\nCreatorul tău de parole",
+
+"liste_aide":
+    [
+    "Manual de utilizare",
+    "Videoclip",
+    "Despre"
+    ]
+    
 }

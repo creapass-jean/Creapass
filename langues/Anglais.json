@@ -156,5 +156,12 @@
     "Type your Creapass password and press \"Enter\"",
 
 "Systray_infobule":
-    "Creapass\nYour password creator"
+    "Creapass\nYour password creator",
+
+"liste_aide":
+    [
+    "User Manual",
+    "Video",
+    "About"
+    ]
 }

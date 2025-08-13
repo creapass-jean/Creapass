@@ -155,5 +155,13 @@
     "Tapez votre mot de passe Creapass et appuyez sur \"Entrée\"",
 
 "Systray_infobule":
-    "Creapass\nVotre créateur de mots de passe"
+    "Creapass\nVotre créateur de mots de passe",
+
+"liste_aide":
+    [
+    "Notice d'emploi",
+    "Vidéo",
+    "À propos"
+    ]
+
 }
