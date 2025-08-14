@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 #  creapass.py
+#  Créateur de mots de passe solides, reproductibles et sécurisés
 #
 #  Copyright 2025 Jean Dalbrut
 #  sauf logo et icône : Copyright 2025 Quentin Dalbrut
