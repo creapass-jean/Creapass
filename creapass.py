@@ -498,7 +498,7 @@ class Ini(tkb.Frame):
                                       justify = "center"
                                       )
         label_link_notice.place(x = 210, y = 100, width = 150, height = 30)
-        label_link_notice.bind("<Button-1>", lambda x: self.choisir_aide("Notice d'emploi"))
+        label_link_notice.bind("<Button-1>", lambda x: self.choisir_aide())
     # Ajouter un tooltip
         ToolTip(label_link_notice, text = self.lang.translate("ToolTip_label_link_notice"), alpha = 0.85)
 
@@ -628,8 +628,8 @@ class Ini(tkb.Frame):
     def quit_langue(self, event = None) :
         self.combobox_ini_theme.focus_set()
 
-    def choisir_aide(self, cible, event = None):
-        self.com.affiche_notice(cible)
+    def choisir_aide(self):
+        self.com.affiche_notice()
 
     def change_theme(self, theme_selection) :
         nom_theme = self.com.change_theme(theme_selection)
