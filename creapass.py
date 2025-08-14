@@ -9,18 +9,6 @@
 # Merci aux différentes IA : chatgpt, chat.deepseek,  chat.mistral.ai, gemini.google, perplexity.ai et copilot.microsoft
 # pour leurs conseils la plupart du temps judicieux et quelques corrections bienvenues
 
-#   Licence
-# Ce logiciel est libre, vous êtes autorisé à l’utiliser sans restriction,
-# le partager voire l’améliorer sous certaines conditions, notamment citer
-# le nom de l’auteur et de l’accompagner des textes et image originaux qui
-# le composent.
-# Les précisions sont résumées à cette adresse :
-# https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr
-# ou sous forme plus complète et plus juridique à cette adresse :
-# https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.fr (traduction)
-# ou https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.en (original
-# en anglais)
-# La page donne également accès à plus de 30 traductions
 
 from tkinter import Button, Frame
 import ttkbootstrap as tkb
