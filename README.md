@@ -64,12 +64,9 @@ Creapass/
 ## 🚀 Lancer l’application
 ```bash
 python creapass.py
-
-
-Ou bien, sous Windows : creapass.exe
 ---
 ```
----
+
 
 🧭 **Origine du projet**  
 Développé et testé avec soin à Limoges, Nouvelle-Aquitaine 🇫🇷  
