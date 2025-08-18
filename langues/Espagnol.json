@@ -11,12 +11,6 @@
 "interface":
     "Interfaz",
 
-"theme":
-    "Tema",
-
-"interface":
-    "Interfaz",
-
 "entry_id" :
     "Introduzca aquí su nombre de usuario. Puede ser cualquier palabra que desee; la única condición es que pueda recordarla si la necesita, ya que este identificador es utilizado por el software pero no se almacena en el ordenador. Por ejemplo, su nombre y apellidos, o el nombre y apellidos de su novia, o una o varias palabras de cualquier tipo. Sin embargo, hay una regla que debe respetarse: no utilice espacios; sustituya los espacios por guiones bajos (tecla 8 en un PC o tecla dedicada en un Mac). Por ejemplo, Albert_Durant. No es necesario elegir una palabra complicada. Sólo se le pedirá este identificador si cambia de ordenador o después de formatear; sin embargo, lo necesitará, pues de lo contrario ya no reproducirá las contraseñas que utilice.",
 
