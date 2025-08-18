@@ -163,5 +163,15 @@
     "Manual de usuario",
     "Video",
     "Acerca de"
-    ]
+    ],
+
+"a_propos":
+    [
+    "Acerca de Creapass",
+    "Creador de contraseñas\nfuertes, reproducibles y seguras",
+    "Copyright 2025 Jean Dalbrut\nexcepto icono y logo, copyright 2025 Quentin Dalbrut",
+    "información",
+    "contacto",
+    "cerrar"
+    ]   
 }

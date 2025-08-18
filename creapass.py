@@ -11,7 +11,6 @@
 # pour leurs conseils la plupart du temps judicieux et quelques corrections bienvenues
 
 
-from tkinter import Button, Frame
 import ttkbootstrap as tkb
 from ttkbootstrap.constants import *
 from ttkbootstrap.dialogs import Messagebox

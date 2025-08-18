@@ -162,6 +162,16 @@
     "Notice d'emploi",
     "Vidéo",
     "À propos"
+    ],
+
+"a_propos":
+    [
+    "À propos de Creapass",
+    "Créateur de mots de passe\nsolides, reproductibles et sécurisés",
+    "Copyright 2025 Jean Dalbrut\nsauf icône et logo, copyright 2025 Quentin Dalbrut",
+    "information",
+    "contact",
+    "fermer"
     ]
 
 }
