@@ -335,7 +335,7 @@ class A_propos(tkb.Toplevel) :
     def __init__(self, parent) :
         super().__init__(parent)        
         self.lang = LanguageManager()  # Gestionnaire de langues
-        self.title ("À propos de creapass")
+        self.title (self.lang.translate("a_propos")[0])
         self.geometry ("380x440+270+270")
         
         self.logo = tkb.PhotoImage(file = "images_creapass/logo2.png")
@@ -356,7 +356,7 @@ class A_propos(tkb.Toplevel) :
         self.lbl_des = tkb.Label(self,
                                  font=("", 10, "bold"),
                                  justify = "center",
-                                 text = "Créateur de mots de passe\nsolides, reproductibles et sécurisés"
+                                 text = self.lang.translate("a_propos")[1]
                                 )
         self.lbl_des.pack()
 
@@ -366,13 +366,13 @@ class A_propos(tkb.Toplevel) :
         self.lbl_ver.pack()
 
         self.lbl_cop = tkb.Label(self,
-                            text = "Copyright 2025 Jean Dalbrut\nsauf icône et logo, copyright 2025 Quentin Dalbrut",
+                            text = self.lang.translate("a_propos")[2],
                             justify = "center"
                            )
         self.lbl_cop.pack()
 
         self.lbl_trad = tkb.Label(self,
-                                  text = "Traductions :",
+                                  text = self.lang.translate("a_propos")[3],
                                   )
         self.lbl_trad.pack()
 
@@ -388,7 +388,7 @@ class A_propos(tkb.Toplevel) :
         self.frame_cdes.pack(padx=10, pady=10, fill="x")
 
         self.lbl_web = tkb.Label(self.frame_cdes,
-                                 text = "information",
+                                 text = self.lang.translate("a_propos")[4],
                                  anchor="center",
                                  font = ("", 12, "underline"),
                                  cursor = "hand2",
@@ -398,7 +398,7 @@ class A_propos(tkb.Toplevel) :
         self.lbl_web.bind("<Button-1>", self.information)
 
         self.lbl_mail = tkb.Label(self.frame_cdes,
-                                 text = "contact",
+                                 text = self.lang.translate("a_propos")[5],
                                  anchor="center",
                                  font = ("", 12, "underline"),
                                  cursor = "hand2",
@@ -412,7 +412,7 @@ class A_propos(tkb.Toplevel) :
             lbl.bind("<Leave>", self.on_leave)
 
         self.btn_quit = tkb.Button(self.frame_cdes,
-                                  text = "Fermer",
+                                  text = self.lang.translate("a_propos")[6],
                                   command= self.fermer,
                                   bootstyle ="primary"
                                   )
