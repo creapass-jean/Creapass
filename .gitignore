@@ -1,6 +1,6 @@
-# Dossiers générés ou temporaires
+# Dossiers ou fichiers générés ou temporaires
 active_html/
-user_data/
+user_data
 
 # Fichiers de test ou sensibles
 id.json

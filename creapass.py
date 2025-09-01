@@ -27,6 +27,8 @@ import hashlib
 import base64
 import pyperclip
 import webbrowser
+import tkhtmlview
+
 
 #  #########################################################
 
@@ -88,6 +90,15 @@ class FoncCom :
         """Lit le statut de l'interface mini dans user_data.json."""
         prefs = FoncCom.gestion_fichiers("user_data.json", {}, "r")
         return prefs.get("MiniInterface", defaut)
+    
+    @staticmethod
+    def lecture_html(fichier_html):
+        """Lit le contenu d'un fichier HTML et le retourne sous forme de chaîne."""
+        try:
+            with open(fichier_html, "r", encoding="utf-8") as f:
+                return f.read()
+        except FileNotFoundError:
+            return "<h1>Fichier HTML non trouvé</h1>"
 
 ### fin gestion fichiers
 
@@ -302,6 +313,7 @@ class App(tkb.Window):
         self.style.theme_use(theme)
         self.iconphoto(True, tkb.PhotoImage(file =  "images_creapass/creapass.png"))
         self.resizable(0,0)
+        self.bind("<Alt-i>", self.réinitialisation_totale)
         self.bind("<Control-q>", self.fermeture)
         self.bind("<Control-Q>", self.fermeture)
         self.current_frame = None
@@ -323,9 +335,12 @@ class App(tkb.Window):
         self.current_frame = frame_class(self)
         self.current_frame.pack(fill="both", expand=True)  # Assure l'affichage correct
 
+    def réinitialisation_totale(self, event = None):
+        Danger(self)
+
     def show_apropos(self) :
         A_propos(self)
-
+        
     def fermeture(self, event = None) :
         self.destroy()
 
@@ -926,7 +941,14 @@ class MiniInterface(tkb.Frame):
         self.compte_retour = False
         self.sans_barre_sys = True #windows
         self.parent.bind("<Alt-m>", self.sans_barre_syst) #windows
+        self.parent.bind("<Alt-s>", self.réinitialisation_simple)
+
         self.create_widgets()
+        
+    def réinitialisation_simple(self, event = None):
+        self.com.set_miniinterface("Non")
+        self.parent.show_frame(MainMdp)
+
 
 #### projet systray ####
 
@@ -1082,7 +1104,77 @@ class IniMini(tkb.Frame):
             self.entry_mdp_mini.delete(0, "end")
             self.entry_mdp_mini.config(foreground ='black', show='*')
 
+# ##########################################################
 
+class Danger(tkb.Toplevel):
+    def __init__(self, parent):
+        super().__init__(parent)
+        self.lang = LanguageManager()
+        self.aide = Help()
+        self.com = FoncCom(self)
+        self.parent = parent
+        self.geometry("1000x900+100+50")
+        self.parent.title("DANGER")
+        self.html = self.com.lecture_html("active_html/danger.html")
+        self.create_widgets()
+
+    def create_widgets(self) :
+        label_danger = tkb.Label(self,
+                                    text = "DANGER",
+                                    font = ("Arial Black Normal", 40),
+                                    foreground = "red"
+                                    )
+        label_danger.pack(pady = 20)
+
+        # Créer un widget HTML
+        self.html_view = tkhtmlview.HTMLLabel(self, html= self.html)
+        self.html_view.pack(fill="both", expand=True)
+    
+        # Ajouter une barre de défilement verticale
+        self.scrollbar = tkb.Scrollbar(self.html_view, command=self.html_view.yview)
+        self.scrollbar.pack(side="right", fill="y")
+        self.html_view.configure(yscrollcommand=self.scrollbar.set)
+
+
+    #
+        label_confirm = tkb.Label(self,
+                                text = "Confirmez-vous la réinitialisation totale de l'application ?\nToutes les données seront perdues.",
+                                font = ("", 20),
+                                 justify = "center"
+                                 )
+        label_confirm.pack(pady = 10)
+    
+    
+    #Créer un cadre pour les boutons
+        self.frame_buttons = tkb.Frame(self)
+        self.frame_buttons.pack(pady = 10)
+
+        self.btn_yes = tkb.Button(self.frame_buttons,
+                                text = "Oui",
+                                bootstyle = "danger",
+                                command = self.yes_action
+                                )
+        self.btn_yes.grid(row = 0, column = 0, padx = 10)
+
+        self.btn_no = tkb.Button(self.frame_buttons,
+                               text = "Non",
+                               bootstyle = "primary",
+                               command = self.no_action
+                               )
+        self.btn_no.grid(row = 0, column = 1, padx = 10)
+
+    def yes_action(self):
+        # Supprimer les fichiers de données
+        files_to_delete = ['id.json', 'sites.json', 'user_data.json']
+        for file in files_to_delete:
+            if os.path.exists(file):
+                   os.remove(file)
+        self.parent.show_frame(Ini)
+        self.destroy()
+
+    def no_action(self):
+        self.destroy()
+        
 # ##########################################################
 
 if __name__ == "__main__":
