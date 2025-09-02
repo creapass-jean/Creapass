@@ -13,7 +13,7 @@
 
 import ttkbootstrap as tkb
 from ttkbootstrap.constants import *
-from ttkbootstrap.dialogs import Messagebox
+from ttkbootstrap.dialogs import Messagebox, Icon
 from ttkbootstrap.tooltip import ToolTip
 from pathlib import Path
 from PIL import Image
@@ -313,7 +313,7 @@ class App(tkb.Window):
         self.style.theme_use(theme)
         self.iconphoto(True, tkb.PhotoImage(file =  "images_creapass/creapass.png"))
         self.resizable(0,0)
-        self.bind("<Alt-i>", self.réinitialisation_totale)
+        self.bind("<Double-Control-Alt-i>", self.réinitialisation_totale)
         self.bind("<Control-q>", self.fermeture)
         self.bind("<Control-Q>", self.fermeture)
         self.current_frame = None
@@ -479,6 +479,16 @@ class Ini(tkb.Frame):
         self.com = FoncCom(self)
         self.parent.geometry("550x350+200+200")
         self.parent.title(self.lang.translate("ini_fen_ttk.Window_title"))
+    # création du fichier user_data.json par défaut s'il n'existe pas
+        self.user_data_base = {
+            "theme_choisi": "Clair",
+            "theme_applique": "cosmo",
+            "langue": "Français",
+            "MiniInterface": "Non"
+            }
+        if not os.path.exists("user_data.json"):
+            FoncCom.gestion_fichiers("user_data.json", self.user_data_base, "w")
+
         self.create_widgets()
 
 # création des widgets
@@ -838,6 +848,9 @@ class MainMdp(tkb.Frame):
             )
         if reponse in ("Oui", "oui", "Yes", "yes", "Si", "si", "Da", "da") :
             self.com.set_miniinterface("Oui")
+        else :
+            self.com.set_miniinterface("Non")
+            return
         self.parent.show_frame(MiniInterface)
 
     def choisir_theme(self, theme_selection) :
@@ -1164,13 +1177,22 @@ class Danger(tkb.Toplevel):
         self.btn_no.grid(row = 0, column = 1, padx = 10)
 
     def yes_action(self):
+        self.alert = Messagebox.show_question(
+            self.lang.translate("Messagebox.show_warning_2")[0],
+            self.lang.translate("Messagebox.show_warning_2")[1],
+            alert = True,
+            buttons = ["Confirmer:danger", "Annuler:secondary"],
+            #icon=Icon.warning,
+            #parent = self.parent 
+            )
+        if self.alert == "Confirmer" :
         # Supprimer les fichiers de données
-        files_to_delete = ['id.json', 'sites.json', 'user_data.json']
-        for file in files_to_delete:
-            if os.path.exists(file):
-                   os.remove(file)
-        self.parent.show_frame(Ini)
-        self.destroy()
+            files_to_delete = ['id.json', 'sites.json', 'user_data.json']
+            for file in files_to_delete:
+                if os.path.exists(file):
+                       os.remove(file)
+            self.parent.show_frame(Ini)
+            self.destroy()
 
     def no_action(self):
         self.destroy()
