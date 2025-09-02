@@ -36,6 +36,12 @@
     "Aide"
     ],
 
+"Messagebox.show_warning_2":
+    [
+    "Êtes-vous VRAIMENT sûr de vouloir réinitialiser totalement le logiciel ?\nToutes vos données seront perdues.\nSi vous n'êtes pas sûr de vous, appuyez sur \"Non\" et demandez de l'aide à un professionnel.",
+    "DANGER"
+    ],
+
 "Messagebox.show_error_1":
     [
     "Ce mot de passe n'est pas valide, recommencez\nVous avez trois essais.",
