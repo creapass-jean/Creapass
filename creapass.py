@@ -15,6 +15,7 @@ import ttkbootstrap as tkb
 from ttkbootstrap.constants import *
 from ttkbootstrap.dialogs import Messagebox, Icon
 from ttkbootstrap.tooltip import ToolTip
+from ttkbootstrap.icons import Icon
 from pathlib import Path
 from PIL import Image
 import pystray
@@ -218,7 +219,7 @@ class LanguageManager:
 
     def translate(self, key):
         """Retourne la chaîne traduite pour la clé donnée."""
-        return self.translations.get(key, f"[{key}]")  # Fallback : affiche la clé non trouvée
+        return self.translations.get(key)#, f"[{key}]")  # Fallback : affiche la clé non trouvée
 
     def change_language(self, language_file):
         """
@@ -848,10 +849,10 @@ class MainMdp(tkb.Frame):
             )
         if reponse in ("Oui", "oui", "Yes", "yes", "Si", "si", "Da", "da") :
             self.com.set_miniinterface("Oui")
+            self.parent.show_frame(MiniInterface)
         else :
-            self.com.set_miniinterface("Non")
-            return
-        self.parent.show_frame(MiniInterface)
+            # self.com.set_miniinterface("Non")
+            self.parent.show_frame(MiniInterface)
 
     def choisir_theme(self, theme_selection) :
         nom_theme = self.com.change_theme(theme_selection)
@@ -957,31 +958,36 @@ class MiniInterface(tkb.Frame):
         self.parent.bind("<Alt-s>", self.réinitialisation_simple)
 
         self.create_widgets()
-        
-    def réinitialisation_simple(self, event = None):
-        self.com.set_miniinterface("Non")
-        self.parent.show_frame(MainMdp)
+        self.setup_systray()  
 
-
-#### projet systray ####
-
-        # Interception de la fermeture par la croix
+    def setup_systray(self):
+        """Configuration du systray"""
         self.parent.protocol("WM_DELETE_WINDOW", self.hide_window)
-        # Icone personnalisée
-        icon_path = "images_creapass/creapass.ico"
-        self.image = Image.open(icon_path)
-        # Configuration de l'icône système
-        self.icon = pystray.Icon("Creapass")
-        self.icon.icon = self.image
-        self.icon.title = self.lang.translate("Systray_infobule")
-        self.icon.menu = pystray.Menu(
-            pystray.MenuItem(self.lang.translate("Minimenu")[0], self.show_window),
-            pystray.MenuItem(self.lang.translate("Minimenu")[1], self.hide_window),
-            pystray.MenuItem(self.lang.translate("Minimenu")[2], self.quit_app)
+        
+        try:
+            icon_path = "images_creapass/creapass.ico"
+            if os.path.exists(icon_path):
+                self.image = Image.open(icon_path)
+            else:
+                self.image = Image.new('RGB', (64, 64), color='red')
+                
+            self.icon = pystray.Icon("Creapass")
+            self.icon.icon = self.image
+            self.icon.title = self.lang.translate("Systray_infobule")
+            self.icon.menu = pystray.Menu(
+                pystray.MenuItem(self.lang.translate("Minimenu")[0], self.show_window),
+                pystray.MenuItem(self.lang.translate("Minimenu")[1], self.hide_window),
+                pystray.MenuItem(self.lang.translate("Minimenu")[2], self.quit_app)
             )
-        # Lancement du systray dans un thread séparé
-        self.systray_thread = threading.Thread(target=self.icon.run, daemon=True)
-        self.systray_thread.start()
+            
+            self.systray_thread = threading.Thread(target=self.icon.run)
+            self.systray_thread.daemon = True
+            self.systray_thread.start()
+            
+        except Exception as e:
+            print(f"Erreur systray: {e}")
+            # Fallback: permettre la fermeture normale
+            self.parent.protocol("WM_DELETE_WINDOW", self.parent.destroy)
 
     def hide_window(self):
         self.parent.withdraw()
@@ -1028,6 +1034,10 @@ class MiniInterface(tkb.Frame):
                                  relief = "solid"
                                  )
         self.label_sortie.place(x = 241, y = 0, width = 330, height = 30)
+
+    def réinitialisation_simple(self, event = None):
+        self.com.set_miniinterface("Non")
+        self.parent.show_frame(MainMdp)
 
     def sans_barre_syst(self, event = None):
         if self.sans_barre_sys == True:
@@ -1109,9 +1119,8 @@ class IniMini(tkb.Frame):
             return
         else :
             self.parent.show_frame(MiniInterface)
-            self.parent.withdraw(
-            )
-
+            self.parent.show_frame(MiniInterface)
+            self.parent.withdraw()
     def on_entry_click(self, event=None):
         if self.entry_mdp_mini.get() == self.texte_entry :
             self.entry_mdp_mini.delete(0, "end")
@@ -1127,13 +1136,13 @@ class Danger(tkb.Toplevel):
         self.com = FoncCom(self)
         self.parent = parent
         self.geometry("1000x900+100+50")
-        self.parent.title("DANGER")
+        self.parent.title(self.lang.translate("Messagebox.show_warning_2")[1],)
         self.html = self.com.lecture_html("active_html/danger.html")
         self.create_widgets()
 
     def create_widgets(self) :
         label_danger = tkb.Label(self,
-                                    text = "DANGER",
+                                    text = self.lang.translate("Messagebox.show_warning_2")[1],
                                     font = ("Arial Black Normal", 40),
                                     foreground = "red"
                                     )
@@ -1148,10 +1157,8 @@ class Danger(tkb.Toplevel):
         self.scrollbar.pack(side="right", fill="y")
         self.html_view.configure(yscrollcommand=self.scrollbar.set)
 
-
-    #
         label_confirm = tkb.Label(self,
-                                text = "Confirmez-vous la réinitialisation totale de l'application ?\nToutes les données seront perdues.",
+                                text = self.lang.translate("Messagebox.show_warning_2")[3],
                                 font = ("", 20),
                                  justify = "center"
                                  )
@@ -1163,27 +1170,27 @@ class Danger(tkb.Toplevel):
         self.frame_buttons.pack(pady = 10)
 
         self.btn_yes = tkb.Button(self.frame_buttons,
-                                text = "Oui",
+                                text = self.lang.translate("Messagebox.show_warning_2")[4],
                                 bootstyle = "danger",
                                 command = self.yes_action
                                 )
         self.btn_yes.grid(row = 0, column = 0, padx = 10)
 
         self.btn_no = tkb.Button(self.frame_buttons,
-                               text = "Non",
+                               text = self.lang.translate("Messagebox.show_warning_2")[5],
                                bootstyle = "primary",
                                command = self.no_action
                                )
         self.btn_no.grid(row = 0, column = 1, padx = 10)
 
     def yes_action(self):
+        buttons_data = self.lang.translate("Messagebox.show_warning_2_buttons")
         self.alert = Messagebox.show_question(
             self.lang.translate("Messagebox.show_warning_2")[0],
-            self.lang.translate("Messagebox.show_warning_2")[1],
+            self.lang.translate("Messagebox.show_warning_2")[2],
             alert = True,
-            buttons = ["Confirmer:danger", "Annuler:secondary"],
-            #icon=Icon.warning,
-            #parent = self.parent 
+            parent = self,
+            buttons = [f"{b['label']}:{b['style']}" for b in buttons_data]
             )
         if self.alert == "Confirmer" :
         # Supprimer les fichiers de données

@@ -36,7 +36,23 @@
     "Help"
     ],
 
-"Messagebox.show_error_1":
+"Messagebox.show_warning_2":
+    [
+    "LAST WARNING: This will ERASE ALL DATA. Proceed only if certain. Otherwise, click 'No' and consult an expert.",
+    "WARNING",    
+    "CONFIRM RESET",
+    "Do you confirm the complete reset of the application?\nAll data will be lost.",
+    "Yes",
+    "No"
+    ],
+
+"Messagebox.show_warning_2_buttons":
+    [
+    {"label": "Confirm", "style": "danger"},
+    {"label": "Cancel", "style": "secondary"}
+    ],
+
+    "Messagebox.show_error_1":
     [
     "This password is invalid, try again\nYou have three tries.",
     "Invalid password"
