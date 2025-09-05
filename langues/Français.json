@@ -39,7 +39,17 @@
 "Messagebox.show_warning_2":
     [
     "Êtes-vous VRAIMENT sûr de vouloir réinitialiser totalement le logiciel ?\nToutes vos données seront perdues.\nSi vous n'êtes pas sûr de vous, appuyez sur \"Non\" et demandez de l'aide à un professionnel.",
-    "DANGER"
+    "DANGER",
+    "RÉINITIALISATION TOTALE",
+    "Confirmez-vous la réinitialisation totale de l'application ?\nToutes les données seront perdues.",
+    "Oui",
+    "Non"
+    ],
+
+"Messagebox.show_warning_2_buttons":
+    [
+    {"label": "Confirmer", "style": "danger"},
+    {"label": "Annuler", "style": "secondary"}
     ],
 
 "Messagebox.show_error_1":

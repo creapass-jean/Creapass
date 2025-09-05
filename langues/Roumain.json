@@ -36,6 +36,22 @@
     "Ajutor"
     ],
 
+"Messagebox.show_warning_2":
+    [
+    "ULTIMA AVERTIZARE: Aceasta va ȘTERGE TOATE DATELE. Continuați numai dacă sunteți sigur. În caz contrar, faceți clic pe 'Nu' și consultați un expert.",
+    "ATENȚIE",
+    "CONFIRMAȚI REINIȚIALIZAREA",
+    "Confirmați reinițializarea completă a aplicației?\nToate datele vor fi pierdute.",
+    "Da",
+    "Nu"
+    ],
+
+"Messagebox.show_warning_2_buttons":
+    [
+    {"label": "Confirmă", "style": "danger"},
+    {"label": "Anulează", "style": "secondary"}
+    ],
+
 "Messagebox.show_error_1":
     [
     "Această parolă nu este valabilă, încercați din nou. Aveți la dispoziție trei încercări.",

@@ -30,6 +30,22 @@
     "Ayuda"
     ],
 
+"Messagebox.show_warning_2":
+    [
+    "ÚLTIMA ADVERTENCIA: Esto BORRARÁ TODOS LOS DATOS. Continúe solo si está seguro. De lo contrario, pulse 'No' y busque ayuda.",
+    "¡PELIGRO!",
+    "CONFIRMAR REINICIO",
+    "¿Confirma el restablecimiento TOTAL de la aplicación?\nTodos los datos se perderán.",
+    "Si",
+    "No"
+    ],
+
+    "Messagebox.show_warning_2_buttons":
+    [
+    {"label": "Confirmar", "style": "danger"},
+    {"label": "Cancelar", "style": "secondary"}
+    ],
+
 "Messagebox.show_error_1":
     [
     "Esta contraseña no es válida, inténtalo de nuevoTienes tres intentos",
