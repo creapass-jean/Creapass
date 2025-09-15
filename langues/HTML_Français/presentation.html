@@ -17,7 +17,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--dark);
-            max-width: 900px;
+            max-width: 850px;
             margin: 0 auto;
             padding: 20px;
             background-color: #f9f9f9;
@@ -118,7 +118,7 @@
 <body>
     <header>
         <h1>Creapass</h1>
-        <p>Générateur de mots de passe sécurisés et mémorisables</p>
+        <p>Générateur de mots de passe aléatoires,sûrs et reproductibles</p>
     </header>
     
     <div class="card">
@@ -129,13 +129,13 @@
             <li>Le même mot de passe sur tous les sites</li>
             <li>Ou une combinaison des deux</li>
         </ul>
-        <p>Ce comportement rend vos données personnelles extrêmement vulnérables.</p>
+        <p>Ce comportement rend vos données personnelles <strong>extrêmement vulnérables.</strong></p>
     </div>
     
     <div class="card">
         <h2>Les solutions existantes et leurs limites</h2>
-        <p>Les gestionnaires de mots de passe (Keepass, Dashlane...) proposent des mots de passe aléatoires comme :</p>
-        <p class="highlight">f&j12S+)Df@}</p>
+        <p>Les gestionnaires de mots de passe (Keepass, Dashlane, votre navigateur...) proposent des mots de passe aléatoires comme :</p>
+        <p class="highlight">f&j12S+)€d»Df@}</p>
         <p>Problème : ces mots de passe sont stockés dans le cloud, potentiellement accessibles à des pirates spécialisés.</p>
     </div>
     
@@ -178,6 +178,16 @@
                 <li>Algorithme cryptographique robuste</li>
             </ul>
         </div>
+        
+        <div class="feature">
+            <h3>Écologie</h3>
+            <ul>
+                <li>Quelques microsecondes d’énergie, juste le temps de votre besoin</li>
+                <li>Contrairement aux années de stockage continu dans un gestionnaire de mots de passe hébergé sur des data centers énergivores</li>
+            </ul>
+        </div>
+
+        
     </div>
     
     <div class="card">
@@ -196,8 +206,8 @@
         <h3>Accès à votre ordinateur</h3>
         <p>Un pirate informatique particulièrement expérimenté pourrait éventuellement retrouver vos mots de passe, mais :</p>
         <ul>
-            <li>C'est extrèmement difficile</li>
-            <li>Peu probable qu'un vrai hacker cible un particulier</li>
+            <li>Ce n'est pas à la portée du premier venu</li>
+            <li>Peu probable qu'un vrai hacker cible un particulier (ils préfèrent les grosses structures)</li>
         </ul>
         
         <div class="warning">
@@ -208,8 +218,8 @@
         <h3>Perte d'identifiants</h3>
         <p>Si vous perdez votre identifiant ou mot de passe personnel :</p>
         <ul>
-            <li>Impossible de les récupérer, ils ne figurent nulle-part dans l'ordinateur ni dans le cloud</li>
-            <li>Il faudra tout réinitialiser</li>
+            <li><strong>Impossible de les récupérer</strong>, ils ne figurent nulle-part dans l'ordinateur ni dans le cloud</li>
+            <li>Il faudra <strong>tout réinitialiser</strong></li>
         </ul>
     </div>
     
@@ -217,7 +227,7 @@
         <h2>Niveau de sécurité</h2>
         <p>Le nombre de combinaisons possibles est :</p>
         <div class="math">
-1 719 780 985 220 790 618 342 033 025 937 378 406 524 658 203 125<br>soit environ 1,720 octillions (1 octillion-fr- = 1 Quindecillion-US- = 10<sup>48</sup>)
+    1 719 780 985 220 790 618 342 033 025 937 378 406 524 658 203 125<br>soit environ 1,720 octillions (1 octillion-fr- = 1 Quindecillion-US- = 10<sup>48</sup>)
         </div>
         <p>Temps estimé pour tester toutes les combinaisons (à raison de 1 milliard d'essais par seconde):</p>
         <div class="math">
@@ -225,5 +235,8 @@
         </div>
         <p>Soit bien au-delà de l'espérance de vie de notre système solaire !</p>
     </div>
+      <footer style="text-align: center">
+          Original en français, traductions mistral.ai et/ou deepl.com<br>&copy; Jean Dalbrut – Auteur de CréaPass
+      </footer>
 </body>
 </html>

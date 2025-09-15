@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creapass - Secure and memorable password generator</title>
-    <style>
-        :root {
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Creapass - Secure Password Generator</title>
+<style>
+   :root {
             --primary: #2c3e50;
             --secondary: #3498db;
             --accent: #e74c3c;
@@ -17,7 +18,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--dark);
-            max-width: 900px;
+            max-width: 850px;
             margin: 0 auto;
             padding: 20px;
             background-color: #f9f9f9;
@@ -113,117 +114,119 @@
                 font-size: 1.8rem;
             }
         }
-    </style>
+  </style>
 </head>
 <body>
     <header>
-        <h1>Creapass</h1>
-        <p>Secure and memorable password generator</p>
+    <h1>Creapass</h1>
+    <p>Random, secure, and reproducible password generator</p>
     </header>
-    
     <div class="card">
-        <h2>The problem with passwords</h2>
-        <p>Most internet users use:</p>
-        <ul>
-            <li>Very simple passwords (<span class="highlight">qwerty</span>, <span class="highlight">12345</span>, etc.)</li>
-            <li>The same password on all websites</li>
-            <li>Or a combination of both</li>
-        </ul>
-        <p>This behavior makes your personal data extremely vulnerable.</p>
+    <h2>The Problem with Passwords</h2>
+    <p>Most internet users use:</p>
+    <ul>
+        <li>Very simple passwords (qwerty, 12345, etc.)</li>
+        <li>The same password on all websites</li>
+        <li>Or a combination of both</li>
+    </ul>
+    <p>This behavior makes your personal data <strong>extremely vulnerable.</strong></p>
     </div>
-    
     <div class="card">
-        <h2>Existing solutions and their limitations</h2>
-        <p>Password managers (Keepass, Dashlane, etc.) offer random passwords such as:</p>
-        <p class="highlight">f&j12S+)Df@}</p>
-        <p>Problem: these passwords are stored in the cloud, potentially accessible to specialized hackers.</p>
+    <h2>Existing Solutions and Their Limits</h2>
+    <p>Password managers (Keepass, Dashlane, your browser...) offer random passwords like:</p>
+    <p class="highlight">f&amp;j12S+)€d»Df@}</p>
+    <p>Problem: These passwords are stored in the cloud, potentially accessible to specialized hackers.</p>
     </div>
-    
     <div class="card">
-        <h2>The Creapass solution</h2>
-        <p>Creapass generates passwords:</p>
-        <ul>
-            <li><strong>On demand</strong> - No storage of your passwords</li>
-            <li><strong>Locally</strong> - Data never leaves your computer</li>
-            <li><strong>Reproducible</strong> - The same input always gives the same result</li>
-            <li><strong>Secure</strong> - Impossible to “trace back” to the original input</li>
-        </ul>
+    <h2>The Creapass Solution</h2>
+    <p>Creapass generates passwords that are:</p>
+    <ul>
+        <li><strong>On demand</strong> – No storage of your passwords</li>
+        <li><strong>Locally</strong> – Data never leaves your computer</li>
+        <li><strong>Reproducible</strong> – The same input always gives the same result</li>
+        <li><strong>Secure</strong> – Impossible to "reverse-engineer" the original input</li>
+    </ul>
     </div>
-    
     <h2>Specifications</h2>
     <div class="features">
         <div class="feature">
-            <h3>Security</h3>
-            <ul>
-                <li>Data remains on your computer</li>
-                <li>No storage of generated passwords</li>
-                <li>Impossible to reverse engineer</li>
-            </ul>
+        <h3>Security</h3>
+        <ul>
+            <li>Data stays on your computer</li>
+            <li>No storage of generated passwords</li>
+            <li>Impossible to reverse engineer</li>
+        </ul>
         </div>
-        
         <div class="feature">
-            <h3>Portability</h3>
-            <ul>
-                <li>Can be used from a USB key</li>
-                <li>No trace on the computers used</li>
-                <li>No complex installation</li>
-            </ul>
+        <h3>Portability</h3>
+        <ul>
+            <li>Can be used from a USB drive</li>
+            <li>No traces left on the computers used</li>
+            <li>No complex installation required</li>
+        </ul>
         </div>
-        
         <div class="feature">
-            <h3>Reliability</h3>
-            <ul>
-                <li>Same input = same output</li>
-                <li>Minimal modification = completely different result</li>
-                <li>Robust cryptographic algorithm</li>
-            </ul>
+        <h3>Reliability</h3>
+        <ul>
+            <li>Same input = same output</li>
+            <li>Minimal change = completely different result</li>
+            <li>Robust cryptographic algorithm</li>
+        </ul>
+        </div>
+        <div class="feature">
+        <h3>Ecology</h3>
+        <ul>
+            <li>A few microseconds of energy, just enough for your needs</li>
+            <li>Unlike years of continuous storage in a password manager hosted on energy-intensive data centers</li>
+        </ul>
         </div>
     </div>
-    
     <div class="card">
-        <h2>Technical operation</h2>
-        <p>Creapass uses the principle of<strong> digital fingerprinting:</strong> :</p>
-        <ul>
-            <li>Your identifiers are irreversibly transformed</li>
-            <li>Same principle as reputable websites (Facebook, banks, etc.)</li>
-            <li>Technology similar to cryptocurrencies</li>
-        </ul>
+    <h2>Technical Operation</h2>
+    <p>Creapass uses the principle of <strong>digital fingerprinting:</strong></p>
+    <ul>
+        <li>Your credentials are irreversibly transformed</li>
+        <li>Same principle as serious websites (Facebook, banks...)</li>
+        <li>Similar technology to cryptocurrencies</li>
+    </ul>
     </div>
-    
     <div class="card">
-        <h2>Security issues</h2>
-        
-        <h3>Access to your computer</h3>
-        <p>A particularly experienced hacker could potentially recover your passwords, but:</p>
-        <ul>
-            <li>It is extremely difficult</li>
-            <li>It is unlikely that a real hacker would target an individual</li>
-        </ul>
-        
+    <h2>Security Questions</h2>
+    <h3>Access to Your Computer</h3>
+    <p>A particularly experienced hacker could potentially retrieve your passwords, but:</p>
+    <ul>
+        <li>This is not within reach of just anyone</li>
+        <li>Unlikely that a real hacker would target an individual (they prefer large structures)</li>
+    </ul>
         <div class="warning">
-            <h3>Ultra-secure solution</h3>
-            <p>Use Creapass from a USB key to leave no trace on the computers you use.</p>
+        <h3>Ultra-Secure Solution</h3>
+        <p>Use Creapass from a USB drive to leave no trace on the computers you use.</p>
         </div>
-        
-        <h3>Loss of login details</h3>
-        <p>If you lose your personal login details or password:</p>
-        <ul>
-            <li>It is impossible to recover them, as they are not stored anywhere on the computer or in the cloud</li>
-            <li>You will have to reset everything</li>
-        </ul>
+    <h3>Loss of Credentials</h3>
+    <p>If you lose your personal identifier or password:</p>
+    <ul>
+        <li><strong>Impossible to recover them,</strong> they are not stored anywhere on the computer or in the cloud</li>
+        <li>You will have to <strong>reset everything</strong></li>
+    </ul>
     </div>
-    
     <div class="card">
-        <h2>Security level</h2>
-        <p>The number of possible combinations is:</p>
+    <h2>Security Level</h2>
+    <p>The number of possible combinations is:</p>
         <div class="math">
-1 719 780 985 220 790 618 342 033 025 937 378 406 524 658 203 125<br>or approximately 1,720 octillions (1 octillion-fr- = 1 Quindecillion-US- = 10<sup>48</sup>)
+            1 719 780 985 220 790 618 342 033 025 937 378 406 524 658 203 125<br/>
+            soit environ 1,720 octillions (1 octillion-fr- = 1 Quindecillion-US- = 10<sup>48</sup>)
         </div>
-        <p>Estimated time to test all combinations (at a rate of 1 billion attempts per second):</p>
+    <p>Estimated time to test all combinations (at a rate of 1 billion attempts per second):</p>
         <div class="math">
-± 54 496 000 000 000 000 000 000 000 000 000 years<br>or approximately 54.5 quintillions (1 quintillion-fr- = 1 nonillion-US- = 10<sup>30</sup>)
+            ± 54 496 000 000 000 000 000 000 000 000 000 années<br/>
+            soit environ 54.5 quintillions (1 quintillion-fr- = 1 nonillion-US- = 10<sup>30</sup>)
         </div>
-        <p>Well beyond the life expectancy of our solar system!</p>
+    <p>Far beyond the lifespan of our solar system!</p>
     </div>
+    <footer style="text-align: center">
+       Original en français, traductions mistral.ai et/ou deepl.com
+       <br/>
+       © Jean Dalbrut – Auteur de CréaPass
+    </footer>
 </body>
 </html>

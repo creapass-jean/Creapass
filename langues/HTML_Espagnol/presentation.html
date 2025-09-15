@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creapass - Generador de contraseñas seguras</title>
-    <style>
-        :root {
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Creapass - Generador de contraseñas seguras</title>
+<style>
+   :root {
             --primary: #2c3e50;
             --secondary: #3498db;
             --accent: #e74c3c;
@@ -17,7 +18,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--dark);
-            max-width: 900px;
+            max-width: 850px;
             margin: 0 auto;
             padding: 20px;
             background-color: #f9f9f9;
@@ -113,117 +114,118 @@
                 font-size: 1.8rem;
             }
         }
-    </style>
+  </style>
 </head>
 <body>
     <header>
         <h1>Creapass</h1>
-        <p>Generador de contraseñas seguras y fáciles de recordar</p>
+        <p>Generador de contraseñas aleatorias, seguras y reproducibles</p>
     </header>
-    
     <div class="card">
         <h2>El problema de las contraseñas</h2>
-        <p>La mayoría de los internautas utilizan :</p>
+        <p>La mayoría de los usuarios de internet usan:</p>
         <ul>
-            <li>Contraseñas muy simples (<span class="highlight">azerty</span>, <span class="highlight">12345</span>, etc.)</li>
+            <li>Contraseñas muy simples (azerty, 12345, etc.)</li>
             <li>La misma contraseña en todos los sitios</li>
             <li>O una combinación de ambas</li>
         </ul>
-        <p>Este comportamiento hace que sus datos personales sean extremadamente vulnerables.</p>
+        <p>Este comportamiento hace que sus datos personales sean <strong>extremadamente vulnerables.</strong></p>
     </div>
-    
     <div class="card">
-        <h2>Soluciones existentes y sus limitaciones</h2>
-        <p>Los gestores de contraseñas (Keepass, Dashlane, etc.) ofrecen contraseñas aleatorias como :</p>
-        <p class="highlight">f&j12S+)Df@}</p>
-        <p>Problema: estas contraseñas se almacenan en la nube, potencialmente accesible a hackers especializados.</p>
+        <h2>Soluciones existentes y sus límites</h2>
+        <p>Los gestores de contraseñas (Keepass, Dashlane, su navegador...) ofrecen contraseñas aleatorias como:</p>
+        <p class="highlight">f&amp;j12S+)€d»Df@}</p>
+        <p>Problema: Estas contraseñas se almacenan en la nube, potencialmente accesibles para hackers especializados.</p>
     </div>
-    
     <div class="card">
         <h2>La solución Creapass</h2>
-        <p>Creapass genera contraseñas :</p>
+        <p>Creapass genera contraseñas que son:</p>
         <ul>
-            <li><strong>Bajo demanda</strong> - No se almacenan sus contraseñas</li>
-            <li><strong>Localmente</strong> - Los datos nunca salen de su ordenador</li>
-            <li><strong>Reproducible</strong> - La misma entrada siempre da el mismo resultado</li>
-            <li><strong>Seguro</strong> - Imposible «volver» a la entrada original</li>
+            <li><strong>A demanda</strong> – Sin almacenamiento de sus contraseñas</li>
+            <li><strong>Localmente</strong> – Los datos nunca salen de su computadora</li>
+            <li><strong>Reproducibles</strong> – La misma entrada siempre da el mismo resultado</li>
+            <li><strong>Seguras</strong> – Imposible de "reconstruir" la entrada original</li>
         </ul>
     </div>
-    
     <h2>Especificaciones</h2>
     <div class="features">
         <div class="feature">
             <h3>Seguridad</h3>
             <ul>
-                <li>Los datos permanecen en su ordenador</li>
-                <li>No se almacenan las contraseñas generadas</li>
-                <li>Imposibilidad de ingeniería inversa</li>
+                <li>Datos que permanecen en su computadora</li>
+                <li>Sin almacenamiento de las contraseñas generadas</li>
+                <li>Imposible de hacer ingeniería inversa</li>
             </ul>
         </div>
-        
         <div class="feature">
             <h3>Portabilidad</h3>
             <ul>
-                <li>Puede utilizarse desde una llave USB</li>
-                <li>Sin rastro en los ordenadores utilizados</li>
-                <li>Sin instalación compleja</li>
+                <li>Se puede utilizar desde una memoria USB.</li>
+                <li>No hay rastros en los ordenadores utilizados.</li>
+                <li>Sin instalaciones complejas</li>
             </ul>
         </div>
-        
         <div class="feature">
             <h3>Fiabilidad</h3>
             <ul>
-                <li>Misma entrada = misma salida</li>
-                <li>Mínima modificación = resultado completamente diferente</li>
+                <li>La misma entrada = la misma salida</li>
+                <li>Modificación mínima = resultado completamente diferente</li>
                 <li>Algoritmo criptográfico robusto</li>
             </ul>
         </div>
+        <div class="feature">
+            <h3>Ecología</h3>
+            <ul>
+                <li>Unos pocos microsegundos de energía, solo el tiempo que necesite</li>
+                <li>A diferencia de los años de almacenamiento continuo en un gestor de contraseñas alojado en centros de datos que consumen mucha energía</li>
+            </ul>
+        </div>
     </div>
-    
     <div class="card">
         <h2>Funcionamiento técnico</h2>
-        <p>Creapass utiliza el principio de la <strong>huella digital</strong> :</p>
+        <p>Creapass utiliza el principio de <strong>huella digital</strong>:</p>
         <ul>
-            <li>Sus identificadores se transforman de forma irreversible</li>
-            <li>Mismo principio que los sitios serios (Facebook, bancos, etc.)</li>
-            <li>Tecnología similar a la de las criptomonedas</li>
+            <li>Sus credenciales se transforman de manera irreversible</li>
+            <li>Mismo principio que los sitios serios (Facebook, bancos...)</li>
+            <li>Tecnología similar a las criptomonedas</li>
         </ul>
     </div>
-    
     <div class="card">
-        <h2>Cuestiones de seguridad</h2>
-        
-        <h3>Acceso a su ordenador</h3>
-        <p>Un hacker especialmente experimentado podría recuperar tus contraseñas, pero :</p>
+        <h2>Preguntas de seguridad</h2>
+        <h3>Acceso a su computadora</h3>
+        <p>Un hacker particularmente experimentado podría recuperar potencialmente sus contraseñas, pero:</p>
         <ul>
-            <li>Es extremadamente difícil</li>
-            <li>Es poco probable que un verdadero hacker tenga como objetivo a un particular</li>
+            <li>Esto no está al alcance de cualquiera</li>
+            <li>Es poco probable que un hacker real apunte a un individuo (prefieren estructuras grandes)</li>
         </ul>
-        
         <div class="warning">
-            <h3>Solución ultrasegura</h3>
-            <p>Utilice Creapass desde una llave USB para no dejar rastro en los ordenadores que utiliza.</p>
+            <h3>Solución ultra-segura</h3>
+            <p>Use Creapass desde una memoria USB para no dejar rastro en las computadoras que utilice.</p>
         </div>
-        
-        <h3>Pérdida de datos de acceso</h3>
-        <p>Si pierde sus datos de acceso personales o su contraseña :</p>
+        <h3>Pérdida de credenciales</h3>
+        <p>Si pierde su identificador o contraseña personal:</p>
         <ul>
-            <li>Es imposible recuperarlos, ya que no se encuentran en el ordenador ni en la nube.</li>
-            <li>Tendrás que restablecerlo todo.</li>
+            <li><strong>Imposible recuperarlas,</strong> no están almacenadas en ningún lugar de la computadora ni en la nube</li>
+            <li>Tendrá que <strong>reiniciar todo</strong></li>
         </ul>
     </div>
-    
     <div class="card">
         <h2>Nivel de seguridad</h2>
-        <p>El número de combinaciones posibles es :</p>
+        <p>El número de combinaciones posibles es:</p>
         <div class="math">
-1 719 780 985 220 790 618 342 033 025 937 378 406 524 658 203 125<br>es decir, aproximadamente 1,720 octillions (1 octillion-fr- = 1 Quindecillion-US- = 10<sup>48</sup>)
-        </div>
-        <p>Tiempo estimado para probar todas las combinaciones (a un ritmo de 1.000 millones de pruebas por segundo):</p>
+            1 719 780 985 220 790 618 342 033 025 937 378 406 524 658 203 125
+            <br/>
+            soit environ 1,720 octillions (1 octillion-fr- = 1 Quindecillion-US- = 10<sup>48</sup>)
+       </div>
+        <p>Tiempo estimado para probar todas las combinaciones (a razón de 1 billón de intentos por segundo):</p>
         <div class="math">
-± 54 496 000 000 000 000 000 000 000 000 000 années<br>o aproximadamente 54.5 quintillions (1 quintillion-fr- = 1 nonillion-US- = 10<sup>30</sup>)
-        </div>
-        <p>Mucho más allá de la esperanza de vida de nuestro sistema solar.</p>
+            ± 54 496 000 000 000 000 000 000 000 000 000 années<br/>
+            soit environ 54.5 quintillions (1 quintillion-fr- = 1  nonillion-US- = 10<sup>30</sup>)
+       </div>
+        <p>¡Muy por encima de la esperanza de vida de nuestro sistema solar!</p>
     </div>
+    <footer style="text-align: center">Original en français, traductions mistral.ai et/ou deepl.com<br/>
+       © Jean Dalbrut – Auteur de CréaPass
+    </footer>
 </body>
 </html>

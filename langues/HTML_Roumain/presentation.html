@@ -1,141 +1,233 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notice d'emploi - Creapass</title>
-    <style>
-        /* === Styles de base === */
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Creapass - Generator de parole securizat</title>
+<style>
+   :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne et lisible */
-            line-height: 1.6; /* Espacement confortable entre les lignes */
-            color: #333; /* Couleur de texte foncée pour meilleure lisibilité */
-            max-width: 900px; /* Largeur max pour une lecture confortable */
-            margin: 0 auto; /* Centrage de la page */
-            padding: 20px; /* Marge intérieure */
-            background-color: #f9f9f9; /* Fond légèrement gris */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
         }
-
-        .section-card {
-            background-color: #fefefe; /* Blanc légèrement plus chaud */
-            border-radius: 8px; /* Coins légèrement arrondis */
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Ombre très subtile */
-            padding: 25px;
-            margin: 30px auto;
-            max-width: 850px; /* Largeur optimale pour la lecture */
-            border-left: 4px solid #3498db;
-
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-
-        /* === Titres === */
+        
         h1 {
-            color: #2c3e50; /* Couleur bleu foncé */
-            text-align: center;
-            border-bottom: 2px solid #3498db; /* Ligne de séparation */
-            padding-bottom: 10px;
+            margin: 0;
+            font-size: 2.5rem;
         }
-
-        h2, h3 {
-            color: #2980b9; /* Bleu un peu plus clair */
-            margin-top: 30px; /* Espace avant les titres */
+        
+        h2 {
+            color: var(--secondary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
         }
-
-        /* === Images === */
-        img {
-            display: block;
-            max-width: 100%; /* Images responsives */
-            height: auto;
-            margin: 20px auto; /* Centrage avec marges */
-            border: 1px solid #ddd;  /*Bordure légère */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Ombre légère */
+        
+        h3 {
+            color: var(--primary);
         }
-
-        .fig-caption {
-            text-align: center;
-            font-style: italic;
-            margin-top: 5px;
-            color: #666;
-            font-size: 0.9em;
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--secondary);
         }
-    
-        /* === Paragraphes et texte === */
-        p {
-            margin-bottom: 15px; /* Espace entre paragraphes */
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
         }
-
-        /* === Listes === */
+        
+        .feature {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
         ul {
-            padding-left: 20px; /* Alignement des puces */
+            padding-left: 1.5rem;
         }
-
+        
         li {
-            margin-bottom: 8px; /* Espace entre éléments de liste */
+            margin-bottom: 0.5rem;
         }
-
-        /* === Mise en valeur === */
+        
+        .highlight {
+            background-color: #fffde7;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        
         .warning {
-            color: #e74c3c; /* Rouge pour les avertissements */
-            background-color: #fdeaea; /* Fond rouge très clair */
-            padding: 15px;
-            border-left: 4px solid #e74c3c; /* Bordure gauche */
-            margin: 20px 0;
-            font-weight: bold;
+            background-color: #ffebee;
+            border-left: 4px solid var(--accent);
+            padding: 1rem;
+            border-radius: 0 4px 4px 0;
+            margin: 1rem 0;
         }
-
-        .note {
-            background-color: #e8f4fc; /* Fond bleu très clair */
-            padding: 15px;
-            border-left: 4px solid #3498db; /* Bordure gauche */
-            margin: 20px 0;
+        
+        .math {
+            font-family: monospace;
+            white-space: pre-wrap;
+            background: var(--light);
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
         }
-
-        /* === Liens === */
-        a {
-            color: #3498db; /* Couleur bleue */
-            text-decoration: none; /* Pas de soulignement */
-        }
-
-        a:hover {
-            text-decoration: underline; /* Soulignement au survol */
-        }
-
-        /* === Pied de page === */
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            font-size: 0.9em;
-            color: #7f8c8d; /* Gris moyen */
-        }
-
-        /* === Responsive === */
-        @media (max-width: 600px) {
+        
+        @media (max-width: 768px) {
             body {
                 padding: 10px;
             }
+            
             h1 {
-                font-size: 1.5em;
+                font-size: 1.8rem;
             }
         }
-    </style>
+  </style>
 </head>
 <body>
-    <header style="background-color: transparent;">
-        <p style="text-align: center"><img src="images_creapass/logo.webp" alt="Logo Creapass" style="border:none; box-shadow:none;">
-        <h1>Présetation - Creapass</h1>
-        <p class="note">Générateur de mots de passe aléatoires reproductibles et autonome</p>
+    <header>
+        <h1>Creapass</h1>
+        <p>Generator de parole aleatorii, sigure și reproducibile</p>
     </header>
-
-    <section class = "section-card">
-        <p>Désolés, Cette page n'est pas encore traduite. Vous pouvez vous reporter sur une des langues disponibles en choisissant « Langues / (choix-langue) » </p>
-        <p>Sorry, this page is not yet translated. You can refer to one of the available languages by selecting "Languages / (language-choice)"</p>
-        <p>Lo sentimos, esta página aún no está traducida. Puede referirse a uno de los idiomas disponibles seleccionando "Idiomas / (elección-de-idioma)"</p>
-        <p>Ne pare rău, această pagină nu a fost încă tradusă. Puteți consulta una dintre limbile disponibile selectând „Limbi / (alege-limba)”</p>
-    </section>
-
-    <div class="footer">
-        <p>Creapass - Générateur de mots de passe sécurisés et reproductibles</p>
+    <div class="card">
+        <h2>Problema parolelor</h2>
+        <p>Majoritatea utilizatorilor de internet folosesc:</p>
+        <ul>
+            <li>Parole foarte simple (azerty, 12345, etc.)</li>
+            <li>Aceeași parolă pe toate site-urile</li>
+            <li>Sau o combinație între cele două</li>
+        </ul>
+        <p>Acest comportament face datele dvs. personale <strong>extrem de vulnerabile.</strong></p>
     </div>
+    <div class="card">
+        <h2>Soluțiile existente și limitele lor</h2>
+        <p>Managerii de parole (Keepass, Dashlane, browser-ul dvs. etc.) oferă parole aleatorii precum:</p>
+        <p class="highlight">f&amp;j12S+)€d»Df@}</p>
+        <p>Problemă: Aceste parole sunt stocate în cloud, potențial accesibile hackerilor specializați.</p>
+    </div>
+    <div class="card">
+        <h2>Soluția Creapass</h2>
+        <p>Creapass generează parole care sunt:</p>
+        <ul>
+            <li><strong>La cerere</strong> – Fără stocare a parolelor dvs.</li>
+            <li><strong>Local</strong> – Datele nu părăsesc niciodată calculatorul dvs.</li>
+            <li><strong>Reproducibile</strong> – Aceeași intrare dă întotdeauna același rezultat</li>
+            <li><strong>Securizate</strong> – Imposibil de "reconstruit" intrarea originală</li>
+        </ul>
+    </div>
+    <h2>Specificații</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Securitate</h3>
+                <ul>
+                    <li>Datele rămân pe calculatorul dvs.</li>
+                    <li>Nicio stocare a parolelor generate</li>
+                    <li>Imposibil de realizat inginerie inversă</li>
+                </ul>
+            </div>
+            <div class="feature">
+                <h3>Portabilidad</h3>
+                <ul>
+                    <li>Se puede utilizar desde una memoria USB</li>
+                    <li>No deja rastro en los ordenadores utilizados</li>
+                    <li>No requiere una instalación compleja</li>
+                </ul>
+            </div>
+            <div class="feature">
+                <h3>Fiabilidad</h3>
+                <ul>
+                    <li>Misma entrada = misma salida</li>
+                    <li>Modificación mínima = resultado completamente diferente</li>
+                    <li>Algoritmo criptográfico robusto</li>
+                </ul>
+            </div>
+            <div class="feature">
+                <h3>Ecología</h3>
+                <ul>
+                    <li>Unos pocos microsegundos de energía, solo el tiempo que necesite</li>
+                    <li>A diferencia de los años de almacenamiento continuo en un gestor de contraseñas alojado en centros de datos que consumen mucha energía</li>
+                </ul>
+            </div>
+        </div>
+    <div class="card">
+        <h2>Funcționare tehnică</h2>
+        <p>Creapass utilizează principiul <strong>amprentei digitale:</strong></p>
+        <ul>
+            <li>Credențialele dvs. sunt transformate ireversibil</li>
+            <li>Același principiu ca site-urile serioase (Facebook, bănci etc.)</li>
+            <li>Tehnologie similară cu cea a criptomonedelor</li>
+        </ul>
+    </div>
+    <div class="card">
+        <h2>Întrebări de securitate</h2>
+        <h3>Acces la calculatorul dvs.</h3>
+        <p>Un hacker foarte experimentat ar putea recupera potențial parolele dvs., dar:</p>
+        <ul>
+            <li>Aceasta nu este la îndemâna oricui</li>
+            <li>Este puțin probabil ca un hacker real să țintească un individ (preferă structurile mari)</li>
+        </ul>
+        <div class="warning">
+            <h3>Soluție ultra-securizată</h3>
+            <p>Folosiți Creapass de pe o unitate USB pentru a nu lăsa urme pe calculatoarele pe care le utilizați.</p>
+        </div>
+        <h3>Pierderea credențialelor</h3>
+        <p>Dacă vă pierdeți identificatorul sau parola personală:</p>
+        <ul>
+            <li><strong>Imposibil de recuperat,</strong> nu sunt stocate nicăieri pe calculator sau în cloud</li>
+            <li>Va trebui să <strong>resetați totul</strong></li>
+        </ul>
+    </div>
+    <div class="card">
+        <h2>Nivel de securitate</h2>
+        <p>Numărul de combinații posibile este:</p>
+        <div class="math">
+            1 719 780 985 220 790 618 342 033 025 937 378 406 524 658 203 125
+            <br/>
+            soit environ 1,720 octillions (1 octillion-fr- = 1 Quindecillion-US- = 10<sup>48</sup>)
+        </div>
+        <p>Timpul estimat pentru testarea tuturor combinațiilor (la o rată de 1 miliard de încercări pe secundă):</p>
+        <div class="math">
+            ± 54 496 000 000 000 000 000 000 000 000 000 années<br/>
+            soit environ 54.5 quintillions (1 quintillion-fr- = 1 nonillion-US- = 10<sup>30</sup>)
+        </div>
+        <p>Departe dîncolo de durata de viață a sistemului nostru solar!</p>
+    </div>
+    <footer style="text-align: center">
+       Original en français, traductions mistral.ai et/ou deepl.com
+       <br/>
+       © Jean Dalbrut – Auteur de CréaPass
+    </footer>
 </body>
 </html>
