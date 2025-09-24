@@ -325,6 +325,7 @@ class App(tkb.Window):
 
         elif not os.path.exists("id.json"):
             self.show_frame(Ini)
+
         else:
             self.show_frame(MainMdp)
 
@@ -349,11 +350,14 @@ class App(tkb.Window):
 
 class A_propos(tkb.Toplevel) :
     def __init__(self, parent) :
-        super().__init__(parent)        
+        super().__init__(parent)
         self.lang = LanguageManager()  # Gestionnaire de langues
         self.title (self.lang.translate("a_propos")[0])
         self.geometry ("380x440+270+270")
-        
+        self.transient(parent)  # Assure que la fenêtre est au-dessus de la fenêtre parente
+        self.grab_set
+        self.lift()
+        self.focus_force()        
         self.logo = tkb.PhotoImage(file = "images_creapass/logo2.png")
         self.lbl_im = tkb.Label(self, image=self.logo)
         self.lbl_im.pack()
@@ -995,13 +999,14 @@ class MiniInterface(tkb.Frame):
     def show_window(self, icon=None, item=None):
         self.parent.deiconify()
         self.premier_plan()
-        self.parent.update_idletasks()
-        self.parent.after(700, lambda: self.combobox_site.focus_force())
+#        self.parent.update_idletasks()
+#        self.parent.after(700, lambda: self.combobox_site.focus_force())
 
     def premier_plan(self) :
         self.parent.lift()
         self.parent.attributes('-topmost', True)
-        self.parent.after(300, lambda: self.parent.attributes('-topmost', False))  # pour redonner la main ensuite
+        self.parent.after(300, lambda: self.parent.attributes('-topmost', False))
+        self.combobox_site.focus_set()
 
     def quit_app(self, icon=None, item=None):
         self.icon.stop()
@@ -1131,6 +1136,7 @@ class IniMini(tkb.Frame):
 class Danger(tkb.Toplevel):
     def __init__(self, parent):
         super().__init__(parent)
+ #        self.attributes('-topmost', True)
         self.lang = LanguageManager()
         self.aide = Help()
         self.com = FoncCom(self)
@@ -1138,6 +1144,10 @@ class Danger(tkb.Toplevel):
         self.geometry("1000x900+100+50")
         self.parent.title(self.lang.translate("Messagebox.show_warning_2")[1],)
         self.html = self.com.lecture_html("active_html/danger.html")
+        self.transient(parent)  # Faire de cette fenêtre une fenêtre enfant
+        self.grab_set()  # Empêcher l'interaction avec la fenêtre parente
+        self.lift()
+        self.focus_force()
         self.create_widgets()
 
     def create_widgets(self) :
