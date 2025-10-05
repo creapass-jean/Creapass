@@ -1221,7 +1221,6 @@ def get_donateur():
     return prefs.get("donateur")
     
 donateur = get_donateur()
-print(donateur)
 if donateur == False :
     import utilisation
 else :
