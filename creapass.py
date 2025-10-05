@@ -4,18 +4,35 @@
 #  creapass.py
 #  Créateur de mots de passe solides, reproductibles et sécurisés
 #
+# Merci aux différentes IA : chatgpt, chat.deepseek,  chat.mistral.ai, gemini.google, perplexity.ai et copilot.microsoft
+# pour leurs conseils la plupart du temps judicieux et quelques corrections bienvenues
 #  Copyright 2025 Jean Dalbrut
 #  sauf logo et icône : Copyright 2025 Quentin Dalbrut
 #
-# Merci aux différentes IA : chatgpt, chat.deepseek,  chat.mistral.ai, gemini.google, perplexity.ai et copilot.microsoft
-# pour leurs conseils la plupart du temps judicieux et quelques corrections bienvenues
+# MIT License
+# Texte original. Pour information, traduction française à la suite.
+# Copyright  ©  2025 Jean DALBRUT
+# Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+# The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+# ***************************************************
+# Pour information, traduction française :
+
+# Licence MIT
+# Copyright © 2025 Jean Dalbrut
+
+# Par la présente, l'autorisation est accordée, gratuitement, à toute personne obtenant une copie de ce logiciel et des fichiers de documentation associés (le "Logiciel"), de traiter le Logiciel sans restriction, y compris, sans limitation, les droits d'utiliser, de copier, de modifier, de fusionner, de publier, de distribuer, de sous-licencier et/ou de vendre des copies du Logiciel, et de permettre aux personnes à qui le Logiciel est fourni de le faire, sous réserve des conditions suivantes :
+# L'avis de droit d'auteur ci-dessus et cet avis de permission doivent être inclus dans toutes les copies ou parties substantielles du Logiciel.
+
+# LE LOGICIEL EST FOURNI "TEL QUEL", SANS GARANTIE D'AUCUNE SORTE, EXPRESSE OU IMPLICITE, Y COMPRIS, MAIS SANS S'Y LIMITER, LES GARANTIES DE QUALITÉ MARCHANDE, D'ADÉQUATION À UN USAGE PARTICULIER ET DE NON-CONTREFAÇON. EN AUCUN CAS LES AUTEURS OU DÉTENTEURS DU DROIT D'AUTEUR NE POURRONT ÊTRE TENUS RESPONSABLES DE TOUTE RÉCLAMATION, DOMMAGE OU AUTRE RESPONSABILITÉ, QUE CE SOIT DANS UNE ACTION CONTRACTUELLE, DÉLICTUELLE OU AUTRE, DÉCOULANT DE, OU EN RELATION AVEC LE LOGICIEL OU L'UTILISATION OU AUTRES TRANSACTIONS DANS LE LOGICIEL.
 
 
 import ttkbootstrap as tkb
 from ttkbootstrap.constants import *
-from ttkbootstrap.dialogs import Messagebox, Icon
+from ttkbootstrap.dialogs import Messagebox
 from ttkbootstrap.tooltip import ToolTip
-from ttkbootstrap.icons import Icon
 from pathlib import Path
 from PIL import Image
 import pystray
@@ -30,7 +47,6 @@ import pyperclip
 import webbrowser
 import tkhtmlview
 
-
 #  #########################################################
 
 class FoncCom :
@@ -39,7 +55,6 @@ class FoncCom :
         self.lang = LanguageManager()  # Gestionnaire de langues
         self.aide = Help()
         self.main_mdp = main_mdp  #référence à MainMdp
-
 ### section : gestion fichiers (fonctions statiques)
     @staticmethod
     def gestion_fichiers(fichier, data=None, wr="r"):
@@ -148,6 +163,9 @@ class FoncCom :
 
 #todo : construire les autres fonctions liées au menu Aide
 
+    def cpt_util(self):
+        utilisation += 1
+    
     def recup_site(self, site, name, event = None) :
         """récupère le nom du site demandeur et en vérifie la validité. Si le nom ne figure pas dans la liste, l'ajoute et l'enregistre sur le disque"""
         site = site.capitalize()    #1ère lettre en capitale
@@ -188,7 +206,10 @@ class FoncCom :
         base = identvar + motvar + site_code
         passfinal = self.empreinte(base)
         passdesire = passfinal [0 : 25]
-
+        # self.utilisation = 0 #à voir
+        # utilisation += 1
+        
+        # print ("debug : ", self.don.compte)
         """Bien que la probabilité qu'il manque soit une minuscule ou une majuscule ou un signe ou un chiffre, souvent demandés par les sites, soit extrèmement faible, cette ligne ajoute de façon sûre ces 4 types de caractères (y!Y8)"""
         passdesire = passdesire[0:4] + "y" + passdesire[5:10] + "!" + passdesire[11:16] + "Y" + passdesire[17:20] + "8" + passdesire[21:]
         return passdesire
@@ -219,7 +240,7 @@ class LanguageManager:
 
     def translate(self, key):
         """Retourne la chaîne traduite pour la clé donnée."""
-        return self.translations.get(key)#, f"[{key}]")  # Fallback : affiche la clé non trouvée
+        return self.translations.get(key, f"[{key}]")  # Fallback : affiche la clé non trouvée
 
     def change_language(self, language_file):
         """
@@ -314,7 +335,7 @@ class App(tkb.Window):
         self.style.theme_use(theme)
         self.iconphoto(True, tkb.PhotoImage(file =  "images_creapass/creapass.png"))
         self.resizable(0,0)
-        self.bind("<Double-Control-Alt-i>", self.réinitialisation_totale)
+        self.bind("<Alt-i>", self.réinitialisation_totale)
         self.bind("<Control-q>", self.fermeture)
         self.bind("<Control-Q>", self.fermeture)
         self.current_frame = None
@@ -325,7 +346,6 @@ class App(tkb.Window):
 
         elif not os.path.exists("id.json"):
             self.show_frame(Ini)
-
         else:
             self.show_frame(MainMdp)
 
@@ -350,14 +370,11 @@ class App(tkb.Window):
 
 class A_propos(tkb.Toplevel) :
     def __init__(self, parent) :
-        super().__init__(parent)
+        super().__init__(parent)        
         self.lang = LanguageManager()  # Gestionnaire de langues
         self.title (self.lang.translate("a_propos")[0])
         self.geometry ("380x440+270+270")
-        self.transient(parent)  # Assure que la fenêtre est au-dessus de la fenêtre parente
-        self.grab_set
-        self.lift()
-        self.focus_force()        
+        
         self.logo = tkb.PhotoImage(file = "images_creapass/logo2.png")
         self.lbl_im = tkb.Label(self, image=self.logo)
         self.lbl_im.pack()
@@ -484,16 +501,6 @@ class Ini(tkb.Frame):
         self.com = FoncCom(self)
         self.parent.geometry("550x350+200+200")
         self.parent.title(self.lang.translate("ini_fen_ttk.Window_title"))
-    # création du fichier user_data.json par défaut s'il n'existe pas
-        self.user_data_base = {
-            "theme_choisi": "Clair",
-            "theme_applique": "cosmo",
-            "langue": "Français",
-            "MiniInterface": "Non"
-            }
-        if not os.path.exists("user_data.json"):
-            FoncCom.gestion_fichiers("user_data.json", self.user_data_base, "w")
-
         self.create_widgets()
 
 # création des widgets
@@ -853,10 +860,7 @@ class MainMdp(tkb.Frame):
             )
         if reponse in ("Oui", "oui", "Yes", "yes", "Si", "si", "Da", "da") :
             self.com.set_miniinterface("Oui")
-            self.parent.show_frame(MiniInterface)
-        else :
-            # self.com.set_miniinterface("Non")
-            self.parent.show_frame(MiniInterface)
+        self.parent.show_frame(MiniInterface)
 
     def choisir_theme(self, theme_selection) :
         nom_theme = self.com.change_theme(theme_selection)
@@ -962,36 +966,31 @@ class MiniInterface(tkb.Frame):
         self.parent.bind("<Alt-s>", self.réinitialisation_simple)
 
         self.create_widgets()
-        self.setup_systray()  
-
-    def setup_systray(self):
-        """Configuration du systray"""
-        self.parent.protocol("WM_DELETE_WINDOW", self.hide_window)
         
-        try:
-            icon_path = "images_creapass/creapass.ico"
-            if os.path.exists(icon_path):
-                self.image = Image.open(icon_path)
-            else:
-                self.image = Image.new('RGB', (64, 64), color='red')
-                
-            self.icon = pystray.Icon("Creapass")
-            self.icon.icon = self.image
-            self.icon.title = self.lang.translate("Systray_infobule")
-            self.icon.menu = pystray.Menu(
-                pystray.MenuItem(self.lang.translate("Minimenu")[0], self.show_window),
-                pystray.MenuItem(self.lang.translate("Minimenu")[1], self.hide_window),
-                pystray.MenuItem(self.lang.translate("Minimenu")[2], self.quit_app)
+    def réinitialisation_simple(self, event = None):
+        self.com.set_miniinterface("Non")
+        self.parent.show_frame(MainMdp)
+
+
+#### projet systray ####
+
+        # Interception de la fermeture par la croix
+        self.parent.protocol("WM_DELETE_WINDOW", self.hide_window)
+        # Icone personnalisée
+        icon_path = "images_creapass/creapass.ico"
+        self.image = Image.open(icon_path)
+        # Configuration de l'icône système
+        self.icon = pystray.Icon("Creapass")
+        self.icon.icon = self.image
+        self.icon.title = self.lang.translate("Systray_infobule")
+        self.icon.menu = pystray.Menu(
+            pystray.MenuItem(self.lang.translate("Minimenu")[0], self.show_window),
+            pystray.MenuItem(self.lang.translate("Minimenu")[1], self.hide_window),
+            pystray.MenuItem(self.lang.translate("Minimenu")[2], self.quit_app)
             )
-            
-            self.systray_thread = threading.Thread(target=self.icon.run)
-            self.systray_thread.daemon = True
-            self.systray_thread.start()
-            
-        except Exception as e:
-            print(f"Erreur systray: {e}")
-            # Fallback: permettre la fermeture normale
-            self.parent.protocol("WM_DELETE_WINDOW", self.parent.destroy)
+        # Lancement du systray dans un thread séparé
+        self.systray_thread = threading.Thread(target=self.icon.run, daemon=True)
+        self.systray_thread.start()
 
     def hide_window(self):
         self.parent.withdraw()
@@ -999,14 +998,13 @@ class MiniInterface(tkb.Frame):
     def show_window(self, icon=None, item=None):
         self.parent.deiconify()
         self.premier_plan()
-#        self.parent.update_idletasks()
-#        self.parent.after(700, lambda: self.combobox_site.focus_force())
+        self.parent.update_idletasks()
+        self.parent.after(700, lambda: self.combobox_site.focus_force())
 
     def premier_plan(self) :
         self.parent.lift()
         self.parent.attributes('-topmost', True)
-        self.parent.after(300, lambda: self.parent.attributes('-topmost', False))
-        self.combobox_site.focus_set()
+        self.parent.after(300, lambda: self.parent.attributes('-topmost', False))  # pour redonner la main ensuite
 
     def quit_app(self, icon=None, item=None):
         self.icon.stop()
@@ -1039,10 +1037,6 @@ class MiniInterface(tkb.Frame):
                                  relief = "solid"
                                  )
         self.label_sortie.place(x = 241, y = 0, width = 330, height = 30)
-
-    def réinitialisation_simple(self, event = None):
-        self.com.set_miniinterface("Non")
-        self.parent.show_frame(MainMdp)
 
     def sans_barre_syst(self, event = None):
         if self.sans_barre_sys == True:
@@ -1124,8 +1118,9 @@ class IniMini(tkb.Frame):
             return
         else :
             self.parent.show_frame(MiniInterface)
-            self.parent.show_frame(MiniInterface)
-            self.parent.withdraw()
+            self.parent.withdraw(
+            )
+
     def on_entry_click(self, event=None):
         if self.entry_mdp_mini.get() == self.texte_entry :
             self.entry_mdp_mini.delete(0, "end")
@@ -1136,28 +1131,16 @@ class IniMini(tkb.Frame):
 class Danger(tkb.Toplevel):
     def __init__(self, parent):
         super().__init__(parent)
- #        self.attributes('-topmost', True)
         self.lang = LanguageManager()
         self.aide = Help()
         self.com = FoncCom(self)
         self.parent = parent
-        self.geometry("1000x900+100+50")
-        self.parent.title(self.lang.translate("Messagebox.show_warning_2")[1],)
+        self.geometry("1000x800+100+100")
+        self.parent.title("DANGER")
         self.html = self.com.lecture_html("active_html/danger.html")
-        self.transient(parent)  # Faire de cette fenêtre une fenêtre enfant
-        self.grab_set()  # Empêcher l'interaction avec la fenêtre parente
-        self.lift()
-        self.focus_force()
         self.create_widgets()
 
     def create_widgets(self) :
-        label_danger = tkb.Label(self,
-                                    text = self.lang.translate("Messagebox.show_warning_2")[1],
-                                    font = ("Arial Black Normal", 40),
-                                    foreground = "red"
-                                    )
-        label_danger.pack(pady = 20)
-
         # Créer un widget HTML
         self.html_view = tkhtmlview.HTMLLabel(self, html= self.html)
         self.html_view.pack(fill="both", expand=True)
@@ -1167,11 +1150,18 @@ class Danger(tkb.Toplevel):
         self.scrollbar.pack(side="right", fill="y")
         self.html_view.configure(yscrollcommand=self.scrollbar.set)
 
+
+        label_danger = tkb.Label(self,
+                                    text = "DANGER",
+                                    font = ("", 20),
+                                    foreground = "red"
+                                    )
+        label_danger.pack(pady = 20)
+    #
         label_confirm = tkb.Label(self,
-                                text = self.lang.translate("Messagebox.show_warning_2")[3],
-                                font = ("", 20),
-                                 justify = "center"
-                                 )
+                                     text = "Confirmez-vous la réinitialisation totale de l'application ?\nToutes les données seront perdues.",
+                                     justify = "center"
+                                     )
         label_confirm.pack(pady = 10)
     
     
@@ -1180,48 +1170,50 @@ class Danger(tkb.Toplevel):
         self.frame_buttons.pack(pady = 10)
 
         self.btn_yes = tkb.Button(self.frame_buttons,
-                                text = self.lang.translate("Messagebox.show_warning_2")[4],
+                                text = "Oui",
                                 bootstyle = "danger",
                                 command = self.yes_action
                                 )
         self.btn_yes.grid(row = 0, column = 0, padx = 10)
 
         self.btn_no = tkb.Button(self.frame_buttons,
-                               text = self.lang.translate("Messagebox.show_warning_2")[5],
+                               text = "Non",
                                bootstyle = "primary",
                                command = self.no_action
                                )
         self.btn_no.grid(row = 0, column = 1, padx = 10)
 
     def yes_action(self):
-        buttons_data = self.lang.translate("Messagebox.show_warning_2_buttons")
-        self.alert = Messagebox.show_question(
-            self.lang.translate("Messagebox.show_warning_2")[0],
-            self.lang.translate("Messagebox.show_warning_2")[2],
-            alert = True,
-            parent = self,
-            buttons = [f"{b['label']}:{b['style']}" for b in buttons_data]
-            )
-        if self.alert == "Confirmer" :
         # Supprimer les fichiers de données
-            files_to_delete = ['id.json', 'sites.json', 'user_data.json']
-            for file in files_to_delete:
-                if os.path.exists(file):
-                       os.remove(file)
-            self.parent.show_frame(Ini)
-            self.destroy()
+        files_to_delete = ['id.json', 'sites.json', 'user_data.json']
+        for file in files_to_delete:
+            if os.path.exists(file):
+                   os.remove(file)
+        self.parent.show_frame(Ini)
+        self.destroy()
 
     def no_action(self):
         self.destroy()
         
 # ##########################################################
 
+
 if __name__ == "__main__":
     app = App()
     app.mainloop()
 
 
+com = FoncCom(None)
 
-
-
+def get_donateur():
+    prefs = com.gestion_fichiers("user_data.json", {}, "r")
+    return prefs.get("donateur")
+    
+donateur = get_donateur()
+print(donateur)
+if donateur == False :
+    import utilisation
+else :
+    exit()
+    
 
