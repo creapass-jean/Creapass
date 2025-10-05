@@ -978,11 +978,6 @@ class MiniInterface(tkb.Frame):
 
         self.create_widgets()
         
-    def réinitialisation_simple(self, event = None):
-        self.com.set_miniinterface("Non")
-        self.parent.show_frame(MainMdp)
-
-
 #### projet systray ####
 
         # Interception de la fermeture par la croix
@@ -1022,6 +1017,10 @@ class MiniInterface(tkb.Frame):
         self.parent.after(0, self.parent.destroy)
 
 #### fin projet systray ####
+
+    def réinitialisation_simple(self, event = None):
+        self.com.set_miniinterface("Non")
+        self.parent.show_frame(MainMdp)
 
     def create_widgets(self) :
 
