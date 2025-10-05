@@ -501,6 +501,17 @@ class Ini(tkb.Frame):
         self.com = FoncCom(self)
         self.parent.geometry("550x350+200+200")
         self.parent.title(self.lang.translate("ini_fen_ttk.Window_title"))
+        # creation du fichier user_data.json s'il n'existe pas
+        usage_defaut = {
+            "langue_choisie": "Français",
+            "theme_choisi": "Clair",
+            "theme_applique": "cosmo",
+            "langue": "Français",
+            "MiniInterface": "Non",
+            "utilisation": 0,
+            "donateur": False
+        }
+        FoncCom.gestion_fichiers("user_data.json", usage_defaut, "w")
         self.create_widgets()
 
 # création des widgets
