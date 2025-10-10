@@ -163,8 +163,8 @@ class FoncCom :
 
 #todo : construire les autres fonctions liées au menu Aide
 
-    def cpt_util(self):
-        utilisation += 1
+#    def cpt_util(self):
+#        utilisation += 1
     
     def recup_site(self, site, name, event = None) :
         """récupère le nom du site demandeur et en vérifie la validité. Si le nom ne figure pas dans la liste, l'ajoute et l'enregistre sur le disque"""
@@ -335,7 +335,7 @@ class App(tkb.Window):
         self.style.theme_use(theme)
         self.iconphoto(True, tkb.PhotoImage(file =  "images_creapass/creapass.png"))
         self.resizable(0,0)
-        self.bind("<Alt-i>", self.réinitialisation_totale)
+        self.bind("<Control-Alt-Double-i>", self.réinitialisation_totale)
         self.bind("<Control-q>", self.fermeture)
         self.bind("<Control-Q>", self.fermeture)
         self.current_frame = None
@@ -511,7 +511,10 @@ class Ini(tkb.Frame):
             "utilisation": 0,
             "donateur": False
         }
-        FoncCom.gestion_fichiers("user_data.json", usage_defaut, "w")
+        if not os.path.exists("user_data.json"):
+            FoncCom.gestion_fichiers("user_data.json", usage_defaut, "w")
+            
+        
         self.create_widgets()
 
 # création des widgets
@@ -1162,14 +1165,14 @@ class Danger(tkb.Toplevel):
 
 
         label_danger = tkb.Label(self,
-                                    text = "DANGER",
-                                    font = ("", 20),
+                                    text = self.lang.translate("Messagebox.show_warning_2")[1],                                  font = ("", 20, "bold"),
                                     foreground = "red"
                                     )
         label_danger.pack(pady = 20)
     #
         label_confirm = tkb.Label(self,
-                                     text = "Confirmez-vous la réinitialisation totale de l'application ?\nToutes les données seront perdues.",
+                                     text = self.lang.translate("Messagebox.show_warning_2")[3],
+                                     font = ("", 15, "bold"),
                                      justify = "center"
                                      )
         label_confirm.pack(pady = 10)
@@ -1180,14 +1183,14 @@ class Danger(tkb.Toplevel):
         self.frame_buttons.pack(pady = 10)
 
         self.btn_yes = tkb.Button(self.frame_buttons,
-                                text = "Oui",
+                                text = self.lang.translate("Messagebox.show_warning_2")[4],
                                 bootstyle = "danger",
                                 command = self.yes_action
                                 )
         self.btn_yes.grid(row = 0, column = 0, padx = 10)
 
         self.btn_no = tkb.Button(self.frame_buttons,
-                               text = "Non",
+                               text = self.lang.translate("Messagebox.show_warning_2")[5],
                                bootstyle = "primary",
                                command = self.no_action
                                )
@@ -1199,8 +1202,8 @@ class Danger(tkb.Toplevel):
         for file in files_to_delete:
             if os.path.exists(file):
                    os.remove(file)
-        self.parent.show_frame(Ini)
         self.destroy()
+        self.parent.destroy()
 
     def no_action(self):
         self.destroy()

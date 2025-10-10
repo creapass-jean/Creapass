@@ -36,8 +36,8 @@
     "¡PELIGRO!",
     "CONFIRMAR REINICIO",
     "¿Confirma el restablecimiento TOTAL de la aplicación?\nTodos los datos se perderán.",
-    "Si",
-    "No"
+    "Confirmar",
+    "Cancelar"
     ],
 
     "Messagebox.show_warning_2_buttons":

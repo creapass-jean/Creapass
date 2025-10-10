@@ -42,8 +42,8 @@
     "DANGER",
     "RÉINITIALISATION TOTALE",
     "Confirmez-vous la réinitialisation totale de l'application ?\nToutes les données seront perdues.",
-    "Oui",
-    "Non"
+    "Confirmer",
+    "Annuler"
     ],
 
 "Messagebox.show_warning_2_buttons":

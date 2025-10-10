@@ -42,8 +42,8 @@
     "WARNING",    
     "CONFIRM RESET",
     "Do you confirm the complete reset of the application?\nAll data will be lost.",
-    "Yes",
-    "No"
+    "Confirm",
+    "Cancel"
     ],
 
 "Messagebox.show_warning_2_buttons":

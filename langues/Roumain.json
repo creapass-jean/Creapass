@@ -42,8 +42,8 @@
     "ATENȚIE",
     "CONFIRMAȚI REINIȚIALIZAREA",
     "Confirmați reinițializarea completă a aplicației?\nToate datele vor fi pierdute.",
-    "Da",
-    "Nu"
+    "Confirmă",
+    "Anulează"
     ],
 
 "Messagebox.show_warning_2_buttons":
