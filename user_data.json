@@ -1,9 +1,10 @@
 {
     "langue_choisie": "Français",
-    "theme_choisi": "Clair",
-    "theme_applique": "cosmo",
-    "langue": "Français",
+    "theme_choisi": "albastru-noapte",
+    "theme_applique": "superhero",
+    "langue": "Espagnol",
     "MiniInterface": "Non",
     "utilisation": 0,
-    "donateur": false
+    "donateur": false,
+    "freq_util": 20
 }

@@ -161,11 +161,6 @@ class FoncCom :
         html_path = Path("active_html/notice.html")
         webbrowser.open(html_path.resolve().as_uri())
 
-#todo : construire les autres fonctions liées au menu Aide
-
-#    def cpt_util(self):
-#        utilisation += 1
-    
     def recup_site(self, site, name, event = None) :
         """récupère le nom du site demandeur et en vérifie la validité. Si le nom ne figure pas dans la liste, l'ajoute et l'enregistre sur le disque"""
         site = site.capitalize()    #1ère lettre en capitale
