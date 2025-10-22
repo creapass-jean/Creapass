@@ -504,7 +504,8 @@ class Ini(tkb.Frame):
             "langue": "Français",
             "MiniInterface": "Non",
             "utilisation": 0,
-            "donateur": False
+            "donateur": False,
+            "freq_util": 20
         }
         if not os.path.exists("user_data.json"):
             FoncCom.gestion_fichiers("user_data.json", usage_defaut, "w")
