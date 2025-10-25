@@ -7,8 +7,6 @@
 #  
 
 #
-def main(args):
-    return 0
 
 import webbrowser
 from pathlib import Path
@@ -16,45 +14,30 @@ from creapass import FoncCom
 
 com = FoncCom(None)
 
-def get_freq_util():
-    """Lit le statut de l'utilisation dans user_data.json."""
+def maj_user(data):
+    '''Met à jour user_data'''
     prefs = com.gestion_fichiers("user_data.json", {}, "r")
-    return prefs.get("freq_util")
-
-def set_freq_util(compt):
-    """Écrit le statut appliqué dans user_data.json."""
-    prefs = com.gestion_fichiers("user_data.json", {}, "r")
-    prefs["freq_util"] = compt
+    prefs["donateur"] = data
     return com.gestion_fichiers("user_data.json", prefs, "w")
 
-def get_utilisation():
-    """Lit le statut de l'utilisation dans user_data.json."""
-    prefs = com.gestion_fichiers("user_data.json", {}, "r")
-    return prefs.get("utilisation")
-
-def set_utilisation(compt):
-    """Écrit le statut appliqué dans user_data.json."""
-    prefs = com.gestion_fichiers("user_data.json", {}, "r")
-    prefs["utilisation"] = compt
-    return com.gestion_fichiers("user_data.json", prefs, "w")
-
-freq_util = get_freq_util()
-utilisation = get_utilisation()
+users_data = com.gestion_fichiers("user_data.json", {}, "r") #lecture_users()
+donateur = users_data.get("donateur")
+statut_donateur = donateur[0]
+utilisation = donateur[1]
+freq_don = donateur[2]
 utilisation += 1
-set_utilisation(utilisation)
-if utilisation > freq_util :
+donateur[1] = utilisation
+maj_user(donateur)
+
+if utilisation == freq_don :
     html_path = Path("active_html/don.html")
     webbrowser.open(html_path.resolve().as_uri()) 
-    set_utilisation(0)
-    freq_util -= 1
-    set_freq_util(freq_util)
-    if freq_util == 4:
-        set_freq_util(20)
+    donateur[1] = 0    
+    donateur[2] -= 1
+    if donateur[2] == 4:
+        donateur[2] = 25
+    maj_user(donateur)
+
     exit()    
 else :
     exit()
-   
-if __name__ == '__main__':
-    import sys
-    sys.exit(main(sys.argv))  
-

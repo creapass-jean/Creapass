@@ -1219,9 +1219,10 @@ def get_donateur():
     return prefs.get("donateur")
     
 donateur = get_donateur()
-if donateur == False :
+print(donateur)
+if False in donateur:
     import utilisation
 else :
     exit()
-    
+     
 

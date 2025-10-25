@@ -1,10 +1,12 @@
 {
     "langue_choisie": "Français",
-    "theme_choisi": "albastru-noapte",
+    "theme_choisi": "blue-night",
     "theme_applique": "superhero",
-    "langue": "Espagnol",
+    "langue": "French",
     "MiniInterface": "Non",
-    "utilisation": 0,
-    "donateur": false,
-    "freq_util": 20
+    "donateur": [
+        false,
+        1,
+        25
+    ]
 }
