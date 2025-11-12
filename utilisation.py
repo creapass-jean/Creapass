@@ -25,6 +25,8 @@ donateur = users_data.get("donateur")
 statut_donateur = donateur[0]
 utilisation = donateur[1]
 freq_don = donateur[2]
+if statut_donateur == True:
+    exit()
 utilisation += 1
 donateur[1] = utilisation
 maj_user(donateur)

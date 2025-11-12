@@ -1212,17 +1212,4 @@ if __name__ == "__main__":
     app.mainloop()
 
 
-com = FoncCom(None)
-
-def get_donateur():
-    prefs = com.gestion_fichiers("user_data.json", {}, "r")
-    return prefs.get("donateur")
-    
-donateur = get_donateur()
-print(donateur)
-if False in donateur:
-    import utilisation
-else :
-    exit()
-     
-
+import utilisation
