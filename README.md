@@ -46,6 +46,7 @@ Creapass/
 ├── sites.json                 # Liste évolutive des sites utilisés
 ├── README.md                  # Présentation du projet
 ├── .gitignore                 # Fichiers et dossiers à exclure
+|__ utilisation                # Appel Paypal
 ```
 
 ## 🔒 Sécurité & Respect de la vie privée
@@ -68,7 +69,9 @@ python creapass.py
 ```
 
 
-🧭 **Origine du projet**  
+🧭 **Origine du projet**
+
+*Je n'avais aucune formation informatique, débutant dans la pâtisserie à 15 ans avec un BEPC, à 21 ans je suis passé à la photographie où j'ai fait ma carrière. À 76 ans, pour occuper ma petite retraite et tenter de faire la pige à Alzheimer je me suis lancé dans l'étude de la programmation avec Python. Ce programme est le résultat de 14 mois d'autodidaxie*  
 Développé et testé avec soin à Limoges, Nouvelle-Aquitaine 🇫🇷  
 Parce que la confidentialité mérite une touche artisanale.
 
