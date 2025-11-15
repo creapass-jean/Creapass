@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notice d'emploi - Creapass</title>
+    <title>Instrucțiuni de utilizare - Creapass</title>
     <style>
         /* === Styles de base === */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne et lisible */
             line-height: 1.6; /* Espacement confortable entre les lignes */
             color: #333; /* Couleur de texte foncée pour meilleure lisibilité */
-            max-width: 900px; /* Largeur max pour une lecture confortable */
+            max-width: 850px; /* Largeur max pour une lecture confortable */
             margin: 0 auto; /* Centrage de la page */
             padding: 20px; /* Marge intérieure */
             background-color: #f9f9f9; /* Fond légèrement gris */
         }
-
         .section-card {
             background-color: #fefefe; /* Blanc légèrement plus chaud */
             border-radius: 8px; /* Coins légèrement arrondis */
@@ -24,9 +23,7 @@
             margin: 30px auto;
             max-width: 850px; /* Largeur optimale pour la lecture */
             border-left: 4px solid #3498db;
-
         }
-
         /* === Titres === */
         h1 {
             color: #2c3e50; /* Couleur bleu foncé */
@@ -34,12 +31,10 @@
             border-bottom: 2px solid #3498db; /* Ligne de séparation */
             padding-bottom: 10px;
         }
-
         h2, h3 {
             color: #2980b9; /* Bleu un peu plus clair */
             margin-top: 30px; /* Espace avant les titres */
         }
-
         /* === Images === */
         img {
             display: block;
@@ -49,7 +44,6 @@
             border: 1px solid #ddd;  /*Bordure légère */
             box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Ombre légère */
         }
-
         .fig-caption {
             text-align: center;
             font-style: italic;
@@ -57,21 +51,18 @@
             color: #666;
             font-size: 0.9em;
         }
-    
+
         /* === Paragraphes et texte === */
         p {
             margin-bottom: 15px; /* Espace entre paragraphes */
         }
-
         /* === Listes === */
         ul {
             padding-left: 20px; /* Alignement des puces */
         }
-
         li {
             margin-bottom: 8px; /* Espace entre éléments de liste */
         }
-
         /* === Mise en valeur === */
         .warning {
             color: #e74c3c; /* Rouge pour les avertissements */
@@ -81,25 +72,21 @@
             margin: 20px 0;
             font-weight: bold;
         }
-
         .note {
             background-color: #e8f4fc; /* Fond bleu très clair */
             padding: 15px;
             border-left: 4px solid #3498db; /* Bordure gauche */
             margin: 20px 0;
         }
-
         /* === Liens === */
         a {
             color: #3498db; /* Couleur bleue */
             text-decoration: none; /* Pas de soulignement */
         }
-
         a:hover {
             text-decoration: underline; /* Soulignement au survol */
         }
-
-        /* === Pied de page === */
+<!--         /* === Pied de page === */
         .footer {
             text-align: center;
             margin-top: 40px;
@@ -108,7 +95,7 @@
             font-size: 0.9em;
             color: #7f8c8d; /* Gris moyen */
         }
-
+ -->
         /* === Responsive === */
         @media (max-width: 600px) {
             body {
@@ -122,20 +109,66 @@
 </head>
 <body>
     <header style="background-color: transparent;">
-        <p style="text-align: center"><img src="images_creapass/logo.webp" alt="Logo Creapass" style="border:none; box-shadow:none;">
-        <h1>Notice d'emploi - Creapass</h1>
-        <p class="note">Générateur de mots de passe aléatoires reproductibles et autonome</p>
+        <p style="text-align: center"><img src="../images_creapass/logo.webp" alt="Logo Creapass" style="border:none; box-shadow:none;">
+        <h1>Instrucțiuni de utilizare - Creapass</h1>
+        <p class="note">Generator de parole aleatorii reproducibile și autonom</p>
     </header>
-
     <section class = "section-card">
-        <p>Désolés, Cette page n'est pas encore traduite. Vous pouvez vous reporter sur une des langues disponibles en choisissant « Langues / (choix-langue) » </p>
-        <p>Sorry, this page is not yet translated. You can refer to one of the available languages by selecting "Languages / (language-choice)"</p>
-        <p>Lo sentimos, esta página aún no está traducida. Puede referirse a uno de los idiomas disponibles seleccionando "Idiomas / (elección-de-idioma)"</p>
-        <p>Ne pare rău, această pagină nu a fost încă tradusă. Puteți consulta una dintre limbile disponibile selectând „Limbi / (alege-limba)”</p>
+        <h2>1 - Inițializare</h2>
+        <p>Când porniți Creapass pentru prima dată, veți vedea această fereastră:</p>
+        <p style="text-align: center"><img src="../images_creapass/fig_1.webp" alt="Fereastra de inițializare"/></p>
+        <p class="fig-caption">Figura 1: Fereastra de inițializare</p>
+        <p>Software-ul a fost conceput pentru a fi utilizat fără mouse-ul (este mai ușor și mai rapid, dar mouse-ul rămâne disponibil). Zona activă este înconjurată de un cadru albastru; apăsarea tastei „Enter” validează și trece automat la zona următoare.</p>
+        <p class="warning">ATENȚIE: Identificatorul și parola dvs. sunt salvate sub formă codificată (amprentă digitală). Este <strong>IMPERATIV SĂ VĂ AMINTIȚI</strong> aceste date, deoarece nu pot fi recuperate.</p>
+        <p style="text-align: center"><a href="conseils_ini.html">→ Consultați sfaturile noastre pentru a alege un identificator și o parolă bune ←</a></p>
+        <p id="Lorsque vous avez entré ces données">După introducerea acestor date, fereastra devine:</p>
+        <p style="text-align: center"><img src="../images_creapass/fig_2.webp" alt="Fereastra de validare"/></p>
+        <p class="fig-caption">Figura 2: Validarea inițializării</p>
     </section>
+    <section class = "section-card">
+        <h2>2 - Utilizare de bază</h2>
+        <p>După inițializare, această fereastră va apărea la pornire:</p>
+        <p style="text-align: center"><img src="../images_creapass/fig_3.webp" alt="Fereastra principală"/></p>
+        <p class="fig-caption">Figura 3: Fereastra principală</p>
+        <p>Trebuie să introduceți parola pentru a accesa funcționalitățile. Apoi:</p>
+        <ol>
+            <li>Selectați sau introduceți un site/aplicație</li>
+            <li>Validați cu Enter</li>
+            <li>Parola generată este copiată automat în clipboard</li>
+        </ol>
+        <p style="text-align: center"><img src="../images_creapass/fig_4.webp" alt="Generare parolă"/></p>
+        <p class="fig-caption">Figura 4: Parolă generată</p>
+    </section>
+    <section class = "section-card">
+        <h2>3 - Mini-interfață</h2>
+        <p>Pentru o utilizare mai discretă, activați mini-interfața prin meniu.<br>Atenție, această opțiune din meniu este accesibilă doar după validarea parolei.</p>
+        <p style="text-align: center"><img src="../images_creapass/fig_5.webp" alt="Activare mini-interfață"/></p>
+        <p class="fig-caption">Figura 5: Activarea mini-interfeței</p>
+        <p>Mini-interfața apare apoi, împreună cu o pictogramă în zona de lângă ceas:<br>Un clic dreapta pe pictogramă afișează un meniu</p>
+        <p style="text-align: center"><img src="../images_creapass/fig_6.webp" alt="Mini-interfață"/></p>
+        <p class="fig-caption">Figura 6: Mini-interfață</p>
+        <p style="text-align: center"><img src="../images_creapass/fig_8.webp" alt="Mini-interfață"/></p>
+        <p class="fig-caption">Figura 8: Pictogramă lângă ceas: 1-repaus, 2-la trecere, 3-la clic dreapta</p>
+        <p>Dacă trebuie să mutați această fereastră, apăsați „Alt+m” pentru a afișa bara tradițională de sistem</p>
+        <p style="text-align: center"><img src="../images_creapass/fig_7.webp" alt="Mini-interfață deplasabilă"/></p>
+        <p class="fig-caption">Figura 6: Mini-interfață deplasabilă</p>
 
-    <div class="footer">
-        <p>Creapass - Générateur de mots de passe sécurisés et reproductibles</p>
-    </div>
+        <p class="note">Sfat: După alegerea site-ului, apăsați Enter pentru a genera o parolă, apoi din nou Enter pentru a șterge și a pregăti o nouă generare.</p>
+        <p>Dacă ați ales să deschideți direct în forma redusă, vi se va cere parola.<br><strong>Atenție,</strong> acest lucru presupune că stăpâniți software-ul și că este modul dvs. obișnuit de lucru; nu veți mai avea acces la opțiunile „limbă” și „temă”</p>
+    </section>
+    <section class = "section-card">
+        <h2>Ajutor și scurtături</h2>
+        <ul>
+            <li><strong>F1</strong>: Ajutor contextual</li>
+            <li><strong>Ctrl+Q</strong>: Închidere aplicație</li>
+            <li><strong>Ctrl+V</strong>: Lipire parola generată</li>
+            <li><strong>Alt+m</strong>: Afișare/ascundere bara de sistem</li>
+            <li><strong>Alt+s</strong>: (disponibil doar în mini-interfață) Revenire la interfața normală</li>
+            <li><strong>Ctrl+Alt+i+i</strong>: (Apăsați de două ori pe „i” cu Ctrl+Alt apăsate) Resetare completă a programului</li>
+        </ul>
+    </section>
+    <footer style="text-align: center">
+      Original în franceză, traduceri mistral.ai și/sau deepl.com<br>&copy; Jean Dalbrut – Autorul CréaPass
+    </footer>
 </body>
 </html>

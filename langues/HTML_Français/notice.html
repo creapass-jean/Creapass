@@ -99,7 +99,7 @@
             text-decoration: underline; /* Soulignement au survol */
         }
 
-        /* === Pied de page === */
+<!--         /* === Pied de page === */
         .footer {
             text-align: center;
             margin-top: 40px;
@@ -108,7 +108,7 @@
             font-size: 0.9em;
             color: #7f8c8d; /* Gris moyen */
         }
-
+ -->
         /* === Responsive === */
         @media (max-width: 600px) {
             body {
@@ -122,7 +122,7 @@
 </head>
 <body>
     <header style="background-color: transparent;">
-        <p style="text-align: center"><img src="images_creapass/logo.webp" alt="Logo Creapass" style="border:none; box-shadow:none;">
+        <p style="text-align: center"><img src="../images_creapass/logo.webp" alt="Logo Creapass" style="border:none; box-shadow:none;">
         <h1>Notice d'emploi - Creapass</h1>
         <p class="note">Générateur de mots de passe aléatoires reproductibles et autonome</p>
     </header>
@@ -130,7 +130,7 @@
     <section class = "section-card">
         <h2>1 - Initialisation</h2>
         <p>Lorsque vous lancez Creapass pour la première fois, vous allez voir cette fenêtre :</p>
-        <p style="text-align: center"><img src="images_creapass/fig_1.webp" alt="Fenêtre d'initialisation"/></p>
+        <p style="text-align: center"><img src="../images_creapass/fig_1.webp" alt="Fenêtre d'initialisation"/></p>
         <p class="fig-caption">Figure 1 : Fenêtre d'initialisation</p>
 
         <p>Le logiciel a été conçu pour être utilisé sans la souris (c'est plus facile et plus rapide mais la souris demeure). La zone en service est entourée d'un cadre bleu, l'appui sur la touche « Entrée » valide et passe automatiquement à la zone suivante.</p>
@@ -140,14 +140,14 @@
         <p style="text-align: center"><a href="conseils_ini.html">→ Consultez nos conseils pour choisir un bon identifiant et mot de passe ←</a></p>
 
         <p id="Lorsque vous avez entré ces données">Après avoir entré ces données, la fenêtre devient :</p>
-        <p style="text-align: center"><img src="images_creapass/fig_2.webp" alt="Fenêtre de validation"/></p>
+        <p style="text-align: center"><img src="../images_creapass/fig_2.webp" alt="Fenêtre de validation"/></p>
         <p class="fig-caption">Figure 2 : Validation de l'initialisation</p>
     </section>
 
     <section class = "section-card">
         <h2>2 - Utilisation de départ</h2>
         <p>Après l'initialisation, cette fenêtre apparaîtra au démarrage :</p>
-        <p style="text-align: center"><img src="images_creapass/fig_3.webp" alt="Fenêtre principale"/></p>
+        <p style="text-align: center"><img src="../images_creapass/fig_3.webp" alt="Fenêtre principale"/></p>
         <p class="fig-caption">Figure 3 : Fenêtre principale</p>
 
         <p>Vous devez saisir votre mot de passe pour accéder aux fonctionnalités. Ensuite :</p>
@@ -157,23 +157,23 @@
             <li>Le mot de passe généré est automatiquement copié dans le presse-papiers</li>
         </ol>
 
-        <p style="text-align: center"><img src="images_creapass/fig_4.webp" alt="Génération de mot de passe"/></p>
+        <p style="text-align: center"><img src="../images_creapass/fig_4.webp" alt="Génération de mot de passe"/></p>
         <p class="fig-caption">Figure 4 : Mot de passe généré</p>
     </section>
 
     <section class = "section-card">
         <h2>3 - Mini-interface</h2>
         <p>Pour une utilisation plus discrète, activez la mini-interface via le menu.<br>Attention, cette option du menu n'est accessible qu'après validation du mot de passe.</p>
-        <p style="text-align: center"><img src="images_creapass/fig_5.webp" alt="Activation mini-interface"/></p>
+        <p style="text-align: center"><img src="../images_creapass/fig_5.webp" alt="Activation mini-interface"/></p>
         <p class="fig-caption">Figure 5 : Activation de la mini-interface</p>
 
         <p>La mini-interface apparaît alors, ainsi qu'une icône dans la zone à côté de l'horloge :<br>Un clic droit sur l'icône fait apparaître un menu</p>
-        <p style="text-align: center"><img src="images_creapass/fig_6.webp" alt="Mini-interface"/></p>
+        <p style="text-align: center"><img src="../images_creapass/fig_6.webp" alt="Mini-interface"/></p>
         <p class="fig-caption">Figure 6 : Mini-interface</p>
-        <p style="text-align: center"><img src="images_creapass/fig_8.webp" alt="Mini-interface"/></p>
+        <p style="text-align: center"><img src="../images_creapass/fig_8.webp" alt="Mini-interface"/></p>
         <p class="fig-caption">Figure 8 : Icône côté horloge : 1-au repos, 2-au survol, 3-au clic droit</p>
         <p>Si vous devez déplacer cette fenêtre, appuyez sur « Alt-m » pour avoir la traditionnelle barre-système</p>
-        <p style="text-align: center"><img src="images_creapass/fig_7.webp" alt="Mini-interface déplaçable"/></p>
+        <p style="text-align: center"><img src="../images_creapass/fig_7.webp" alt="Mini-interface déplaçable"/></p>
         <p class="fig-caption">Figure 6 : Mini-interface déplaçable</p>
         
         <p class="note">Astuce : Après choix du site, appuyez sur Entrée pour générer un mot de passe, puis à nouveau Entrée pour effacer et préparer une nouvelle génération.</p>
@@ -187,11 +187,15 @@
             <li><strong>Ctrl+Q</strong> : Quitter l'application</li>
             <li><strong>Ctrl+V</strong> : Coller le mot de passe généré</li>
             <li><strong>Alt+m</strong>: Afficher/supprimer la barre système</li>
+            <li><strong>Alt+s</strong>: (disponible uniquement en mini-interface) Revenir à l'interface normale</li>
+            <li><strong>Ctrl+Alt+i+i</strong>: (Tapez 2 fois sur "i" avec Ctrl-Alt enfoncés)  Réinitialiser totalement le programme</li>
+
         </ul>
     </section>
 
-    <div class="footer">
-        <p>Creapass - Générateur de mots de passe sécurisés et reproductibles</p>
-    </div>
+    <footer style="text-align: center">
+      Original en français, traductions mistral.ai et/ou deepl.com<br>&copy; Jean Dalbrut – Auteur de CréaPass
+    </footer>
+
 </body>
 </html>
