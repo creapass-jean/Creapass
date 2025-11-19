@@ -4,127 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A coffee (or a pint) for the road?</title>
-    <style>
-        /* === Base Styles === */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern and readable font */
-            line-height: 1.6; /* Comfortable line spacing */
-            color: #333; /* Dark text color for better readability */
-            max-width: 1000px; /* Max width for comfortable reading */
-            margin: 0 auto; /* Center the page */
-            padding: 20px; /* Inner margin */
-            background-color: #f9f9f9; /* Slightly gray background */
-        }
-        .section-card {
-            background-color: #fefefe; /* Slightly warmer white */
-            border-radius: 8px; /* Slightly rounded corners */
-            box-shadow: 5px 5px 8px rgba(0,0,0,0.3); /* Very subtle shadow */
-            padding: 25px;
-            margin: 30px auto;
-            max-width: 450px; /* Optimal width for reading */
-            border-left: 4px solid #3498db;
-        }
-        /* === Titles === */
-        h1 {
-            color: #2c3e50; /* Dark blue color */
-            text-align: center;
-            border-bottom: 2px solid #3498db; /* Separation line */
-            padding-bottom: 10px;
-        }
-        h2, h3 {
-            color: #2980b9; /* Slightly lighter blue */
-            margin-top: 30px; /* Space before titles */
-        }
-        /* === Images === */
-        img {
-            display: block;
-            max-width: 100%; /* Responsive images */
-            height: auto;
-            margin: 20px auto; /* Center with margins */
-            border: 1px solid #ddd;  /* Light border */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Light shadow */
-        }
-        .tableaux {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            grid-template-rows: auto
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .tableau {
-            background: white;
-            padding: 1rem;
-            border-radius: 8px;
-            border-left: 4px solid #3498db;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        form {
-            text-align:center;}
-        /* === Paragraphs and text === */
-        p {
-            margin-bottom: 10px; /* Space between paragraphs */
-        }
-        /* === Lists === */
-        ul {
-            padding-left: 20px; /* Alignment of bullets */
-        }
-        li {
-            margin-bottom: 8px; /* Space between list items */
-            background:#E3F9D9
-        }
-        /* === Highlighting === */
-        .note {
-            background-color: #e8f4fc; /* Very light blue background */
-            padding: 15px;
-            border-left: 4px solid #3498db; /* Left border */
-            margin: 20px 0;
-            text-align : center;
-        }
-        /* === Links === */
-        a {
-            color: #3498db; /* Blue color */
-            text-decoration: none; /* No underline */
-        }
-        a:hover {
-            text-decoration: underline; /* Underline on hover */
-        }
-        /* === Footer === */
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            font-size: 0.9em;
-            color: #7f8c8d; /* Medium gray */
-        }
-        /* === Responsive === */
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            h1 {
-                font-size: 1.5em;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header style="background-color: transparent;">
         <h1>🙂 Thank you for using the application</h1>
-        <p style="text-align: center"><img src="images_creapass/logo2.webp" alt="Logo Creapass" style="border:none; box-shadow:none;">
+        <p style="text-align: center"><img src="../images_creapass/logo_3.webp" alt="Logo Creapass" style="border:none; box-shadow:none;">
         <p class="note">You appreciate this application? - I hope it is useful to you daily.</p>
     </header>
-    <div class="tableaux">
-        <div class="tableau">
+    <div class="features">
+        <div class="feature">
             <h3>A little help for a big thank you</h3>
             <p>You regularly use my secure password generation software, and it really makes me happy!</p>
             <p>There are surely improvements to be made. I await your suggestions and remarks.</p>
             <p>Without any training in IT, I learned everything at 77 years old to achieve the programming of this software</p>
         </div>
 
-        <div class="tableau">
+        <div class="feature">
             <h3>To allow me to continue improving it</h3>
             <p>to maintain and evolve it, you can offer me, if you feel like it:</p>
             <ul>
@@ -133,7 +29,7 @@
             </ul>
         
 
-            <form
+            <form style="text-align:center"
                 action="https://www.paypal.com/donate"
                 method="post"
                 target="_top"

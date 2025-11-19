@@ -281,8 +281,9 @@ class LanguageManager:
         '''change la langue des fichiers HTML en copiant le dossier HTML_"langue" dans le dossier principal de l'application'''
         html_dir = Path('langues/HTML_'+lang_file)
         active_html_file = html_dir.with_suffix('')
+        print(active_html_file)
         if os.path.exists("active_html") :
-            shutil.rmtree("active_html", onerror = self.on_rm_error)
+            shutil.rmtree("active_html")#, onerror = self.on_rm_error)
         shutil.copytree(active_html_file, "active_html")
 
     def on_rm_error(self, func, path, exc_info) :

@@ -96,6 +96,7 @@
             margin: 1rem 0;
         }
 
+ 
         .math {
             font-family: monospace;
             white-space: pre-wrap;
@@ -104,8 +105,7 @@
             border-radius: 4px;
             overflow-x: auto;
         }
-
-
+        
         @media (max-width: 768px) {
             body {
                 padding: 10px;
@@ -116,7 +116,6 @@
             }
         }
         
-
 /* Conteneur du sélecteur de langue */
 .language-selector {
     background: white;

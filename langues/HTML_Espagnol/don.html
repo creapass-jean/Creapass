@@ -4,127 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¿Un café (o una pinta) para el camino?</title>
-    <style>
-        /* === Estilos base === */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna y legible */
-            line-height: 1.6; /* Espaciado cómodo entre líneas */
-            color: #333; /* Color de texto oscuro para mejor legibilidad */
-            max-width: 1000px; /* Ancho máximo para una lectura cómoda */
-            margin: 0 auto; /* Centrado de la página */
-            padding: 20px; /* Margen interior */
-            background-color: #f9f9f9; /* Fondo ligeramente gris */
-        }
-        .section-card {
-            background-color: #fefefe; /* Blanco ligeramente más cálido */
-            border-radius: 8px; /* Esquinas ligeramente redondeadas */
-            box-shadow: 5px 5px 8px rgba(0,0,0,0.3); /* Sombra muy sutil */
-            padding: 25px;
-            margin: 30px auto;
-            max-width: 450px; /* Ancho óptimo para la lectura */
-            border-left: 4px solid #3498db;
-        }
-        /* === Títulos === */
-        h1 {
-            color: #2c3e50; /* Color azul oscuro */
-            text-align: center;
-            border-bottom: 2px solid #3498db; /* Línea de separación */
-            padding-bottom: 10px;
-        }
-        h2, h3 {
-            color: #2980b9; /* Azul un poco más claro */
-            margin-top: 30px; /* Espacio antes de los títulos */
-        }
-        /* === Imágenes === */
-        img {
-            display: block;
-            max-width: 100%; /* Imágenes responsivas */
-            height: auto;
-            margin: 20px auto; /* Centrado con márgenes */
-            border: 1px solid #ddd;  /* Bordure légère */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra ligera */
-        }
-        .tableaux {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            grid-template-rows: auto
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .tableau {
-            background: white;
-            padding: 1rem;
-            border-radius: 8px;
-            border-left: 4px solid #3498db;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        form {
-            text-align:center;}
-        /* === Párrafos y texto === */
-        p {
-            margin-bottom: 10px; /* Espacio entre párrafos */
-        }
-        /* === Listas === */
-        ul {
-            padding-left: 20px; /* Alineación de viñetas */
-        }
-        li {
-            margin-bottom: 8px; /* Espacio entre elementos de lista */
-            background:#E3F9D9
-        }
-        /* === Resaltado === */
-        .note {
-            background-color: #e8f4fc; /* Fondo azul muy claro */
-            padding: 15px;
-            border-left: 4px solid #3498db; /* Borde izquierdo */
-            margin: 20px 0;
-            text-align : center;
-        }
-        /* === Enlaces === */
-        a {
-            color: #3498db; /* Color azul */
-            text-decoration: none; /* Sin subrayado */
-        }
-        a:hover {
-            text-decoration: underline; /* Subrayado al pasar el ratón */
-        }
-        /* === Pie de página === */
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            font-size: 0.9em;
-            color: #7f8c8d; /* Gris medio */
-        }
-        /* === Responsive === */
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            h1 {
-                font-size: 1.5em;
-            }
-        }
-    </style>
 </head>
 <body>
     <header style="background-color: transparent;">
         <h1>🙂 Gracias por usar la aplicación</h1>
-        <p style="text-align: center"><img src="images_creapass/logo2.webp" alt="Logo Creapass" style="border:none; box-shadow:none;">
+        <p style="text-align: center"><img src="../images_creapass/logo_3.webp" alt="Logo Creapass" style="border:none; box-shadow:none;">
         <p class="note">¿Aprecias esta aplicación? - Espero que te sea útil a diario.</p>
     </header>
-    <div class="tableaux">
-        <div class="tableau">
+    <div class="features">
+        <div class="feature">
             <h3>Un pequeño empujón para un gran gracias</h3>
             <p>Usas regularmente mi software de generación de contraseñas seguras, ¡y eso me hace muy feliz!</p>
             <p>Seguramente quedan mejoras por hacer. Espero tus sugerencias y comentarios.</p>
             <p>Sin ninguna formación en informática, lo aprendí todo a los 77 años para lograr la programación de este software</p>
         </div>
 
-        <div class="tableau">
+        <div class="feature">
             <h3>Para permitirme seguir mejorándolo</h3>
             <p>para mantenerlo y hacerlo evolucionar, puedes ofrecerme, si te apetece:</p>
             <ul>
@@ -133,7 +28,7 @@
             </ul>
             
 
-            <form
+            <form style="text-align:center"
                 action="https://www.paypal.com/donate"
                 method="post"
                 target="_top"

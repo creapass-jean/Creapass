@@ -4,127 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O cafea (sau o pintă) pentru drum?</title>
-    <style>
-        /* === Stiluri de bază === */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font modern și lizibil */
-            line-height: 1.6; /* Spațiere confortabilă între linii */
-            color: #333; /* Culoare text închis pentru o mai bună lizibilitate */
-            max-width: 1000px; /* Lățime maximă pentru o lectură confortabilă */
-            margin: 0 auto; /* Centrarea paginii */
-            padding: 20px; /* Marja interioară */
-            background-color: #f9f9f9; /* Fundal ușor gri */
-        }
-        .section-card {
-            background-color: #fefefe; /* Alb ușor mai cald */
-            border-radius: 8px; /* Colțuri ușor rotunjite */
-            box-shadow: 5px 5px 8px rgba(0,0,0,0.3); /* Umbră foarte subtilă */
-            padding: 25px;
-            margin: 30px auto;
-            max-width: 450px; /* Lățime optimă pentru lectură */
-            border-left: 4px solid #3498db;
-        }
-        /* === Titluri === */
-        h1 {
-            color: #2c3e50; /* Culoare albastră închisă */
-            text-align: center;
-            border-bottom: 2px solid #3498db; /* Linie de separare */
-            padding-bottom: 10px;
-        }
-        h2, h3 {
-            color: #2980b9; /* Albastru un pic mai deschis */
-            margin-top: 30px; /* Spațiu înainte de titluri */
-        }
-        /* === Imagini === */
-        img {
-            display: block;
-            max-width: 100%; /* Imagini responsive */
-            height: auto;
-            margin: 20px auto; /* Centrare cu margini */
-            border: 1px solid #ddd;  /*Bordure légère */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Umbră ușoară */
-        }
-        .tableaux {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            grid-template-rows: auto
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .tableau {
-            background: white;
-            padding: 1rem;
-            border-radius: 8px;
-            border-left: 4px solid #3498db;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        form {
-            text-align:center;}
-        /* === Paragrafe și text === */
-        p {
-            margin-bottom: 10px; /* Spațiu între paragrafe */
-        }
-        /* === Liste === */
-        ul {
-            padding-left: 20px; /* Alinierea punctelor */
-        }
-        li {
-            margin-bottom: 8px; /* Spațiu între elementele listei */
-            background:#E3F9D9
-        }
-        /* === Evidențiere === */
-        .note {
-            background-color: #e8f4fc; /* Fundal albastru foarte deschis */
-            padding: 15px;
-            border-left: 4px solid #3498db; /* Bordură stânga */
-            margin: 20px 0;
-            text-align : center;
-        }
-        /* === Linkuri === */
-        a {
-            color: #3498db; /* Culoare albastră */
-            text-decoration: none; /* Fără subliniere */
-        }
-        a:hover {
-            text-decoration: underline; /* Subliniere la trecere */
-        }
-        /* === Subsol === */
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            font-size: 0.9em;
-            color: #7f8c8d; /* Gri mediu */
-        }
-        /* === Responsive === */
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            h1 {
-                font-size: 1.5em;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../styles.css">
+    
 </head>
 <body>
     <header style="background-color: transparent;">
         <h1>🙂 Vă mulțumim că folosiți aplicația</h1>
-        <p style="text-align: center"><img src="images_creapass/logo2.webp" alt="Logo Creapass" style="border:none; box-shadow:none;">
-        <p class="note">Apreciați această aplicație? - Sper că vă este utilă zilnic.</p>
+        <p style="text-align: center"><img src="../images_creapass/logo_3.webp" alt="Logo Creapass" style="border:none; box-shadow:none;">
     </header>
-    <div class="tableaux">
-        <div class="tableau">
+
+    <p class="note">Apreciați această aplicație? - Sper că vă este utilă zilnic.</p>
+
+        <div class="features">
+        <div class="feature">
             <h3>Un mic ajutor pentru un mare mulțumim</h3>
             <p>Folosiți regulat software-ul meu de generare a parolelor securizate, și acest lucru mă face foarte fericit!</p>
             <p>Cu siguranță mai am de făcut îmbunătățiri. Aștept sugestiile și observațiile dvs.</p>
             <p>Fără niciun fel de pregătire în IT, am învățat totul la 77 de ani pentru a ajunge la programarea acestui software</p>
         </div>
 
-        <div class="tableau">
+        <div class="feature">
             <h3>Pentru a mă permite să continuu să îl îmbunătățesc</h3>
             <p>pentru a-l menține și a-l face să evolueze, puteți să-mi oferiți, dacă doriți:</p>
             <ul>
@@ -132,9 +31,7 @@
                 <li>sau o bere pentru buna dispoziție🍺</li>
             </ul>
         
-        
-        
-            <form
+            <form text-align:center
                 action="https://www.paypal.com/donate"
                 method="post"
                 target="_top"

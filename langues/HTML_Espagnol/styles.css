@@ -104,8 +104,7 @@
             border-radius: 4px;
             overflow-x: auto;
         }
-
-
+        
         @media (max-width: 768px) {
             body {
                 padding: 10px;
@@ -116,6 +115,9 @@
             }
         }
         
+/* ========================================
+   SÉLECTEUR DE LANGUE - À ajouter à votre CSS existant
+   ======================================== */
 
 /* Conteneur du sélecteur de langue */
 .language-selector {

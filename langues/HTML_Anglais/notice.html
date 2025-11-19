@@ -4,130 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User manual - Creapass</title>
-    <style>
-        /* === Styles de base === */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne et lisible */
-            line-height: 1.6; /* Espacement confortable entre les lignes */
-            color: #333; /* Couleur de texte foncée pour meilleure lisibilité */
-            max-width: 900px; /* Largeur max pour une lecture confortable */
-            margin: 0 auto; /* Centrage de la page */
-            padding: 20px; /* Marge intérieure */
-            background-color: #f9f9f9; /* Fond légèrement gris */
-        }
-
-        .section-card {
-            background-color: #fefefe; /* Blanc légèrement plus chaud */
-            border-radius: 8px; /* Coins légèrement arrondis */
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Ombre très subtile */
-            padding: 25px;
-            margin: 30px auto;
-            max-width: 850px; /* Largeur optimale pour la lecture */
-            border-left: 4px solid #3498db;
-
-        }
-
-        /* === Titres === */
-        h1 {
-            color: #2c3e50; /* Couleur bleu foncé */
-            text-align: center;
-            border-bottom: 2px solid #3498db; /* Ligne de séparation */
-            padding-bottom: 10px;
-        }
-
-        h2, h3 {
-            color: #2980b9; /* Bleu un peu plus clair */
-            margin-top: 30px; /* Espace avant les titres */
-        }
-
-        /* === Images === */
-        img {
-            display: block;
-            max-width: 100%; /* Images responsives */
-            height: auto;
-            margin: 20px auto; /* Centrage avec marges */
-            border: 1px solid #ddd;  /*Bordure légère */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Ombre légère */
-        }
-
-        .fig-caption {
-            text-align: center;
-            font-style: italic;
-            margin-top: 5px;
-            color: #666;
-            font-size: 0.9em;
-        }
-    
-        /* === Paragraphes et texte === */
-        p {
-            margin-bottom: 15px; /* Espace entre paragraphes */
-        }
-
-        /* === Listes === */
-        ul {
-            padding-left: 20px; /* Alignement des puces */
-        }
-
-        li {
-            margin-bottom: 8px; /* Espace entre éléments de liste */
-        }
-
-        /* === Mise en valeur === */
-        .warning {
-            color: #e74c3c; /* Rouge pour les avertissements */
-            background-color: #fdeaea; /* Fond rouge très clair */
-            padding: 15px;
-            border-left: 4px solid #e74c3c; /* Bordure gauche */
-            margin: 20px 0;
-            font-weight: bold;
-        }
-
-        .note {
-            background-color: #e8f4fc; /* Fond bleu très clair */
-            padding: 15px;
-            border-left: 4px solid #3498db; /* Bordure gauche */
-            margin: 20px 0;
-        }
-
-        /* === Liens === */
-        a {
-            color: #3498db; /* Couleur bleue */
-            text-decoration: none; /* Pas de soulignement */
-        }
-
-        a:hover {
-            text-decoration: underline; /* Soulignement au survol */
-        }
-
-        /* === Pied de page === */
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            font-size: 0.9em;
-            color: #7f8c8d; /* Gris moyen */
-        }
-
-        /* === Responsive === */
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            h1 {
-                font-size: 1.5em;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
     <header style="background-color: transparent;">
-        <p style="text-align: center"><img src="../images_creapass/logo.webp" alt="Logo Creapass" style="border:none; box-shadow:none;">
-        <h1>User manual - Creapass</h1>
+        <p style="text-align: center"><img src="../images_creapass/logo_3.webp" alt="Logo Creapass" style="border:none; box-shadow:none;">
         <p class="note">Random password generator that is reproducible and standalone</p>
     </header>
 
-    <section class = "section-card">
+    <h1 style="text-align: center">User manual</h1>
+
+    <section class = "card">
         <h2>1 - Initialization</h2>
         <p>When you launch Creapass for the first time, you will see this window:</p>
         <p style="text-align: center"><img src="../images_creapass/fig_1.webp" alt="Fenêtre d'initialisation"/></p>
@@ -144,7 +31,7 @@
         <p class="fig-caption">Figure 2: Initialization validation</p>
     </section>
 
-    <section class = "section-card">
+    <section class = "card">
         <h2>2 - Initial use</h2>
         <p>After initialization, this window will appear at startup:</p>
         <p style="text-align: center"><img src="../images_creapass/fig_3.webp" alt="Fenêtre principale"/></p>
@@ -161,7 +48,7 @@
         <p class="fig-caption">Figure 4: Password generated</p>
     </section>
 
-    <section class = "section-card">
+    <section class = "card">
         <h2>3 - Mini interface</h2>
         <p>For more discreet use, activate the mini interface via the menu.<br>Please note that this menu option is only accessible after validating the password.</p>
         <p style="text-align: center"><img src="../images_creapass/fig_5.webp" alt="Activation mini-interface"/></p>
@@ -177,7 +64,7 @@
         <p>If you have chosen to open directly in reduced mode, you will be asked for your password.<br><strong>Please note</strong> that this assumes you are familiar with the software and that this is your usual working mode; you will no longer have access to the “language” and “theme” options.</p>
     </section>
 
-    <section class = "section-card">
+    <section class = "card">
         <h2>Help and shortcuts</h2>
         <ul>
             <li><strong>F1</strong>: Contextual help</li>

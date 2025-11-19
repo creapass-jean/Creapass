@@ -4,135 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Un café (ou une pinte) pour la route ?</title>
-    <style>
-        /* === Styles de base === */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne et lisible */
-            line-height: 1.6; /* Espacement confortable entre les lignes */
-            color: #333; /* Couleur de texte foncée pour meilleure lisibilité */
-            max-width: 1000px; /* Largeur max pour une lecture confortable */
-            margin: 0 auto; /* Centrage de la page */
-            padding: 20px; /* Marge intérieure */
-            background-color: #f9f9f9; /* Fond légèrement gris */
-        }
-
-        .section-card {
-            background-color: #fefefe; /* Blanc légèrement plus chaud */
-            border-radius: 8px; /* Coins légèrement arrondis */
-            box-shadow: 5px 5px 8px rgba(0,0,0,0.3); /* Ombre très subtile */
-            padding: 25px;
-            margin: 30px auto;
-            max-width: 450px; /* Largeur optimale pour la lecture */
-            border-left: 4px solid #3498db;
-
-        }
-
-        /* === Titres === */
-        h1 {
-            color: #2c3e50; /* Couleur bleu foncé */
-            text-align: center;
-            border-bottom: 2px solid #3498db; /* Ligne de séparation */
-            padding-bottom: 10px;
-        }
-
-        h2, h3 {
-            color: #2980b9; /* Bleu un peu plus clair */
-            margin-top: 30px; /* Espace avant les titres */
-        }
-
-        /* === Images === */
-        img {
-            display: block;
-            max-width: 100%; /* Images responsives */
-            height: auto;
-            margin: 20px auto; /* Centrage avec marges */
-            border: 1px solid #ddd;  /*Bordure légère */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Ombre légère */
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            grid-template-rows: auto
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-        
-        .feature {
-            background: white;
-            padding: 1rem;
-            border-radius: 8px;
-            border-left: 4px solid #3498db;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        
-        form {
-            text-align:center;}
-
-
-        /* === Paragraphes et texte === */
-        p {
-            margin-bottom: 10px; /* Espace entre paragraphes */
-        }
-
-        /* === Listes === */
-        ul {
-            padding-left: 20px; /* Alignement des puces */
-        }
-
-        li {
-            margin-bottom: 8px; /* Espace entre éléments de liste */
-            background:#E3F9D9
-        }
-
-        /* === Mise en valeur === */
-
-        .note {
-            background-color: #e8f4fc; /* Fond bleu très clair */
-            padding: 15px;
-            border-left: 4px solid #3498db; /* Bordure gauche */
-            margin: 20px 0;
-            text-align : center;
-        }
-
-        /* === Liens === */
-        a {
-            color: #3498db; /* Couleur bleue */
-            text-decoration: none; /* Pas de soulignement */
-        }
-
-        a:hover {
-            text-decoration: underline; /* Soulignement au survol */
-        }
-
-        /* === Pied de page === */
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            font-size: 0.9em;
-            color: #7f8c8d; /* Gris moyen */
-        }
-
-        /* === Responsive === */
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            h1 {
-                font-size: 1.5em;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header style="background-color: transparent;">
         <h1>🙂 Merci d’utiliser l'application</h1>
-        <p style="text-align: center"><img src="images_creapass/logo3.gif" alt="Logo Creapass" style="border:none; box-shadow:none;">
-        <p class="note">Vous appréciez cette application ? - J’espère qu’elle vous rend service au quotidien.</p>
+        <p style="text-align: center"><img src="../images_creapass/logo_3.webp" alt="Logo Creapass" style="border:none; box-shadow:none;">
+ 
     </header>
 
+    <div class="note>
+        <p class="note">Vous appréciez cette application ? - J’espère qu’elle vous rend service au quotidien.</p>
+    </div>
     <div class="features">
         <div class="feature">
             <h3>Un petit coup de pouce pour un grand merci</h3>
@@ -149,7 +32,7 @@
                 <li>ou une petite pinte pour la bonne humeur🍺</li>
             </ul>
             
-            <form
+            <form style="text-align:center"
                 action="https://www.paypal.com/donate"
                 method="post"
                 target="_top"
