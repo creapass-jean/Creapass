@@ -63,6 +63,7 @@
             padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--secondary);
         }
         
         ul {
@@ -88,12 +89,11 @@
             margin: 1rem 0;
         }
         
-         .note {
-            background-color: #0000ff;
-            border-left: 4px solid var(--accent);
-            padding: 1rem;
-            border-radius: 0 4px 4px 0;
-            margin: 1rem 0;
+        .note {
+            background-color: #e8f4fc;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
         }
 
         .math {

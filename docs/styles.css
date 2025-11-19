@@ -87,16 +87,12 @@
             border-radius: 0 4px 4px 0;
             margin: 1rem 0;
         }
-        
-         .note {
-            background-color: #0000ff;
-            border-left: 4px solid var(--accent);
-            padding: 1rem;
-            border-radius: 0 4px 4px 0;
-            margin: 1rem 0;
-        }
-
- 
+        .note {
+            background-color: #e8f4fc;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+        } 
         .math {
             font-family: monospace;
             white-space: pre-wrap;

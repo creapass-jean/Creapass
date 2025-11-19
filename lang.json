@@ -1,193 +1,194 @@
 {
 "file":
-    "Fișier",
+    "Fichier",
 
 "help":
-    "Ajutor",
+    "Aide",
 
 "theme":
-    "Temă",
+    "Thème",
 
 "interface":
-    "Interfață",
+    "Interface",
 
 "ini_langue":
-    "Alegeți aici limba interfeței",
+    "Choisissez votre langue",
 
 "ini_theme":
-    "Alegeți tema interfeței",
+    "Coisissez le thème de l'interface",
 
 "entry_id" :
-    "Introduceți aici numele dvs. de utilizator. Acesta poate fi orice cuvânt doriți; singura condiție este să vi-l puteți aminti dacă aveți nevoie de el, deoarece acest identificator este utilizat de software, dar nu este stocat în computer. De exemplu, numele și prenumele dvs. sau numele și prenumele prietenei dvs. sau unul sau mai multe cuvinte la alegere. Cu toate acestea, există o regulă care trebuie respectată: nu folosiți spații; înlocuiți spațiile cu semnul de subliniere „_” (tasta 8 pe un PC sau tasta dedicată pe un Mac). De exemplu, Albert_Durant. Nu este nevoie să alegeți un cuvânt complicat. Acest identificator vă va fi cerut doar dacă schimbați calculatorul sau după formatare; totuși, este esențial, altfel nu va mai reproduce parolele pe care le utilizați.",
+    "Entrez ici votre identifiant. Celui-ci peut être n’importe quel mot de votre choix ; la seule condition est que vous puissiez vous en souvenir en cas de besoin, en effet,cet identifiant est utilisé par le logiciel mais n'est pas stocké dans l'ordinateur . Exemple, vos nom et prénoms, ou ceux de votre petite amie, ou un ou plusieurs mots quelconques.\nIl faut cependant respecter une règle, ne pas mettre d’espace ; remplacer les espaces par des underscores « _ »(touche 8 d’un PC ou touche dédiée sur un Mac). Exemple, Albert_Durant. Il est inutile de choisir un mot compliqué. Cet identifiant ne vous sera demandé que si vous changez d'ordinateur ou suite à un formatage ; cependant, il vous sera indispensable, sans quoi il ne reproduira plus les mots de passe que vous utilisez",
 
 "entry_ini_mdp" :
-    "Introduceți parola dvs. aici. Ca și în cazul autentificării de mai sus, alegeți o parolă fără spații și simplă, dar nu prea simplă; evitați data nașterii sau „Azerty”, folosiți ceva de genul „Napoleon a pierdut la Waterloo în 1815! Dacă păstrați primele litere, veți obține „NapàWe1815!”, care este ușor de reținut și solid. Și în acest caz, rețineți că software-ul nu vă înregistrează parola.",
+    "Entrez ici votre mot de passe. Comme pour l’identifiant ci- dessus, choisissez un mot de passe sans espace et simple mais pas trop ; évitez votre date de naissance ou \"Azerty\", utilisez plutôt un truc du genre :\n« Le 18 juin 40 Charles de Gaulle appelle les français à la résistance! »\n. Prenez les premières lettres de chaque mot, vous obtenez\n \" L18j40CdGalfàlr! \", facile à retenir et solide.\n Autre exemple : « Ma grand-mère est née le 15 décembre 50! »\ndevient  \"Mg-menl15d50!\"\nRemplacez les espaces par des underscores ( _ ). Là encore, sachez que le logiciel n’enregistre pas votre mot de passe.",
 
 "mdp" :
-    "Aici trebuie să introduceți din nou parola pentru a verifica dacă se potrivește cu cea introdusă la prima utilizare a software-ului. Aveți dreptul la 3 încercări. Dacă faceți 3 greșeli, software-ul se va închide și nu îl veți mai putea utiliza. Scopul acestei proceduri este de a împiedica orice „pirat” să aibă acces la computerul dumneavoastră.",
+    "Vous devez ici retaper votre mot de passe afin de vérifier qu'il correspond à celui que vous avez entré lors de l'initialisation au cours de la première utilisation du logiciel. Vous avez droit à 3 essais. Si vous avez commis 3 erreurs, le logiciel se ferme et vous ne pouvez pas l'utiliser. Cette procédure vise à interdire l'usage à un éventuel \"pirate\" qui aurait accès à votre ordinateur.",
 
 "site":
-    "Faceți clic pe săgeata mică din dreapta pentru a vedea lista de site-uri. De asemenea, puteți apăsa tasta săgeată și apoi tasta enter. Dacă site-ul în cauză nu apare în listă, introduceți-l, va fi luat în considerare și va apărea data viitoare.\n Ca de obicei, nu puneți spații, dacă este necesar, înlocuiți-le cu caractere de subliniere ( _ ).\n Se poate întâmpla ca același site să vă ceară mai multe parole; să ne imaginăm că vizitați site-ul „collection_voitures”. Acest site vă cere o parolă pentru înregistrare și are un forum care vă cere o altă parolă. Nu încercați să complicați lucrurile prin copierea adresei; cel mai important lucru este să vă amintiți ce faceți. Pentru a vă asigura că numele apare în lista de site-uri, simplificați-l folosind „Collec_auto_i” și „Collec_auto_f” (de exemplu).",
+    "Clic sur la petite flèche à droite pour avoir la liste des sites. Vous pouvez aussi appuyer sur la touche \"flèche-bas\" puis entrée. Si le site concerné ne figure pas dans la liste, tapez-le, il sera pris en compte et il apparaîtra la prochaine fois.\n Comme d'habitude, ne mettez pas d'espaces, si besoin, remplacez les par des underscores ( _ ).\n Il peut arriver qu'un même site vous demande plusieurs mots de passe ; imaginons que vous visitiez le site «collection_voitures». Ce site vous demande un mot de passe pour votre inscription et dispose d'un forum qui vous demande un autre mot de passe. Ne cherchez pas la complication en recopiant l'adresse ; l'essentiel est que vous vous souveniez de ce que vous faites. Afin que le nom loge dans la liste des sites, simplifiez par «Collec_auto_i» et «Collec_auto_f» (par exemple).",
 
 
 "Messagebox.show_warning":
     [
-    "Nu s-a găsit niciun fișier de ajutor pentru acest widget.",
-    "Ajutor"
+    "Aucun fichier d'aide trouvé pour ce widget.",
+    "Aide"
     ],
 
 "Messagebox.show_warning_2":
     [
-    "ULTIMA AVERTIZARE: Aceasta va ȘTERGE TOATE DATELE. Continuați numai dacă sunteți sigur. În caz contrar, faceți clic pe 'Nu' și consultați un expert.",
-    "ATENȚIE",
-    "CONFIRMAȚI REINIȚIALIZAREA",
-    "Confirmați reinițializarea completă a aplicației?\nToate datele vor fi pierdute.",
-    "Confirmă",
-    "Anulează"
+    "Êtes-vous VRAIMENT sûr de vouloir réinitialiser totalement le logiciel ?\nToutes vos données seront perdues.\nSi vous n'êtes pas sûr de vous, appuyez sur \"Non\" et demandez de l'aide à un professionnel.",
+    "DANGER",
+    "RÉINITIALISATION TOTALE",
+    "Confirmez-vous la réinitialisation totale de l'application ?\nToutes les données seront perdues.",
+    "Confirmer",
+    "Annuler"
     ],
 
 "Messagebox.show_warning_2_buttons":
     [
-    {"label": "Confirmă", "style": "danger"},
-    {"label": "Anulează", "style": "secondary"}
+    {"label": "Confirmer", "style": "danger"},
+    {"label": "Annuler", "style": "secondary"}
     ],
 
 "Messagebox.show_error_1":
     [
-    "Această parolă nu este valabilă, încercați din nou. Aveți la dispoziție trei încercări.",
-    "Parolă invalidă"
+    "Ce mot de passe n'est pas valide, recommencez\nVous avez trois essais.",
+    "Mot de passe invalide"
     ],
 
 "Messagebox.show_error_2":
     [
-    "Fie nu ați ales un site, fie numele tastat conține unul sau mai multe spații, ceea ce este (în principiu) interzis în numele site-urilor.",
-    "Validare discutabilă"
+    "Soit vous n'avez pas choisi de site, soit le nom tapé contient un ou plusieurs espaces, ce qui est (en principe) interdit dans les noms de site",
+    "Validation douteuse"
     ],
 
 "button_valid.configure_text":
-    "Faceți clic pentru a obține parola dvs. „puternică”",
+    "Cliquez pour obtenir votre mot de passe « solide »",
 
 "label_mdp_text":
-    "Vă rugăm să introduceți parola dvs.",
+    "Veuillez taper votre mot de passe",
 
 "ToolTip_entry_mdp_text":
-    "Introduceți parola fără spații aici în scopul verificării\nPentru a confirma, apăsați „Enter”. ",
+    "Tapez ici votre mot de passe sans espace à titre de vérification\nPour valider, appuyez sur «Entrée» ",
 
 "label_site_text":
-    "Alegeți site-ul sau aplicația în cauză",
+    "Veuillez choisir le site ou l'app concerné",
 
 "ToolTip_combobox_site_text":
-    "Faceți clic pe săgeata din dreapta pentru a alege site-ul solicitant sau apăsați tasta „↓”. Dacă nu este acolo, introduceți-o și va fi acolo data viitoare când veți utiliza site-ul.\nPentru mai multe detalii, apăsați „F1”.",
+    "Cliquez sur la petite flèche à droite pour choisir le site demandeur ou appuyez sur la touche « ↓ ». S'il ne figure pas, tapez le, il sera présent lors de la prochaine utilisation.\nPour plus de détails, appuyez sur « F1 »",
 
 "ToolTip_button_valid_text":
-    "Faceți clic aici sau apăsați *„Enter” pentru validare",
+    "Cliquez ici ou appuyez sur *«Entrée» pour valider",
 
 "label_info_sortie_text":
-    "Mai jos este parola dvs. „solidă”\nAcesta este copiat în clipboard. Pentru a-l utiliza, trebuie doar să mergeți la\nși tastați „<Ctrl+v>” sau „<clic dreapta-paste>”.",
+    "Ci-dessous votre mot de passe « solide »\nIl est copié dans le presse papier. Pour l'utiliser, il vous suffit de vous rendre dans le\nlogiciel demandeur et taper \"<Ctrl+v>\" ou \"<clic droit-coller>\"",
 
 "button_valid_ini.configure_text":
-    "Confirmați",
+    "Valider",
 
 "Messagebox.show_error_3":
     [
-    "Nu ați ales un identificator sau acesta conține spații.",
-    "Identificator invalid"
+    "Vous n'avez pas choisi d'identifiant ou celui-ci contient des espaces.",
+    "Identifiant invalide"
     ],
 
 "Messagebox.show_error_4":
     [
-    "Nu ați ales o parolă sau parola dvs. conține spații.",
-    "Parolă invalidă"
+    "Vous n'avez pas choisi de mot de passe ou celui-ci contient des espaces.",
+    "Mot de passe invalide"
     ],
 
 "ini_fen_ttk.Window_title":
-    "Prima utilizare: inițializarea numelui de utilizator și a parolei",
+    "Première utilisation : Initialisation identifiant et mot de passe",
 
 "label_id_ttk.Label_ini_fen_text":
-    "Vă rugăm să introduceți numele dvs. de utilizator",
+    "Veuillez saisir votre identifiant",
 
 "ToolTip_entry_id_text":
-    "Introduceți aici datele dvs. de autentificare. Confirmați apăsând „Enter”. Pentru mai multe detalii, apăsați „F1”.",
+    "Saisissez ici votre identifiant.\nValidez en appuyant sur «Entrée»\nPour plus de détails, appuyez sur « F1 ».",
 
 "label_ini_mdp_ttk.Label_ini_fen_text":
-    "Vă rugăm să introduceți parola dvs.",
+    "Veuillez entrer votre mot de passe",
 
 "ToolTip_entry_ini_mdp_text":
-    "Introduceți aici parola dvs. fără spații. Confirmați apăsând „Enter”. Pentru mai multe detalii, tastați „F1”.",
+    "Tapez ici votre mot de passe sans espace. Validez en appuyant sur «Entrée»\nPour plus de détails, tapez « F1 ».",
 
 "ToolTip_button_valid_ini_text":
-    "Faceți clic aici sau apăsați Enter",
+    "Cliquez ici ou appuyez sur entrée",
 
 "label_link_notice":
-    "Instrucțiuni de utilizare",
+    "Notice d'emploi",
 
 "ToolTip_label_link_notice":
-    "Dacă doriți să consultați instrucțiunile complete de utilizare, faceți clic aici",
+    "Si vous désirez consulter la notice d'emploi globale, cliquez ici",
 
 "label_ini_langue":
     "Langue",
 
 "combobox_ini_langue":
     [
-    "franceză",
-    "Engleză",
-    "spaniolă",
-    "română"
+    "Français",
+    "Anglais",
+    "Espagnol",
+    "Roumain"
     ],
 "label_ini_theme":
-    "Tema",
+    "Thème",
 
 "combobox_ini_theme":
-    ["Clair",
-    "Întuneric",
-    "Dulce",
-    "albastru-noapte"
+    [
+    "Clair",
+    "Foncé",
+    "Doux",
+    "Bleu-nuit"
     ],
 
 "ToolTip_combobox_ini_langue":
-    "Alegeți limba de interfață făcând clic pe săgeata mică sau apăsând tasta săgeată în jos „↓”. Confirmați prin apăsarea tastei „enter”.",
+    "Choisissez la langue de l'interface en cliquant sur la petite flèche ou en appuyant sur la touche flèche-bas « ↓ ». Validez en appuyant sur la touche « entrée »",
 
 "ToolTip_combobox_ini_theme":
-    "Alegeți tema. Confirmați apăsând „Enter”.",
+    "Choisissez le thème. Validez en appuyant sur la touche « entrée »",
 
 "label_info_ini_text":
-    "ATENȚIE, \nAceastă fereastră de inițializare apare numai atunci\ncând prima dată când utilizați software-ul.",
+    "ATTENTION, \nCette fenêtre d'initialisation n'apparait que lors de\n la première utilisation de votre logiciel.",
 
 "Messagebox.show_question":
     [
-    "Păreți că stăpâniți Creapass.\nDoriți ca în viitor Creapass să se deschidă la lansare, sub forma sa minimizată?\nDacă DA, veți găsi un meniu făcând clic (clic dreapta) pe iconița de lângă ceas",
+    "Vous semblez maîtriser Creapass.\n Désirez vous qu'à l'avenir Creapass s'ouvre dès le lancement, sous sa forme minimisée ?\n  Si OUI, vous trouverez un menu en cliquant (clic droit) sur l'icône prés de l'horloge",
     "MiniInterface ?"
     ],
 
 "Minimenu":
     [
-    "Deschide și/sau aduce în prim plan",
-    "Minimizează",
-    "Ieși"
+    "Ouvrir et/ou mettre au premier plan",
+    "Réduire",
+    "Quitter"
     ],
 
 "Mdp_inimini":
-    "Introduceți parola Creapass și apăsați \"Enter\"",
+    "Tapez votre mot de passe Creapass et appuyez sur \"Entrée\"",
 
 "Systray_infobule":
-    "Creapass\nCreatorul tău de parole",
+    "Creapass\nVotre créateur de mots de passe",
 
 "liste_aide":
     [
-    "Manual de utilizare",
-    "Videoclip",
-    "Despre"
+    "Notice d'emploi",
+    "Vidéo",
+    "À propos"
     ],
 
 "a_propos":
     [
-    "Despre Creapass",
-    "Creator de parole\nputernice, reproducibile și securizate",
-    "Copyright 2025 Jean Dalbrut\ncu excepția pictogramei și a logo-ului, copyright 2025 Quentin Dalbrut",
-    "Traduceri :",
-    "informație",
+    "À propos de Creapass",
+    "Créateur de mots de passe\nsolides, reproductibles et sécurisés",
+    "Copyright 2025 Jean Dalbrut\nsauf icône et logo, copyright 2025 Quentin Dalbrut",
+    "Traductions :",
+    "information",
     "contact",
-    "închide"
-    ]   
- 
+    "fermer"
+    ]
+
 }
