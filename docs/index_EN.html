@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Creapass - Secure Password Generator</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <header>
+        <p style="text-align: center"><img src="../images_creapass/logo_3.webp" alt="Logo Creapass" style="border:none; box-shadow:none;">
+    <p>Random, secure, and reproducible password generator</p>
+    </header>
+
+    <div class="language-selector">
+    <span class="language-label">🌐 Langue :</span>
+        <a href="index.html" class="lang-btn">
+            <span class="flag">🇫🇷</span> Français
+        </a>
+        <a href="index_en.html" class="lang-btn active">
+            <span class="flag">🇬🇧</span> English
+        </a>
+        <a href="index_ES.html" class="lang-btn">
+            <span class="flag">🇪🇸</span> Español
+        </a>
+    </div>
+
+    <div class="card">
+    <h2>The Problem with Passwords</h2>
+    <p>Most internet users use:</p>
+    <ul>
+        <li>Very simple passwords (qwerty, 12345, etc.)</li>
+        <li>The same password on all websites</li>
+        <li>Or a combination of both</li>
+    </ul>
+    <p>This behavior makes your personal data <strong>extremely vulnerable.</strong></p>
+    </div>
+    <div class="card">
+    <h2>Existing Solutions and Their Limits</h2>
+    <p>Password managers (Keepass, Dashlane, your browser...) offer random passwords like:</p>
+    <p class="highlight">f&amp;j12S+)€d»Df@}</p>
+    <p>Problem: These passwords are stored in the cloud, potentially accessible to specialized hackers.</p>
+    </div>
+    <div class="card">
+    <h2>The Creapass Solution</h2>
+    <p>Creapass generates passwords that are:</p>
+    <ul>
+        <li><strong>On demand</strong> – No storage of your passwords</li>
+        <li><strong>Locally</strong> – Data never leaves your computer</li>
+        <li><strong>Reproducible</strong> – The same input always gives the same result</li>
+        <li><strong>Secure</strong> – Impossible to "reverse-engineer" the original input</li>
+    </ul>
+    </div>
+    <h2>Specifications</h2>
+    <div class="features">
+        <div class="feature">
+        <h3>Security</h3>
+        <ul>
+            <li>Data stays on your computer</li>
+            <li>No storage of generated passwords</li>
+            <li>Impossible to reverse engineer</li>
+        </ul>
+        </div>
+        <div class="feature">
+        <h3>Portability</h3>
+        <ul>
+            <li>Can be used from a USB drive</li>
+            <li>No traces left on the computers used</li>
+            <li>No complex installation required</li>
+        </ul>
+        </div>
+        <div class="feature">
+        <h3>Reliability</h3>
+        <ul>
+            <li>Same input = same output</li>
+            <li>Minimal change = completely different result</li>
+            <li>Robust cryptographic algorithm</li>
+        </ul>
+        </div>
+        <div class="feature">
+        <h3>Ecology</h3>
+        <ul>
+            <li>A few microseconds of energy, just enough for your needs</li>
+            <li>Unlike years of continuous storage in a password manager hosted on energy-intensive data centers</li>
+        </ul>
+        </div>
+    </div>
+    <div class="card">
+    <h2>Technical Operation</h2>
+    <p>Creapass uses the principle of <strong>digital fingerprinting:</strong></p>
+    <ul>
+        <li>Your credentials are irreversibly transformed</li>
+        <li>Same principle as serious websites (Facebook, banks...)</li>
+        <li>Similar technology to cryptocurrencies</li>
+    </ul>
+    </div>
+    <div class="card">
+    <h2>Security Questions</h2>
+    <h3>Access to Your Computer</h3>
+    <p>A particularly experienced hacker could potentially retrieve your passwords, but:</p>
+    <ul>
+        <li>This is not within reach of just anyone</li>
+        <li>Unlikely that a real hacker would target an individual (they prefer large structures)</li>
+    </ul>
+        <div class="warning">
+        <h3>Ultra-Secure Solution</h3>
+        <p>Use Creapass from a USB drive to leave no trace on the computers you use.</p>
+        </div>
+    <h3>Loss of Credentials</h3>
+    <p>If you lose your personal identifier or password:</p>
+    <ul>
+        <li><strong>Impossible to recover them,</strong> they are not stored anywhere on the computer or in the cloud</li>
+        <li>You will have to <strong>reset everything</strong></li>
+    </ul>
+    </div>
+    <div class="card">
+    <h2>Security Level</h2>
+    <p>The number of possible combinations is:</p>
+        <div class="math">
+            1 719 780 985 220 790 618 342 033 025 937 378 406 524 658 203 125<br/>
+            soit environ 1,720 octillions (1 octillion-fr- = 1 Quindecillion-US- = 10<sup>48</sup>)
+        </div>
+    <p>Estimated time to test all combinations (at a rate of 1 billion attempts per second):</p>
+        <div class="math">
+            ± 54 496 000 000 000 000 000 000 000 000 000 années<br/>
+            soit environ 54.5 quintillions (1 quintillion-fr- = 1 nonillion-US- = 10<sup>30</sup>)
+        </div>
+    <p>Far beyond the lifespan of our solar system!</p>
+    </div>
+
+    <div class="card" style="background: linear-gradient(135deg, #3498db, #2ecc71); color: white; text-align: center;">
+    <h2 style="color: white; border: none;">Ready to secure your passwords?</h2>
+    <p>Download Creapass for free and take back control of your security</p>
+    <a href="telechargement_EN.html" style="display: inline-block; background: white; color: #2c3e50; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 1rem;">
+    Download Creapass</a>
+    </div>
+
+
+    <footer style="text-align: center">
+       Original en français, traductions mistral.ai et/ou deepl.com
+       <br/>
+       © Jean Dalbrut – Auteur de CréaPass
+    </footer>
+</body>
+</html>

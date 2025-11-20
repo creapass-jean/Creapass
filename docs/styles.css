@@ -87,6 +87,16 @@
             border-radius: 0 4px 4px 0;
             margin: 1rem 0;
         }
+
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #fff;
+            border-left: 4px solid #2B94F6;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
         .note {
             background-color: #e8f4fc;
             padding: 15px;

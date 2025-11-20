@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Creapass - Generador de contraseñas seguras</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <header>
+        <p style="text-align: center"><img src="../images_creapass/logo_3.webp" alt="Logo Creapass" style="border:none; box-shadow:none;">        
+        <p>Generador de contraseñas aleatorias, seguras y reproducibles</p>
+    </header>
+
+    <div class="language-selector">
+    <span class="language-label">🌐 Langue :</span>
+        <a href="index.html" class="lang-btn">
+            <span class="flag">🇫🇷</span> Français
+        </a>
+        <a href="index_EN.html" class="lang-btn">
+            <span class="flag">🇬🇧</span> English
+        </a>
+        <a href="index_ES.html" class="lang-btn active">
+            <span class="flag">🇪🇸</span> Español
+        </a>
+    </div>
+
+    <div class="card">
+        <h2>El problema de las contraseñas</h2>
+        <p>La mayoría de los usuarios de internet usan:</p>
+        <ul>
+            <li>Contraseñas muy simples (azerty, 12345, etc.)</li>
+            <li>La misma contraseña en todos los sitios</li>
+            <li>O una combinación de ambas</li>
+        </ul>
+        <p>Este comportamiento hace que sus datos personales sean <strong>extremadamente vulnerables.</strong></p>
+    </div>
+    <div class="card">
+        <h2>Soluciones existentes y sus límites</h2>
+        <p>Los gestores de contraseñas (Keepass, Dashlane, su navegador...) ofrecen contraseñas aleatorias como:</p>
+        <p class="highlight">f&amp;j12S+)€d»Df@}</p>
+        <p>Problema: Estas contraseñas se almacenan en la nube, potencialmente accesibles para hackers especializados.</p>
+    </div>
+    <div class="card">
+        <h2>La solución Creapass</h2>
+        <p>Creapass genera contraseñas que son:</p>
+        <ul>
+            <li><strong>A demanda</strong> – Sin almacenamiento de sus contraseñas</li>
+            <li><strong>Localmente</strong> – Los datos nunca salen de su computadora</li>
+            <li><strong>Reproducibles</strong> – La misma entrada siempre da el mismo resultado</li>
+            <li><strong>Seguras</strong> – Imposible de "reconstruir" la entrada original</li>
+        </ul>
+    </div>
+    <h2>Especificaciones</h2>
+    <div class="features">
+        <div class="feature">
+            <h3>Seguridad</h3>
+            <ul>
+                <li>Datos que permanecen en su computadora</li>
+                <li>Sin almacenamiento de las contraseñas generadas</li>
+                <li>Imposible de hacer ingeniería inversa</li>
+            </ul>
+        </div>
+        <div class="feature">
+            <h3>Portabilidad</h3>
+            <ul>
+                <li>Se puede utilizar desde una memoria USB.</li>
+                <li>No hay rastros en los ordenadores utilizados.</li>
+                <li>Sin instalaciones complejas</li>
+            </ul>
+        </div>
+        <div class="feature">
+            <h3>Fiabilidad</h3>
+            <ul>
+                <li>La misma entrada = la misma salida</li>
+                <li>Modificación mínima = resultado completamente diferente</li>
+                <li>Algoritmo criptográfico robusto</li>
+            </ul>
+        </div>
+        <div class="feature">
+            <h3>Ecología</h3>
+            <ul>
+                <li>Unos pocos microsegundos de energía, solo el tiempo que necesite</li>
+                <li>A diferencia de los años de almacenamiento continuo en un gestor de contraseñas alojado en centros de datos que consumen mucha energía</li>
+            </ul>
+        </div>
+    </div>
+    <div class="card">
+        <h2>Funcionamiento técnico</h2>
+        <p>Creapass utiliza el principio de <strong>huella digital</strong>:</p>
+        <ul>
+            <li>Sus credenciales se transforman de manera irreversible</li>
+            <li>Mismo principio que los sitios serios (Facebook, bancos...)</li>
+            <li>Tecnología similar a las criptomonedas</li>
+        </ul>
+    </div>
+    <div class="card">
+        <h2>Preguntas de seguridad</h2>
+        <h3>Acceso a su computadora</h3>
+        <p>Un hacker particularmente experimentado podría recuperar potencialmente sus contraseñas, pero:</p>
+        <ul>
+            <li>Esto no está al alcance de cualquiera</li>
+            <li>Es poco probable que un hacker real apunte a un individuo (prefieren estructuras grandes)</li>
+        </ul>
+        <div class="warning">
+            <h3>Solución ultra-segura</h3>
+            <p>Use Creapass desde una memoria USB para no dejar rastro en las computadoras que utilice.</p>
+        </div>
+        <h3>Pérdida de credenciales</h3>
+        <p>Si pierde su identificador o contraseña personal:</p>
+        <ul>
+            <li><strong>Imposible recuperarlas,</strong> no están almacenadas en ningún lugar de la computadora ni en la nube</li>
+            <li>Tendrá que <strong>reiniciar todo</strong></li>
+        </ul>
+    </div>
+    <div class="card">
+        <h2>Nivel de seguridad</h2>
+        <p>El número de combinaciones posibles es:</p>
+        <div class="math">
+            1 719 780 985 220 790 618 342 033 025 937 378 406 524 658 203 125
+            <br/>
+            soit environ 1,720 octillions (1 octillion-fr- = 1 Quindecillion-US- = 10<sup>48</sup>)
+       </div>
+        <p>Tiempo estimado para probar todas las combinaciones (a razón de 1 billón de intentos por segundo):</p>
+        <div class="math">
+            ± 54 496 000 000 000 000 000 000 000 000 000 années<br/>
+            soit environ 54.5 quintillions (1 quintillion-fr- = 1  nonillion-US- = 10<sup>30</sup>)
+       </div>
+        <p>¡Muy por encima de la esperanza de vida de nuestro sistema solar!</p>
+    </div>
+
+    <div class="card" style="background: linear-gradient(135deg, #3498db, #2ecc71); color: white; text-align: center;">
+    <h2 style="color: white; border: none;">¿Listo para asegurar sus contraseñas?</h2>
+    <p>Descargue Creapass gratis y retome el control de su seguridad</p>
+    <a href="telechargement_ES.html" style="display: inline-block; background: white; color: #2c3e50; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 1rem;">
+    Descargar Creapass</a>
+</div>
+
+
+    <footer style="text-align: center">Original en français, traductions mistral.ai et/ou deepl.com<br/>
+       © Jean Dalbrut – Auteur de CréaPass
+    </footer>
+</body>
+</html>
