@@ -37,13 +37,21 @@
     header {
       background: #217BB7;
       color: white;
-      padding: 1rem 2rem;
+      padding: 0.3rem 2rem;
       border-radius: 8px;
       margin-bottom: 2rem;
       text-align: center;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
-    
+    header img {
+      height: 150px;
+      margin-top: 0;
+      margin-bottom:0;
+    }
+    header p {
+      margin-top: 0;
+      margin-bottom:0,5rem;
+    }    
     .download-buttons {
       display: flex;
       gap: 20px;
