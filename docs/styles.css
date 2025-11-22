@@ -46,23 +46,27 @@
             color: var(--secondary);
             border-bottom: 2px solid var(--secondary);
             padding-bottom: 0.5rem;
-            margin-top: 2rem;
+            margin-top: 0.5rem;
         }
         
         h3 {
             color: var(--primary);
         }
         
-    .important {
-      background: #fdf2e9;
-      border-left: 6px solid #e67e22;
-      padding: 10px;
-      margin: 15px 0;
-    }
+        .fig-caption{
+            text-align:center;
+        }
+        
+        .important {
+          background: #fdf2e9;
+          border-left: 6px solid #e67e22;
+          padding: 10px;
+          margin: 15px 0;
+        }
         .card {
             background: white;
             border-radius: 8px;
-            padding: 1.5rem;
+            padding: 0.5rem;
             margin-bottom: 1.5rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             border-left: 4px solid var(--secondary);
@@ -82,10 +86,10 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
-    ol, ul {
-      margin-left: 20px;
-      padding-left: 1.5rem;
-    }
+        ol, ul {
+          margin-left: 20px;
+          padding-left: 1.5rem;
+        }
 
         li {
             margin-bottom: 0.5rem;
@@ -106,14 +110,6 @@
             margin: 1rem 0;
         }
 
-        /* section { */
-            /* margin-bottom: 30px; */
-            /* padding: 20px; */
-            /* background: #fff; */
-            /* border-left: 4px solid #2B94F6; */
-            /* border-radius: 8px; */
-            /* box-shadow: 0 2px 6px rgba(0,0,0,0.1); */
-        /* } */
 
         .note {
             background-color: #e8f4fc;
@@ -125,158 +121,147 @@
             font-family: monospace;
             white-space: pre-wrap;
             background: var(--light);
-            padding: 1rem;
+            /* padding: 1rem; */
             border-radius: 4px;
             overflow-x: auto;
         }
 
-    .download-buttons {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      margin: 30px 0;
-      flex-wrap: wrap;
-    }
-    
-    .download-btn {
-      display: inline-block;
-      padding: 15px 30px;
-      background: #27ae60;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 1.1em;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      text-align: center;
-      min-width: 200px;
-    }
-    
-    .download-btn:hover {
-      background: #229954;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 8px rgba(0,0,0,0.3);
-    }
-    
-    .download-btn.installer {
-      background: #3498db;
-    }
-    
-    .download-btn.installer:hover {
-      background: #2980b9;
-    }
-    
-    .download-btn.disabled {
-      background: #95a5a6;
-      cursor: not-allowed;
-      opacity: 0.6;
-    }
-    
-    .download-btn.disabled:hover {
-      background: #95a5a6;
-      transform: none;
-    }
-    
-    .badge {
-      display: inline-block;
-      background: #e74c3c;
-      color: white;
-      padding: 3px 8px;
-      border-radius: 4px;
-      font-size: 0.75em;
-      margin-left: 8px;
-      vertical-align: middle;
-    }
-    
-    .badge.recommended {
-      background: #27ae60;
-    }
-        
-        
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-            
-            h1 {
-                font-size: 1.8rem;
-            }
+        .download-buttons {
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          margin: 30px 0;
+          flex-wrap: wrap;
         }
         
+        .download-btn {
+          display: inline-block;
+          padding: 15px 30px;
+          background: #27ae60;
+          color: white;
+          text-decoration: none;
+          border-radius: 8px;
+          font-weight: bold;
+          font-size: 1.1em;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+          text-align: center;
+          min-width: 200px;
+        }
+        
+        .download-btn:hover {
+          background: #229954;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+        }
+        
+        .download-btn.installer {
+          background: #3498db;
+        }
+        
+        .download-btn.installer:hover {
+          background: #2980b9;
+        }
+        
+        .download-btn.disabled {
+          background: #95a5a6;
+          cursor: not-allowed;
+          opacity: 0.6;
+        }
+        
+        .download-btn.disabled:hover {
+          background: #95a5a6;
+          transform: none;
+        }
+        
+        .badge {
+          display: inline-block;
+          background: #e74c3c;
+          color: white;
+          padding: 3px 8px;
+          border-radius: 4px;
+          font-size: 0.75em;
+          margin-left: 8px;
+          vertical-align: middle;
+        }
+        
+        .badge.recommended {
+          background: #27ae60;
+        }
+            
 /* Conteneur du sélecteur de langue */
-.language-selector {
-    background: white;
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
+        .language-selector {
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
 
-.language-label {
-    font-weight: 600;
-    color: #333;
-    margin-right: 0.5rem;
-}
+        .language-label {
+            font-weight: 600;
+            color: #333;
+            margin-right: 0.5rem;
+        }
 
-/* Boutons/liens de langue */
-.lang-btn {
-    padding: 0.5rem 1rem;
-    border: 2px solid #ddd;
-    background: white;
-    color: #555;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-    text-decoration: none;
-}
+        /* Boutons/liens de langue */
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid #ddd;
+            background: white;
+            color: #555;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            text-decoration: none;
+        }
 
-.lang-btn:hover {
-    border-color: #3498db;
-    color: #3498db;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+        .lang-btn:hover {
+            border-color: #3498db;
+            color: #3498db;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
 
-.lang-btn.active {
-    background: #3498db;
-    color: white;
-    border-color: #3498db;
-}
+        .lang-btn.active {
+            background: #3498db;
+            color: white;
+            border-color: #3498db;
+        }
 
-/* Drapeaux emoji */
-.flag {
-    font-size: 1.2rem;
-}
+        /* Drapeaux emoji */
+        .flag {
+            font-size: 1.2rem;
+        }
 
 /* Responsive - adaptation mobile */
 @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            
-            h1 {
-                font-size: 1.8rem;
-            }
-    .language-selector {
-        padding: 0.8rem;
-    }
+        body {
+            padding: 10px;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+        }
+        .language-selector {
+            padding: 0.8rem;
+        }
 
-    .lang-btn {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.85rem;
-    }
+        .lang-btn {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.85rem;
+        }
 
-    .language-label {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 0.5rem;
-    }
-}        
+        .language-label {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+    }        
