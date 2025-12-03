@@ -8,20 +8,30 @@
 - Stockage local des identifiants hachés (SHA-256)
 - Organisation claire des fichiers et des préférences utilisateur
 - Interface graphique (images, icônes, contenu adapté selon la langue)
+- Aide html + aide contextuelle (clic droit)
 
 ## 📂 Structure du projet
 ```
 Creapass/
 ├── creapass.py                # Code source principal
 ├── creapass.exe               # Version compilée (Nuitka)
+|__ docs
+   |_ Images_creapass           
+      |_logo_3.webp            # images pour pages docs
+   |_ index.html
+   |_ index_EN.html
+   |_ index_ES.html
+   |_ telechargement.html
+   |_ telechargement_EN.html
+   |_ telechargement_ES.html
+   |_ styles.css
 ├── langues/                   # HTML et traductions JSON
    |_ HTML_Anglais # dossier
-      |_ images_creapass
-         |_ . . .
-         |_ . . .              # copie des images Webp du dossier ci-dessus
-         |_ . . .
-      |_ conseils_ini.html
-      |_ notice.html
+      |_ danger.html           # information des risques liés à la réinitialisation
+      |_ presentation.html     # comme son nom l'indique
+      |_don.html               # appel à don Paypal
+      |_ notice.html           # comme son nom l'indique
+      |_ conseils_ini.html     # sous-notice
    |_ HLML_Espagnol
       |_ . . .                 # même contenu que ci-dessus selon la langue
    |_ HTML_Français
@@ -41,7 +51,7 @@ Creapass/
    |_ logo.png # logo
 ├── active_html/               # HTML généré dynamiquement 
 ├── user_data/                 # Préférences locales de l'utilisateur
-├── lang.json                  # Copie du fichier langue en cours
+├── lang.json                  # Copie du fichier langue en cours (interface)
 ├── id.json                    # Identifiants hachés (SHA-256)
 ├── sites.json                 # Liste évolutive des sites utilisés
 ├── README.md                  # Présentation du projet
