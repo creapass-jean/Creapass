@@ -1,0 +1,4 @@
+ttkbootstrap
+pyperclip
+pystray
+tkhtmlview
