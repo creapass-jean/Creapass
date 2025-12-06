@@ -16,3 +16,5 @@ __pycache__/
 # Fichiers système ou inutiles
 Thumbs.db
 .DS_Store
+
+crea-env/
